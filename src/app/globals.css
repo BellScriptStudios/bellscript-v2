@@ -1,9 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0f1a;
+  --glow1: 34, 139,230;
+  --glow2: 140, 175, 255;
+  --accent: 88, 140, 255;
 }
+
+.btn-primary {
+  --ring: rgba(var(--accent), .35);
+  --ring-strong: rgba(var(--accent), .55);
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: .8rem 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  color: #eef3ff;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .20);
+  box-shadow:
+    inset 0 0 0 1px var(--ring),
+    0 8px 22px var(--ring);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, .28);
+  box-shadow:
+    inset 0 0 0 1px var(--ring-strong),
+    0 12px 28px var(--ring-strong);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 0 1px var(--ring-strong),
+    0 6px 18px rgba(var(--accent), .40);
+}
+
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.75),
+    0 0 0 6px rgba(var(--accent), .55),
+    inset 0 0 0 1px var(--ring-strong);
+}
+
 
 @theme inline {
   --color-background: var(--background);
