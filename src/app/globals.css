@@ -7,6 +7,14 @@
   --accent: 88, 140, 255;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .btn-primary {
   --ring: rgba(var(--accent), .35);
   --ring-strong: rgba(var(--accent), .55);

@@ -4,6 +4,7 @@ import type { Service } from "src/app/Data/services";
 
 export default function ServiceDetail({ service }: { service: Service }) {
   const {
+    id,
     title,
     priceFrom,
     timeline,
@@ -14,6 +15,8 @@ export default function ServiceDetail({ service }: { service: Service }) {
     outcome,
     plans,
   } = service;
+
+  const isSiteCare = id === "site-care-plans";
 
   const hasIncludes = Array.isArray(includes) && includes.length > 0;
   const hasBullets = Array.isArray(bullets) && bullets.length > 0;
@@ -35,27 +38,38 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
           {plans?.length ? (
             <section
-              className={styles.section}
+              className={
+                isSiteCare ? styles.siteCareSection : styles.section
+              }
               aria-labelledby="plans-heading"
             >
-              <div className={styles.plans}>
-                {plans.map((plan) => (
-                  <div
-                    key={plan.id}
-                    className={`${styles.planCard} ${
-                      plan.featured ? styles.featured : ""
-                    }`}
+              {plans.map((plan) => (
+                <div
+                key={plan.id}
+                  className={
+                    isSiteCare
+                      ? `${styles.siteCarePlanCard} ${
+                        plan.featured ? styles.siteCarePlanCardFeatured : ""
+                        }`
+                      : `${styles.planCard} ${
+                        plan.featured ? styles.featured : ""
+                      }`
+                    }
                   >
-                    <h3>{plan.name}</h3>
-                    <p className={styles.price}>{plan.price}</p>
-                    <ul className={styles.perks}>
+                    {isSiteCare && plan.featured && (
+                      <span className={styles.siteCareBadge}>Most Popular</span>
+                    )}
+
+                    <h3 className={styles.siteCarePlanName}>{plan.name}</h3>
+                    <p className={styles.siteCarePlanPrice}>{plan.price}</p>
+
+                    <ul className={styles.siteCarePlanPerks}>
                       {plan.perks.map((perk, i) => (
                         <li key={i}>{perk}</li>
                       ))}
                     </ul>
                   </div>
                 ))}
-              </div>
             </section>
           ) : null}
 
@@ -68,6 +82,8 @@ export default function ServiceDetail({ service }: { service: Service }) {
           {(long || blurb) && (
             <p className={styles.lead}>{long ?? blurb}</p>
           )}
+
+          
         </header>
 
         <section className={styles.columns}>
@@ -88,7 +104,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
           {hasOutcomeList && (
             <article
-              className={styles.card}
+              className={`${styles.card} ${isSiteCare ? styles.siteCareOutcome : ""}`}
               role="region"
               aria-labelledby="outcomes-heading"
             >
@@ -103,7 +119,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
           {hasOutcomeText && (
             <article
-              className={styles.card}
+              className={`${styles.card} ${isSiteCare ? styles.siteCareOutcome : ""}`}
               role="region"
               aria-labelledby="outcome-heading"
             >
@@ -131,10 +147,10 @@ export default function ServiceDetail({ service }: { service: Service }) {
         <div className={styles.bottomCta}>
           <Link
             href="/contact"
-            className={`btn-primary ${styles.primaryCta}`}
+            className={`btn-primary ${styles.primaryCta} ${isSiteCare ? styles.siteCareCta : ""}`}
             aria-label="Contact BellScript Studios"
           >
-            Start this Project →
+            {isSiteCare ? "Talk About Your Care Plan →" : "Start a project →"}
           </Link>
         </div>
 
