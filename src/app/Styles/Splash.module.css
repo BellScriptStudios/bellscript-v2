@@ -5,7 +5,7 @@
   isolation: isolate;
   background: var(--background);
   color: #e8eefc;
-  padding: clamp(1rem, 6vw, 6rem) 1.25rem;
+  padding: 1.5rem 1.25rem; /* mobile: tighter */
   overflow: hidden;
   opacity: 1;
   visibility: visible;
@@ -18,10 +18,10 @@
 .heroWrap::after {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: -25%;
   z-index: -1;
   pointer-events: none;
-  background: 
+  background:
     radial-gradient(45% 55% at 90% 10%, rgba(var(--glow1), .55) 0%, rgba(var(--glow1), 0) 60%),
     radial-gradient(60% 60% at 15% 45%, rgba(var(--glow2), .20) 0%, rgba(var(--glow2), 0) 70%),
     radial-gradient(120% 120% at 50% 10%, rgba(0,0,0,.00) 0%, rgba(0,0,0,.35) 65%, rgba(0,0,0,.65) 100%);
@@ -31,7 +31,7 @@
 .heroWrap::after {
   opacity: .18;
   -webkit-mask-image: radial-gradient(80% 70% at 50% 35%, #000 40%, transparent 100%);
-    mask-image: radial-gradient(80% 70% at 50% 35%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(80% 70% at 50% 35%, #000 40%, transparent 100%);
   background-image:
     linear-gradient(transparent 54px, rgba(255,255,255,.08) 55px),
     linear-gradient(90deg, transparent 54px, rgba(255,255,255,.08) 55px);
@@ -46,11 +46,11 @@
 
 .splashLogo {
   position: absolute;
-  top: 2.5rem;
+  top: 1.75rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  font-size: clamp(1.5rem, 5vw, 1.75rem);
+  font-size: 1.4rem;
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -63,8 +63,14 @@
 }
 
 @keyframes fadeInLogo {
-  from { opacity: 0; transform: translate(-50%, -10px); }
-  to { opacity: 1; transform: translate(-50%, 0); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes logoPulse {
@@ -75,35 +81,79 @@
 .splashLogo::after {
   content: "";
   display: block;
-  width: 200px;
+  width: 140px;
   height: 2px;
   background: linear-gradient(90deg, transparent, #e034a2, transparent);
-  margin: 0.75rem auto 0 auto;
+  margin: 0.65rem auto 0 auto;
   border-radius: 2px;
   opacity: 0.9;
   filter: drop-shadow(0 0 8px rgba(224, 52, 162, 0.5));
 }
 
 .splashContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 75vh;
-    max-width: 720px;
-    padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  max-width: 90vw;
+  padding: 0 0.5rem;
+  text-align: center;
 }
 
 .title {
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 800;
-    text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .subTitle {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-top: 1rem;
-    max-width: 600px;
-    text-align: center;
-    color: #bcc6dc;
+  font-size: 0.95rem;
+  margin-top: 0.85rem;
+  max-width: 28rem;
+  text-align: center;
+  color: #bcc6dc;
+}
+
+@media (min-width: 640px) {
+  .heroWrap {
+    padding: clamp(2rem, 6vw, 4rem) 2rem;
+  }
+
+  .splashLogo {
+    top: 2.25rem;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+  }
+
+  .splashLogo::after {
+    width: 180px;
+  }
+
+  .splashContent {
+    height: 75vh;
+    max-width: 720px;
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+  }
+
+  .subTitle {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroWrap {
+    padding: 4.5rem 3rem;
+  }
+
+  .splashLogo {
+    top: 2.5rem;
+  }
+
+  .splashLogo::after {
+    width: 220px;
+  }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Splash from "src/Components/Splash";
 import Header from "src/Components/Header";
+import Footer from "src/Components/Footer";
 import styles from "src/app/Styles/Page.module.css";
 import Link from "next/link";
 import ProcessSection from "src/Components/ProcessSection";
@@ -56,6 +57,8 @@ export default function Home() {
         <ProcessSection />
         
       </main>
+
+      <Footer />
     </>
   );
 }
