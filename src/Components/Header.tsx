@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../Styles/Header.module.css";
+import styles from "src/app/Styles/Header.module.css";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 

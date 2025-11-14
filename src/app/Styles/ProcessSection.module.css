@@ -1,5 +1,5 @@
 .processSection {
-    padding: clamp(2rem, 5vw, 4rem) 1rem;
+    padding: clamp(2rem, 5vw, 2rem) 2rem;
 }
 
 .inner {
@@ -16,7 +16,7 @@
 }
 
 .processDesc {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     color: rgba(249, 250, 251, 0.75);
     margin-bottom: 1.75rem;
@@ -64,7 +64,6 @@
 
 @media (min-width: 768px) {
     .processDesc {
-        font-size: 1.1rem;
         margin-bottom: 2rem;
     }
 }

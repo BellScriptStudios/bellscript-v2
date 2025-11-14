@@ -1,0 +1,152 @@
+.page {
+  min-height: 100vh;
+  background: #02030a;
+  color: #eef3ff;
+}
+
+.hero {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #f9fafb;
+}
+
+.subTitle {
+  max-width: 32rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(226, 232, 255, 0.8);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem 1.5rem 4rem;
+  }
+}
+
+.filterBar {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filterLabel {
+    font-size: 0.8rem;
+    color: rgba(200, 210, 240, 0.85);
+}
+
+.filterPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filterPill {
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid #27272f;
+    background: #050816;
+    color: rgba(226, 232, 255, 0.82);
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background-color 0.16s ease,
+        border-color 0.16s ease,
+        color 0.16s ease,
+        transform 0.16s ease;
+}
+
+.filterPill:hover {
+    border-color: #3f3f46;
+    background: #070b17;
+    transform: translateY(-1px);
+}
+
+.filterPillActive,
+.filterPillActive:hover {
+    background: rgba(224, 52, 162, 0.18);
+    border-color: rgba(224, 52, 162, 0.8);
+    color: #fdf2ff;
+}
+
+@media (min-width: 768px) {
+    .filterBar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+    }
+
+    .filterLabel { font-size: 0.78rem;}
+}
+
+.categories {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
+}
+
+.category {
+    padding-top: 2.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 2.5rem;
+}
+
+.category:first-of-type {
+    border-top: none;
+    padding-top: 1.5rem;
+}
+
+.catTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.anchorWrap {
+    scroll-margin-top: 6rem;
+}
+
+@media (min-width: 640px) {
+    .categories { padding: 0 1.5rem 4.5rem};
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .categories { padding: 0 2rem 5rem};
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.1rem;
+    }
+}
+
+.bottomCta {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
+
+

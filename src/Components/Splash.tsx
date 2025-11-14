@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "../Styles/Splash.module.css";
+import styles from "src/app/Styles/Splash.module.css";
 
 export default function Splash() {
     const [fadeOut, setFadeOut] = useState(false);

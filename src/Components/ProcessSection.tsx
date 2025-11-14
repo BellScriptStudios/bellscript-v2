@@ -1,4 +1,4 @@
-import styles from '../Styles/ProcessSection.module.css';
+import styles from 'src/app/Styles/ProcessSection.module.css';
 
 export default function ProcessSection() {
     return (
