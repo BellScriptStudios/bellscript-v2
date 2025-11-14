@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Header from "src/Components/Header";
-import Footer from "src/Components/Footer";
 import ServiceDetail from "src/Components/ServiceDetail";
 import { getServiceById } from "src/app/Data/services";
 import { notFound } from "next/navigation";
@@ -73,9 +71,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <Header />
       <ServiceDetail service={service} />
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "src/Components/Header";
 import ServicesClient from "src/app/services/ServicesClient";
 
 export const metadata: Metadata = {
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <Header />
       <ServicesClient />
     </>
   );

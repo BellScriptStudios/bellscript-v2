@@ -2,8 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import Header from "src/Components/Header";
-import Footer from "src/Components/Footer";
 import styles from "src/app/Styles/ServicesPage.module.css";
 import ServiceCard from "src/Components/ServiceCard";
 import { SERVICE_CATEGORIES } from "src/app/Data/services";
@@ -68,8 +66,6 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Header />
-
       <main className={styles.page}>
         <section className={styles.hero}>
           <p className={styles.kicker}>Services & Packages</p>
@@ -132,7 +128,6 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
