@@ -71,7 +71,8 @@ export default function ServiceCard({
   service: Service;
   compact?: boolean;
 }) {
-  const { id, title, blurb, bullets, icon } = service;
+  const { id, title, blurb, bullets, icon, demoUrl } = service;
+
   const href = compact
   ? service.href ?? `/services#${id}`
   : `/services/${id}`;
@@ -95,9 +96,20 @@ export default function ServiceCard({
       ) : null}
 
       <div className={styles.ctaRow}>
-        <Link href={href} className={styles.link}>
+        <Link href={href} className={styles.learnBtn}>
           Learn More
         </Link>
+
+        {demoUrl && (
+          <a
+            href={demoUrl}
+            className={styles.demoBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+              View Demo
+            </a>
+        )}
       </div>
     </article>
   );

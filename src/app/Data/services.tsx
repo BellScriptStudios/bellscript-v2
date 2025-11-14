@@ -31,6 +31,7 @@ export type Service = {
     featured?: boolean;
     active?: boolean;
     plans?: PlanTier[];
+    demoUrl?: string;
 };
 
 export type ServiceCategory = {
