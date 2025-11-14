@@ -32,6 +32,18 @@ export default function Splash() {
     };
   }, []);
 
+  function skipSplash() {
+    setFadeOut(true);
+
+    if (typeof window !== "undefined") {
+      window.sessionStorage.setItem("bs_seenSplash", "true");
+    }
+
+    window.setTimeout(() => {
+      setVisible(false);
+    }, 400)
+  }
+
   if (!visible) return null;
 
   return (
@@ -45,6 +57,10 @@ export default function Splash() {
         <a className="btn-primary" href="/contact">
           Get Started
         </a>
+
+        <button type="button" className={styles.skipBtn} onClick={skipSplash}>
+          Skip
+        </button>
       </div>
     </div>
   );

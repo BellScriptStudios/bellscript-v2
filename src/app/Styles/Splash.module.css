@@ -144,6 +144,35 @@
   }
 }
 
+.skipBtn {
+  margin-top: 1rem;
+  padding: 0.55rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.35);
+  color: #f9fafb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    opacity 0.2s ease;
+}
+
+.skipBtn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.skipBtn:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
 @media (min-width: 1024px) {
   .heroWrap {
     padding: 4.5rem 3rem;
