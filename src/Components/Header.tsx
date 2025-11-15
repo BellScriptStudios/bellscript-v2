@@ -1,72 +1,121 @@
 "use client";
 
-import styles from "src/app/Styles/Header.module.css";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import styles from "src/app/Styles/Header.module.css";
 
 export default function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const btnRef = useRef<HTMLButtonElement | null>(null);
-    const menuRef = useRef<HTMLDivElement | null>(null);
-    
-    useEffect(() => {
-        if (!menuOpen) return;
-        const onDown = (e: MouseEvent) => {
-            const t = e.target as Node;
-            if (!menuRef.current || !btnRef.current) return;
-            if (menuRef.current.contains(t) || btnRef.current.contains(t)) return;
-            setMenuOpen(false);
-        };
-        document.addEventListener("mousedown", onDown);
-        return () => document.removeEventListener("mousedown", onDown);
-    }, [menuOpen]);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
 
-    return (
-        <header className={styles.header}>
-            <div className={styles.headerInner}> 
-                <Link 
-                    href="/"
-                    className={styles.logo}>BellScript Studios    
-                </Link>
-                
-                <nav className={styles.nav} aria-label="Main Navigation">
-                    <Link href="/" className={`${styles.navLink} ${styles.homeLink}`}>Home</Link>
-                    <Link href="/services" className={styles.navLink}>Services</Link>
-                    <Link href="/portfolio" className={styles.navLink}>Work</Link>
-                    <Link href="/about" className={styles.navLink}>About</Link>
-                    <Link href="/contact" className={`btn-primary ${styles.navBtn}`}>Start your Project</Link>
-                </nav>
-            </div>
-            
-            {menuOpen && (
-                <div
-                    className={styles.mobileMenu}
-                    id="mobile-menu"
-                    ref={menuRef}
-                    role="menu"
-                    aria-label="Mobile navigation"
-                >
-                    <Link className={styles.link} href="/">Home</Link>
-                    <Link className={styles.link} href="/about">About</Link>
-                    <Link className={styles.link} href="/portfolio">Our Work</Link>
-                    <Link className={styles.link} href="/services">Services</Link>
-                    <Link className={styles.link} href="/contact">Contact Us</Link>
-            </div>
-            )}
-            <div className={styles.actions}>
-                <button
-                    ref={btnRef}
-                    className={styles.hamburger}
-                    onClick={() => setMenuOpen((v) => !v)}
-                    aria-label="Toggle Menu"
-                    aria-expanded={menuOpen}
-                    aria-controls="mobile-menu"
-                >
-                    <span />
-                    <span />
-                    <span />
-                </button>
-            </div>
-        </header>
-    );
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  function openMenu() {
+    setMenuVisible(true);
+    requestAnimationFrame(() => setMenuOpen(true));
+  }
+
+  function closeMenu() {
+    setMenuOpen(false);
+    window.setTimeout(() => setMenuVisible(false), 220);
+  }
+
+  function toggleMenu() {
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  function handleNavClick() {
+    closeMenu();
+  }
+
+  useEffect(() => {
+    if (!menuVisible) return;
+
+    function handleClickOutside(e: MouseEvent) {
+      const target = e.target as Node;
+
+      if (!menuRef.current || !buttonRef.current) return;
+
+      if (
+        menuRef.current.contains(target) ||
+        buttonRef.current.contains(target)
+      ) {
+        return;
+      }
+
+      closeMenu();
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuVisible]);
+
+  return (
+    <header className={styles.header}>
+      <div className={styles.headerInner}>
+        <div className={styles.logo}>
+          <Link href="/">
+            BellScript Studios
+          </Link>
+        </div>
+
+        <nav className={styles.nav} aria-label="Main navigation">
+          <Link href="/about" className={styles.navLink}>
+            About
+          </Link>
+          <Link href="/projects" className={styles.navLink}>
+            Our Work
+          </Link>
+            <Link href="/services" className={styles.navLink}>
+            Services
+          </Link>
+          <Link href="/contact" className={`${styles.navLink} ${styles.navBtn}`}>
+            Start your Project
+          </Link>
+        </nav>
+
+        <div className={styles.actions}>
+          <button
+            type="button"
+            ref={buttonRef}
+            className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            onClick={toggleMenu}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </div>
+
+      {menuVisible && (
+        <div
+          ref={menuRef}
+          className={`${styles.mobileMenu} ${
+            menuOpen ? styles.mobileMenuOpen : styles.mobileMenuClosing
+          }`}
+        >
+          <Link href="/" className={styles.link} onClick={handleNavClick}>
+            Home
+          </Link>
+          <Link href="/about" className={styles.link} onClick={handleNavClick}>
+            About
+          </Link>
+          <Link href="/services" className={styles.link} onClick={handleNavClick}>
+            Services
+          </Link>
+          <Link href="/contact" className={styles.link} onClick={handleNavClick}>
+            Contact Us
+          </Link>
+        </div>
+      )}
+    </header>
+  );
 }

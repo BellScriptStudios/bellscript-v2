@@ -1,0 +1,108 @@
+.about {
+    position: relative;
+    padding: 3rem 1.25rem 3.5rem;
+    background: #02030a;
+    border-top: 1px solid #111827;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(
+        circle at 20% 0%,
+        rgba(224, 52, 162, 0.5) 0%,
+        rgba(224, 52, 162, 0.18) 30%,
+        rgba(224, 52, 162, 0.04) 60%,
+        transparent 80%
+    );
+    filter: blur(120px);
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.header {
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aboutInner { 
+    max-width: 1120px; 
+    margin: 0 auto;
+}
+
+.aboutKicker {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 0.4rem;
+}
+
+.aboutTitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #f9fafb;
+    margin: 0 0 0.85rem;
+    max-width: 26rem;
+}
+
+.aboutBody {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(226, 232, 255, 0.85);
+    max-width: 40rem;
+    margin: 0 0 0.75rem;
+}
+
+.aboutNote {
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+    color: rgba(148, 163, 184, 0.95);
+}
+
+.aboutNote a {
+    color: #e5e7eb;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.aboutNote a:hover { color: #ffffff; }
+
+@media (min-width: 768px) {
+    .about {
+        padding: 4rem 1.5rem 4.5rem;
+    }
+
+    .aboutTitle {
+        font-size: 1.6rem;
+    }
+
+    .aboutBody {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        padding: 4.5rem 2rem 5rem;
+    }
+
+    .aboutTitle {
+        max-width: none;
+        }
+
+    .aboutNote {
+        align-self: flex-end;
+    }
+}
+

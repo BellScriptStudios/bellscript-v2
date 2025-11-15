@@ -7,12 +7,13 @@
     margin: 0 auto;
 }
 
-.label {
-    font-size: .75rem;
-    letter-spacing: 0.18em;
+.processHeader {
+    font-size: 0.75rem;
     text-transform: uppercase;
-    color: rgba(249, 250, 251, 0.6);
-    margin-bottom: 0.35rem;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 0.4rem;
 }
 
 .processDesc {

@@ -4,6 +4,7 @@ import styles from "src/app/Styles/Page.module.css";
 import Link from "next/link";
 import ProcessSection from "src/Components/ProcessSection";
 import ServicesSection from "src/Components/ServicesSection";
+import AboutSection from "src/Components/AboutSection";
 import { FEATURED_SERVICES } from "src/app/Data/services";
 
 export const metadata: Metadata = {
@@ -51,6 +52,8 @@ export default function Home() {
         </section>
 
         <ProcessSection />
+
+        <AboutSection />
         
       </main>
     </>
