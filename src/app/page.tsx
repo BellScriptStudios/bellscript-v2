@@ -55,6 +55,16 @@ export default function Home() {
 
         <AboutSection />
         
+        <section
+          id="services"
+          className={styles.contactSection}
+          aria-labelledby="contact-section"
+        >
+          <div className={styles.contact}>
+            <p className={styles.contactHeader}>Ready to build? Let&apos;s talk.</p>
+            <Link href="/contact" className={`btn-primary ${styles.bottomCta}`}>Contact Us</Link>
+          </div>
+        </section>
       </main>
     </>
   );
