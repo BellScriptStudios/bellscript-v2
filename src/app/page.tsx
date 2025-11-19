@@ -5,7 +5,9 @@ import Link from "next/link";
 import ProcessSection from "src/Components/ProcessSection";
 import ServicesSection from "src/Components/ServicesSection";
 import AboutSection from "src/Components/AboutSection";
+import { FEATURED_PROJECTS } from "./Data/projects";
 import { FEATURED_SERVICES } from "src/app/Data/services";
+import ProjectSection from "src/Components/ProjectSection";
 
 export const metadata: Metadata = {
   title: "We build in a week — BellScript Studios",
@@ -49,6 +51,19 @@ export default function Home() {
               intro="From career milestones to life’s biggest moments, our featured services bring your ideas to life with clean, modern websites."
               items={FEATURED_SERVICES}
             />
+        </section>
+
+        <section id="projects" className={styles.projects}>
+          <ProjectSection
+            id="our-work"
+            heading="Featured Work"
+            intro="Our featured projects showcase the clean design and thoughtful details that define every BellScript Studios build."
+            items={FEATURED_PROJECTS}
+            showViewAll={true}
+            viewAllHref="/projects"
+            viewAllLabel="View all projects"
+            showHeading={true}
+          />
         </section>
 
         <ProcessSection />

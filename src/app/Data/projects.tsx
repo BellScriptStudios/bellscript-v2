@@ -6,7 +6,7 @@ export type Project = {
     features?: string[];
     link?: { 
         href: string;
-        label: string;
+        label?: string;
         ariaLabel?: string
     };
     image?: {
@@ -34,8 +34,7 @@ export const PROJECTS: Project[] = [
             "Portfolio showcase linking directly to each brand site",
             "Optimized for speed, SEO, and cross-browser compatibility",
         ],
-        link: { href: "https://www.themorningbell.co", 
-                label: "Explore the Project →" },
+        link: { href: "https://www.themorningbell.co"},
         image: { 
             src: "/images/tmb-logo.png",
             alt: "The Morning Bell Co. thumbnail",
@@ -63,7 +62,6 @@ export const PROJECTS: Project[] = [
 
         link: { 
             href: "https://github.com/MTinsley00/CLI_Expense_Tracker.git",
-            label: "Explore the Project →",
             ariaLabel: "View SmartSpend CLI Expense Tracker project on GitHub",
         },
         image: { src: "/images/smartspend-thumb.png", alt: "SmartSpend CLI thumbnail", width: 300, height: 200 },

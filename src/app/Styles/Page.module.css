@@ -92,7 +92,7 @@
 
 @media (min-width: 1024px) {
   .services {
-    padding: 4rem 2rem 5rem;
+    padding: 4rem 2rem 4rem;
   }
 
   .services::before {
@@ -107,6 +107,8 @@
 .servicesInner {
   max-width: 1120px;
   margin: 0 auto;
+  padding-left: 1.5rem;
+  
 }
 
 .servicesHeader {
@@ -161,7 +163,6 @@
 
 .contactSection {
   padding: 4rem 1.25rem;
-  margin-top: 4rem;
   position: relative;
   overflow: hidden;
 }

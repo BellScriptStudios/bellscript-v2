@@ -1,5 +1,5 @@
 .processSection {
-    padding: clamp(2rem, 5vw, 2rem) 2rem;
+    padding: 4rem 1.25rem;
     border-top: 1px solid #111827;
 }
 
@@ -22,7 +22,7 @@
     line-height: 1.5;
     color: rgba(249, 250, 251, 0.75);
     margin-bottom: 1.75rem;
-    max-width: 600px;
+    max-width: 28rem;
 }
 
 .steps {
@@ -65,6 +65,10 @@
 }
 
 @media (min-width: 768px) {
+    .processSection {
+        padding: 4.5rem 2.75rem;
+
+    }
     .processDesc {
         margin-bottom: 2rem;
     }

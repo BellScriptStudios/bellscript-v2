@@ -108,6 +108,9 @@ export default function Header() {
           <Link href="/about" className={styles.link} onClick={handleNavClick}>
             About
           </Link>
+          <Link href="/projects" className={styles.link} onClick={handleNavClick}>
+            Our Work
+          </Link>
           <Link href="/services" className={styles.link} onClick={handleNavClick}>
             Services
           </Link>
