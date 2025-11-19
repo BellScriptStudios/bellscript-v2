@@ -3,13 +3,13 @@ import styles from "src/app/Styles/AboutSection.module.css";
 export default function AboutSection() {
     return (
         <section id="about" className={styles.about}>
-            <div className={styles.header}>
-                <p className={styles.aboutKicker}>About</p>
-                <h2 className={styles.aboutTitle}>
-                    Built by creatives for the modern web.
-                </h2>
-            </div>
             <div className={styles.aboutInner}>
+                <div className={styles.header}>
+                    <p className={styles.aboutKicker}>About</p>
+                    <h2 className={styles.aboutTitle}>
+                        Built by creatives for the modern web.
+                    </h2>
+                </div>
                 <p className={styles.aboutBody}>
                     BellScript Studios focuses on clean, modern builds that feel as good
                     to use as they look. From scrappy ideas to polished launches, we

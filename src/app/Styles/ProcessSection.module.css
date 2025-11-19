@@ -1,5 +1,6 @@
 .processSection {
     padding: clamp(2rem, 5vw, 2rem) 2rem;
+    border-top: 1px solid #111827;
 }
 
 .inner {
