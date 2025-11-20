@@ -44,6 +44,7 @@ export default function ProjectSection({
 
             {showViewAll && (
                 <div className={styles.footerCta}>
+                    <p className={styles.ctaIntro}>Real projects, real clients, and real solutions built for long-term impact.</p>
                     <Link href={viewAllHref} className={styles.viewAll}>
                         {viewAllLabel}
                     </Link>

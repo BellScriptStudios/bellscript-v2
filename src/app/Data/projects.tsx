@@ -15,8 +15,8 @@ export type Project = {
         width?: number;
         height?: number
     };
-    status?: "live" | "coming-soon" | "research-develop";
-    icon?: "umbrella" | "cli" | "shop" | "mirror" | "rnd";
+    status?: "live" | "coming-soon" | "research-develop" | "archived";
+    icon?: "umbrella" | "cli" | "shop" | "mirror" | "rnd" | "web";
     featured?: boolean;
     active?: boolean;
     inhouse: boolean;
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
         image: { src: "/images/smartspend-thumb.png", alt: "SmartSpend CLI thumbnail", width: 300, height: 200 },
         status: "live",
         icon: "cli",
-        featured: true,
+        featured: false,
         active: true,
         inhouse: false,
     },
@@ -105,6 +105,32 @@ export const PROJECTS: Project[] = [
         status: "research-develop",
         link: { href: "/luci", label: "R&D Project By BellScript Studios"},
         icon: "rnd",
+        featured: true,
+        active: true,
+        inhouse: true,
+    },
+
+    {
+        id: "bellscript-v1",
+        title: "BellScirpt Studios — Version One",
+        subtitle: "The original BellScript Studios site",
+        blurb: "The first version of BellScript Studios — a minimal, fast MVP designed to establish the early brand and ship quickly.",
+        features: [
+            "Rapid MVP build",
+            "Early brand exploration",
+            "Simple page structure",
+            "Clean UI foundations",
+            "Launched in under one week"
+        ],
+        image: {
+            src: "/images/bellscript-v1-thumb2.png", 
+            alt: "BellScript Studios Version One Screenshot",
+            width: 600,
+            height: 400
+        },
+        status: "archived",
+        link: { href: "/projects/bellscript-v1", label: "View Case Study"},
+        icon: "web",
         featured: true,
         active: true,
         inhouse: true,

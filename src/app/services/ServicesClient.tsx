@@ -118,12 +118,14 @@ export default function ServicesPage() {
           ))}
 
           <div className={styles.bottomCta}>
-            <Link
-              href="/contact"
-              className="btn-primary"
-              aria-label="Contact BellScript Studios"
-            >
-              Start a Project →
+              <p className={styles.contactHeader}>Work With Us.</p>
+              <p className={styles.contactIntro}>Partner with a studio focused on refinement, intention, and digital craftsmanship.</p>
+              <Link
+                href="/contact"
+                className={`btn-primary ${styles.ctaButton}`}
+                aria-label="Contact BellScript Studios"
+              >
+                Start a Project
             </Link>
           </div>
         </section>

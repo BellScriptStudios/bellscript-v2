@@ -51,6 +51,10 @@ export default function Home() {
               intro="From career milestones to life’s biggest moments, our featured services bring your ideas to life with clean, modern websites."
               items={FEATURED_SERVICES}
             />
+          <div className={styles.servicesCta}>
+            <p className={styles.ctaIntro}>Discover thoughtful offerings designed to support your brand’s next phase.</p>
+            <Link href="/services" className={styles.viewAll}>Browse Our Services</Link>
+          </div>
         </section>
 
         <section id="projects" className={styles.projects}>
@@ -61,15 +65,16 @@ export default function Home() {
             items={FEATURED_PROJECTS}
             showViewAll={true}
             viewAllHref="/projects"
-            viewAllLabel="View all projects"
+            viewAllLabel="See the Full Showcase"
             showHeading={true}
           />
         </section>
 
-        <ProcessSection />
 
         <AboutSection />
-        
+
+        <ProcessSection />
+
         <section
           id="services"
           className={styles.contactSection}

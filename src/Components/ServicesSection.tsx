@@ -25,8 +25,6 @@ export default function ServicesSection({ id, intro, items }: ServicesSectionPro
           <ServiceCard key={svc.id} service={svc} />
         ))}
       </div>
-
-      <div className={styles.servicesDivider} aria-hidden="true" />
     </div>
   );
 }

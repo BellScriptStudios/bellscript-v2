@@ -42,6 +42,9 @@ export default function ProjectsPage() {
                     ))}
                 </div>
                 <div className={styles.bottomCta}>
+                    <p className={styles.contactHeader}>Collaborate With Us.</p>
+                    <p className={styles.contactIntro}>Whether you’re starting fresh or leveling up, we’d love to build with you.</p>
+
                     <Link
                         href="/contact"
                         className={styles.primaryCta}

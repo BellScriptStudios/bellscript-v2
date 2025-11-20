@@ -92,6 +92,20 @@
     gap: 1.5rem;
 }
 
+.contactHeader {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #f9fafb;
+  margin: 0 0 0.5rem;
+}
+
+.contactIntro {
+  font-size: 0.95rem;
+  color: rgba(226, 232, 255, 0.85);
+  margin: 0 0 1.25rem;
+}
+
 .bottomCta {
     max-width: 1120px;
     margin: 3rem auto 0;
