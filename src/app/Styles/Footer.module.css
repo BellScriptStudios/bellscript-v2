@@ -70,7 +70,6 @@
   letter-spacing: 0.05em;
 }
 
-/* Nav Links */
 .nav {
   display: flex;
   justify-content: center;
@@ -95,6 +94,19 @@
   font-size: 0.8rem;
   color: rgba(226, 232, 255, 0.55);
 }
+
+.legalLink {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.legalLink:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.separator { color: rgba(255,255,255,0.35); }
 
 @media (min-width: 768px) {
   .inner {
