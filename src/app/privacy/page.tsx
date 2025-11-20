@@ -29,7 +29,7 @@ export default function PrivacyPage() {
             <h1 id="privacy-title" className={styles.title}>
             A simple, human-readable privacy policy.
             </h1>
-            <p className={styles.updated}>Last updated: February 2025</p>
+            <p className={styles.updated}>Last updated: November 2025</p>
             <p className={styles.lead}>
             We only collect what you choose to send us through the contact form —
             and we use it solely to respond, collaborate, and support your project.
