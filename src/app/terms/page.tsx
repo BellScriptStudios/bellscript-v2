@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import styles from "src/app/Styles/AboutPage.module.css";
+import styles from "src/app/Styles/LegalPage.module.css";
 
 export const metadata: Metadata = {
     title: "Terms of Service",
@@ -29,6 +29,7 @@ export default function TermsPage() {
             <h1 id="terms-title" className={styles.title}>
             Simple terms for using this site.
             </h1>
+            <p className={styles.updated}>Last updated: February 2025</p>
             <p className={styles.lead}>
             These terms explain how you may use the BellScript Studios website and
             what to expect when you get in touch about a project.
@@ -141,7 +142,7 @@ export default function TermsPage() {
                 If you have questions about these terms or how we work, you can
                 reach us at{" "}
                 <span className={styles.inlineStrong}>
-                hello@BellScriptStudios.com
+                hello@bellscript.stuido
                 </span>
                 .
             </p>
