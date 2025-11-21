@@ -98,7 +98,7 @@ export default function BellScriptV1Page() {
             <section className={styles.section}>
                 <h2>What We Learned</h2>
                 <ul>
-                    <li>The brand need a more intentional visual identity.</li>
+                    <li>The brand needed a more intentional visual identity.</li>
                     <li>The service offerings needed a stronger story and positioning.</li>
                     <li>The UI needed more depth, warmth, and personality.</li>
                     <li>The structure was working — just need polish.</li>

@@ -322,6 +322,11 @@
   margin-top: 1rem;
 }
 
+.agree {
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.98);
+}
+
 @media (min-width: 768px) {
   .hero {
     padding: 5.5rem 1.5rem 3.25rem;

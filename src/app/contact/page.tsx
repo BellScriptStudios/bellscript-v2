@@ -194,6 +194,9 @@ export default function AboutPage() {
                             <p className={styles.helperText}>
                                 You&apos;ll hear back within 1–2 business days with next steps.
                             </p>
+                            <p className={styles.agree}>
+                                By submitting, you acknowledge our Privacy Policy.
+                            </p>
                         </div>
                     </form>
                 </div>
