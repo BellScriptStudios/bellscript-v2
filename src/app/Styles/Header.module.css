@@ -75,8 +75,8 @@
 }
 
 .hamburger {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(7, 8, 13, 0.9);
@@ -85,6 +85,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0.4rem;
   padding: 0;
   position: relative;
   transition:
@@ -141,7 +142,6 @@
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
-
 
 .mobileMenu {
   position: absolute;

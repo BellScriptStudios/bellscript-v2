@@ -48,7 +48,7 @@ export default function Footer() {
         <nav className={styles.nav}>
           <Link href="/" className={styles.link}>Home</Link>
           <Link href="/services" className={styles.link}>Services</Link>
-          <Link href="/projects" className={styles.link}>Projects</Link>
+          <Link href="/projects" className={styles.link}>Our Work</Link>
           <Link href="/contact" className={styles.link}>Contact</Link>
         </nav>
 

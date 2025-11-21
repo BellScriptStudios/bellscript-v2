@@ -125,6 +125,7 @@
 
 .blurb {
   font-size: 0.85rem;
+  max-width: 700px;
   line-height: 1.5;
   color: #ffffffcc;
   margin: 0.15rem 0 0.4rem;

@@ -35,23 +35,24 @@ export default function ProjectsPage() {
                     <p className={styles.lead}>Projects engineered with purpose — refined visuals, scalable architectures, and smooth user journeys for concept to launch.</p>
                 </header>
 
+                <div className={styles.content}>
+                    <div className={styles.stack}>
+                        {active.map(p => (
+                            <ProjectCard key={p.id} project={p} />
+                        ))}
+                    </div>
+                    <div className={styles.bottomCta}>
+                        <p className={styles.contactHeader}>Collaborate With Us.</p>
+                        <p className={styles.contactIntro}>Whether you’re starting fresh or leveling up, we’d love to build with you.</p>
 
-                <div className={styles.stack}>
-                    {active.map(p => (
-                        <ProjectCard key={p.id} project={p} />
-                    ))}
-                </div>
-                <div className={styles.bottomCta}>
-                    <p className={styles.contactHeader}>Collaborate With Us.</p>
-                    <p className={styles.contactIntro}>Whether you’re starting fresh or leveling up, we’d love to build with you.</p>
-
-                    <Link
-                        href="/contact"
-                        className={styles.primaryCta}
-                        aria-label="Contact BellScript Studios"
-                    >
-                        Start a Project
-                    </Link>
+                        <Link
+                            href="/contact"
+                            className={`btn-primary ${styles.ctaButton}`}
+                            aria-label="Contact BellScript Studios"
+                        >
+                            Start a Project
+                        </Link>
+                    </div>
                 </div>
             </main>
         </>

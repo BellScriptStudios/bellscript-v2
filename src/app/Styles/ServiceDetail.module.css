@@ -1,15 +1,84 @@
-.main {
+.page {
+  position: relative;
   min-height: 80vh;
-  background: #02030a;
-  color: #eef3ff;
-  padding: 5rem 1.5rem 4rem;
+  padding: 4.5rem 1.25rem 3.5rem;
+  color: #e5edff;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 12% 0%,
+      rgba(255, 75, 120, 0.45) 0%,
+      rgba(255, 75, 120, 0.16) 26%,
+      transparent 60%
+    ),
+
+    radial-gradient(
+      circle at 88% 100%,
+      rgba(255, 220, 120, 0.40) 0%,
+      rgba(255, 220, 120, 0.14) 28%,
+      transparent 65%
+    ),
+      linear-gradient(145deg, #020617 0%, #020314 45%, #030712 100%);
+    background-attachment: fixed;
 }
 
+@media (min-width: 768px) {
+  .page {
+      padding: 5.5rem 1.5rem 4rem;
+
+  }
+}
+
+.page::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+      linear-gradient(
+        to bottom,
+        rgba(255, 200, 150, 0.06) 0px,
+        transparent 1px,
+        transparent 14px
+      ),
+
+      radial-gradient(
+        ellipse at 50% 0%,
+        rgba(255, 180, 90, 0.28) 0%,
+        rgba(15, 23, 42, 0) 60%
+      );
+
+  mix-blend-mode: soft-light;
+  opacity: 0.35;
+  filter: blur(0.3px);
+}
+
+.kicker {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
 
 .detailBody {
   max-width: 1120px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .detailBody {
+    padding: 0;
+  }
+}
+@media (min-width: 1120px) {
+  .detailBody {
+    padding: 0 1.5rem;
+  }
 }
 
 .detailBody::before {
@@ -142,6 +211,10 @@
   color: rgba(226, 232, 255, 0.85);
 }
 
+.list li {
+  list-style-type: disc;
+}
+
 .list li + li {
   margin-top: 0.25rem;
 }
@@ -179,7 +252,7 @@
 }
 
 .backNav {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 .backLink {
@@ -190,15 +263,9 @@
 
 .backLink:hover {
   color: #f9fafb;
-  text-decoration: underline;
 }
 
-/* Larger screens */
-
 @media (min-width: 640px) {
-  .main {
-    padding: 5rem 1.5rem 4rem;
-  }
 
   .columns {
     display: grid;

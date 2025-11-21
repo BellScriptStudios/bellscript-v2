@@ -25,8 +25,9 @@ export default function ServiceDetail({ service }: { service: Service }) {
     typeof outcome === "string" && outcome.trim().length > 0;
 
   return (
-    <main className={styles.main} role="main" aria-labelledby="service-title">
+    <main className={styles.page} role="main" aria-labelledby="service-title">
       <div className={styles.detailBody} aria-labelledby="service-title">
+        <p className={styles.kicker}>Get into the details</p>
         <header className={styles.header}>
           <h1 id="service-title">{title}</h1>
 
