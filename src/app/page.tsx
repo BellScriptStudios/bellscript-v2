@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Splash from "src/Components/Splash";
+{ /* import Splash from "src/Components/Splash"; */ }
 import styles from "src/app/Styles/Page.module.css";
 import Link from "next/link";
 import ProcessSection from "src/Components/ProcessSection";
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Splash />
+      { /* <Splash /> */ }
 
       <main className={styles.page}>
         <div className={styles.hero}>
-          <h1 className={styles.title}>Building Innovative Experiences</h1>
+          <p className={`kicker ${styles.kicker}`}>Welcome to the Studio</p>
+          <h1 className={`title ${styles.title}`}>Building Innovative Experiences</h1>
           <p className={styles.subTitle}>Custom websites and digital experiences — fast, modern, and crafted for your brand.</p>
-          <Link href="/contact" className={`btn-primary ${styles.ctaBtn}`}>Start your Project</Link>
         </div>
 
         <section

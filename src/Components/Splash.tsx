@@ -41,7 +41,7 @@ export default function Splash() {
 
     window.setTimeout(() => {
       setVisible(false);
-    }, 400)
+    }, 350)
   }
 
   if (!visible) return null;

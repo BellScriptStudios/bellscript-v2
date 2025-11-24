@@ -24,8 +24,8 @@ export default function AboutPage() {
     return (
         <main className={styles.page} role="main" aria-labelledby="contact-h1">
             <section className={styles.hero}>
-                <p className={styles.kicker}>Contact BellScript Studios</p>
-                <h1 id="contact-h1" className={styles.title}>Start a project. Keep it simple.</h1>
+                <p className={`kicker ${styles.kicker}`}>Let&apos;s start the conversation</p>
+                <h1 id="contact-h1" className={`title ${styles.title}`}>Start a project. Keep it simple.</h1>
                 <p className={styles.lead}>
                     Tell us what you’re building, where you are in the process,
                     and we’ll follow up with a clear next step — no pressure, no chaos.

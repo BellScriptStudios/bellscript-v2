@@ -11,8 +11,8 @@ export default function BellScriptV1Page() {
     return (
         <main className={styles.page}>
             <header className={styles.hero}>
-                <p className={styles.kicker}>Archived Project</p>
-                <h1 className={styles.title}>Case Study: BellScript Studios V1</h1>
+                <p className={`kicker ${styles.kicker}`}>Archived Project</p>
+                <h1 className={`title ${styles.title}`}>Case Study: BellScript Studios V1</h1>
                 <p className={styles.lead}>
                     The original BellScript Studios site. Build fast, simple and with clarity as the main goal.
                 </p>

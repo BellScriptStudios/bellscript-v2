@@ -69,6 +69,8 @@
 }
 
 .viewAll {
+  font-family: var(--font-sora), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -122,11 +124,6 @@
 }
 
 @media (min-width: 1024px) {
-  .section {
-    padding: 4rem 14.5rem 4.5rem;
-  }
-
-
   .intro {
     max-width: 28rem;
     font-size: 0.9rem;

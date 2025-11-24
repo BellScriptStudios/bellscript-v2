@@ -27,7 +27,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
   return (
     <main className={styles.page} role="main" aria-labelledby="service-title">
       <div className={styles.detailBody} aria-labelledby="service-title">
-        <p className={styles.kicker}>Get into the details</p>
+        <p className={`kicker ${styles.kicker}`}>Get into the details</p>
         <header className={styles.header}>
           <h1 id="service-title">{title}</h1>
 

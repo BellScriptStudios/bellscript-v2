@@ -25,8 +25,8 @@ export default function TermsPage() {
     return (
         <main className={styles.page} aria-labelledby="terms-title">
         <header className={styles.hero}>
-            <p className={styles.kicker}>Terms of Service</p>
-            <h1 id="terms-title" className={styles.title}>
+            <p className={`kicker ${styles.kicker}`}>Terms of Service</p>
+            <h1 id="terms-title" className={`title ${styles.title}`}>
             Simple terms for using this site.
             </h1>
             <p className={styles.updated}>Last updated: November 2025</p>

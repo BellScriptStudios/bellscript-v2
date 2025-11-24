@@ -25,8 +25,8 @@ export default function PrivacyPage() {
     return (
         <main className={styles.page} aria-labelledby="privacy-title">
         <header className={styles.hero}>
-            <p className={styles.kicker}>Privacy Policy</p>
-            <h1 id="privacy-title" className={styles.title}>
+            <p className={`kicker ${styles.kicker}`}>Privacy Policy</p>
+            <h1 id="privacy-title" className={`title ${styles.title}`}>
             A simple, human-readable privacy policy.
             </h1>
             <p className={styles.updated}>Last updated: November 2025</p>

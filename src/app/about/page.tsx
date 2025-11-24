@@ -24,8 +24,8 @@ export default function AboutPage() {
   return (
         <main className={styles.page}>
             <div className={styles.hero}>
-                <p className={styles.kicker}>About BellScript Studios</p>
-                <h1 className={styles.title}>
+                <p className={`kicker ${styles.kicker}`}>A look inside the studio</p>
+                <h1 className={`title ${styles.title}`} >
                 Where thoughtful design and reliable engineering meet.
                 </h1>
                 <p className={styles.lead}>

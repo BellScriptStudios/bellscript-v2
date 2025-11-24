@@ -1,6 +1,6 @@
 .about {
     position: relative;
-    padding: clamp(2rem, 5vw, 2rem) 2rem;
+    padding: 4.5rem 1.25rem;
     background: #02030a;
     border-top: 1px solid #111827;
     overflow: hidden;
@@ -71,10 +71,6 @@
 }
 
 @media (min-width: 768px) {
-  .about {
-    padding: 4.5rem 2.75rem;
-  }
-
   .about::before {
     top: -30%;
     width: 110%;

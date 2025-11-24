@@ -56,13 +56,7 @@
   filter: blur(0.3px);
 }
 
-.kicker {
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
-}
+.kicker { margin-bottom: 1rem; }
 
 .detailBody {
   max-width: 1120px;

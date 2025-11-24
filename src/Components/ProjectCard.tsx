@@ -145,7 +145,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className={styles.ctaSlot}>
           {status === "coming-soon" ? (
             <span
-              className={`${styles.badge} ${styles.ctaPill}`}
+              className={`${styles.soonBadge} ${styles.ctaPill}`}
               aria-label="Coming Soon"
             >
               Coming Soon
