@@ -1,6 +1,5 @@
 .about {
     position: relative;
-    padding: 4rem 1.5rem;
     background: #02030a;
     border-top: 1px solid #111827;
     overflow: hidden;
@@ -25,10 +24,11 @@
 .aboutInner {
   max-width: 1120px;
   margin: 0 auto;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
 }
 
 .aboutKicker {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-weight: 600;

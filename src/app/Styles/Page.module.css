@@ -52,7 +52,6 @@
 
 .services {
   position: relative;
-  padding: 2.5rem 1.25rem;
   border-top: 1px solid #151515;
   overflow: visible;
   z-index: 0;
@@ -84,17 +83,7 @@
   }
 }
 
-@media (min-width:768px) {
-  .services {
-    padding: 2.5rem 1.5rem;
-  }
-}
-
 @media (min-width: 1024px) {
-  .services {
-    padding: 4rem 1.5rem;
-  }
-
   .services::before {
     top: -35%;
     width: 80%;
@@ -104,30 +93,12 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .services {
-    padding: 4rem 11.5rem;
-  }
-}
-
 .servicesInner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
 }
 
-@media (min-width: 1440px) {
-  .servicesInner {
-    margin: 0;
-  }
-}
-
-@media (min-width: 2560px) {
-  .servicesInner {
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-}
 
 .servicesHeader {
   margin-bottom: 1.75rem;
@@ -180,7 +151,7 @@
 }
 .servicesCta {
   text-align: center;
-  padding: 2.25rem 1.25rem 0.5rem;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
 }
 
 .ctaIntro {
@@ -231,7 +202,7 @@
 }
 
 .contactSection {
-  padding: 2.5rem 1.5rem;
+  padding: clamp(0.75rem, 4vw, 1.5rem) clamp(1rem, 5vw, 1.5rem);
   position: relative;
   overflow: hidden;
 }

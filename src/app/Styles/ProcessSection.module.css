@@ -1,11 +1,11 @@
 .processSection {
-    padding: 2.5rem 1.5rem;
     border-top: 1px solid #111827;
 }
 
 .inner {
     max-width: 1120px;
     margin: 0 auto;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
 }
 
 .kicker {

@@ -26,30 +26,32 @@ export default function ProjectSection({
 }: Props) {
     return (
         <section id={id} className={styles.section}>
+            <div className={styles.inner}>
             
-            {showHeading && (
-                <>
-                    <div className={styles.hero}>
-                        <h2 className={styles.kicker}>{heading}</h2>
-                        {intro && <p className={styles.intro}>{intro}</p>}
-                    </div>
-                </>
-            )}
+                {showHeading && (
+                    <>
+                        <div className={styles.hero}>
+                            <h2 className={styles.kicker}>{heading}</h2>
+                            {intro && <p className={styles.intro}>{intro}</p>}
+                        </div>
+                    </>
+                )}
 
-            <div className={styles.stack}>
-                {items.map((p) => (
-                    <ProjectCard key={p.id} project={p} />
-                ))}
-            </div>
-
-            {showViewAll && (
-                <div className={styles.footerCta}>
-                    <p className={styles.ctaIntro}>Real projects, real clients, and real solutions built for long-term impact.</p>
-                    <Link href={viewAllHref} className={styles.viewAll}>
-                        {viewAllLabel}
-                    </Link>
+                <div className={styles.stack}>
+                    {items.map((p) => (
+                        <ProjectCard key={p.id} project={p} />
+                    ))}
                 </div>
-            )}
+
+                {showViewAll && (
+                    <div className={styles.footerCta}>
+                        <p className={styles.ctaIntro}>Real projects, real clients, and real solutions built for long-term impact.</p>
+                        <Link href={viewAllHref} className={styles.viewAll}>
+                            {viewAllLabel}
+                        </Link>
+                    </div>
+                )}
+            </div>
         </section>
     );
 }

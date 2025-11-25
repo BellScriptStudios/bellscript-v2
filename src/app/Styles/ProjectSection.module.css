@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.25rem;
   background: transparent;
   z-index: 0;
 }
@@ -23,6 +23,12 @@
   opacity: 0.5;
   pointer-events: none;
   z-index: -1;
+}
+
+.inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
 }
 
 .hero {
@@ -110,10 +116,6 @@
 }
 
 @media (min-width: 768px) {
-  .section {
-    padding: 4rem 1.5rem;
-  }
-
   .title {
     font-size: 1.6rem;
   }
