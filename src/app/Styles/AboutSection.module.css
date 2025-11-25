@@ -1,5 +1,6 @@
 .about {
     position: relative;
+    padding: 1.5rem 0;
     background: #02030a;
     border-top: 1px solid #111827;
     overflow: hidden;
