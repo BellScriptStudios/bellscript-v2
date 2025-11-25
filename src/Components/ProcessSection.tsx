@@ -4,7 +4,7 @@ export default function ProcessSection() {
     return (
         <section className={styles.processSection} aria-labelledby="process-heading">
             <div className={styles.inner}>
-                <p id="process-title" className={styles.processHeader}>Process</p>
+                <p id="process-title" className={styles.kicker}>Process</p>
                 <p className={styles.processDesc}>
                     From concept to launch, we follow a streamlined process to ensure 
                     your project is delivered on time and exceeds expecations.

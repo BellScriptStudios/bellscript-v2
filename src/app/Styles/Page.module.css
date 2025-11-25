@@ -135,7 +135,7 @@
 }
 
 .servicesKicker {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-weight: 600;
@@ -231,15 +231,9 @@
 }
 
 .contactSection {
-  padding: 1rem 1.25rem 2rem 1.25rem;
+  padding: 2.5rem 1.5rem;
   position: relative;
   overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .contactSection {
-    padding: 2.5rem 1.25rem;
-  }
 }
 
 .contactSection::before {
@@ -261,7 +255,7 @@
 }
 
 .contactHeader {
-    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     font-weight: 700;

@@ -30,7 +30,7 @@ export default function ProjectSection({
             {showHeading && (
                 <>
                     <div className={styles.hero}>
-                        <h2 className={styles.header}>{heading}</h2>
+                        <h2 className={styles.kicker}>{heading}</h2>
                         {intro && <p className={styles.intro}>{intro}</p>}
                     </div>
                 </>
