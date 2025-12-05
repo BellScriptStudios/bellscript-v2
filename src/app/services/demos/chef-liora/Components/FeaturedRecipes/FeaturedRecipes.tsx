@@ -39,7 +39,7 @@ export default function FeaturedRecipes() {
             <h2 className={styles.title}>Featured recipes</h2>
           </div>
 
-          <Link href="/demos/website-in-a-week/recipes" className={styles.viewAll}>
+          <Link href="/services/demos/chef-liora#recipes" className={styles.viewAll}>
             See all recipes
             <span aria-hidden="true">↗</span>
           </Link>

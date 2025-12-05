@@ -46,7 +46,7 @@ export default function VideoStrip() {
                     </div>
 
 
-                    <Link href="/demos/chef-liora/videos" className={styles.viewAll}>
+                    <Link href="/services/demos/chef-liora#tutorials" className={styles.viewAll}>
                         View all videos
                         <span aria-hidden="true">↗</span>
                     </Link>
