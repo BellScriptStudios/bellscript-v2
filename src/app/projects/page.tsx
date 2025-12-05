@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "src/app/Styles/ProjectPage.module.css";
+import Header from "src/Components/Header";
+import Footer from "src/Components/Footer";
 import ProjectCard from "src/Components/ProjectCard";
 import { PROJECTS } from "src/app/Data/projects";
 import type { Metadata } from "next";
@@ -28,6 +30,8 @@ export default function ProjectsPage() {
 
     return (
         <>
+            <Header />
+
             <main className={styles.page} role="main" aria-labelledby="projects-h1">
                 <header className={styles.hero}>
                     <p className={`kicker ${styles.kicker}`}>The work we do</p>
@@ -55,6 +59,7 @@ export default function ProjectsPage() {
                     </div>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }

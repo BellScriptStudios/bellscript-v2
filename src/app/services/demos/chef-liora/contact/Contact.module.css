@@ -1,0 +1,258 @@
+.page {
+  min-height: 100vh;
+  background: #fdfaf6;
+}
+
+.section {
+  width: 100%;
+  padding: 3rem 1.25rem 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+.copy {
+  max-width: 540px;
+}
+
+.kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  margin: 0 0 0.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  color: #1f1f21;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(10, 10, 12, 0.8);
+}
+
+.metaList {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.metaItem {
+  padding-left: 0.25rem;
+}
+
+.metaTitle {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f1f21;
+}
+
+.metaText {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(10, 10, 12, 0.75);
+}
+
+.note {
+  margin: 0 0 0.85rem;
+  font-size: 0.9rem;
+  color: rgba(10, 10, 12, 0.75);
+}
+
+.noteLink {
+  color: #d47c4a;
+  text-decoration: none;
+}
+
+.noteLink:hover {
+  text-decoration: underline;
+}
+
+.backLinkWrap {
+  margin-top: 0.25rem;
+}
+
+.backLink {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: rgba(20, 20, 22, 0.75);
+}
+
+.backLink:hover {
+  color: #d47c4a;
+}
+
+.formWrap {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.6rem 1.4rem 1.8rem;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fieldGroup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.labelText {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: rgba(255, 255, 255, 0.98);
+  font-size: 0.95rem;
+  outline: none;
+  color: #1f1f21;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.input:focus {
+  border-color: #d47c4a;
+  box-shadow: 0 0 0 1px rgba(212, 124, 74, 0.4);
+  background-color: #ffffff;
+}
+
+.textarea {
+  border-radius: 16px;
+  resize: vertical;
+  min-height: 140px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: rgba(255, 255, 255, 0.98);
+  font-size: 0.95rem;
+  outline: none;
+  color: #1f1f21;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #777 50%),
+    linear-gradient(135deg, #777 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.select:focus {
+  border-color: #d47c4a;
+  box-shadow: 0 0 0 1px rgba(212, 124, 74, 0.4);
+  background-color: #ffffff;
+}
+
+.button {
+  margin-top: 0.4rem;
+  align-self: flex-start;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #d47c4a;
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(212, 124, 74, 0.32);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(212, 124, 74, 0.4);
+  background: #c76f3f;
+}
+
+.button:focus-visible {
+  outline: 2px solid #2f2f32;
+  outline-offset: 2px;
+}
+
+.helpText {
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  color: rgba(10, 10, 12, 0.7);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 3.25rem 1.5rem 3.75rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .fieldGroup {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .formWrap {
+    padding: 1.9rem 1.8rem 2.1rem;
+  }
+}

@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Sora, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Header from "src/Components/Header";
-import Footer from "src/Components/Footer";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -76,9 +74,7 @@ export default function RootLayout({
           antialiased`
         }
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

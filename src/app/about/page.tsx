@@ -1,6 +1,8 @@
 import styles from "src/app/Styles/AboutPage.module.css"
 import { Metadata } from "next";
 import Link from "next/link";
+import Header from "src/Components/Header";
+import Footer from "src/Components/Footer";
 
 export const metadata: Metadata = {
   title: "About",
@@ -22,6 +24,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
+    <>
+        <Header />
+
         <main className={styles.page}>
             <div className={styles.hero}>
                 <p className={`kicker ${styles.kicker}`}>A look inside the studio</p>
@@ -125,5 +130,8 @@ export default function AboutPage() {
                 </section>
             </div>
         </main>
+
+        <Footer />
+    </>
     );
 }

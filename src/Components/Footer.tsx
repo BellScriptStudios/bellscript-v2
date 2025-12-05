@@ -55,7 +55,7 @@ export default function Footer() {
         <div className={styles.legal}>
           <p>© {year} BellScript Studios. All rights reserved.</p>
           <Link href="/privacy" className={styles.legalLink}>Privacy Policy </Link>
-          <span className={styles.spearator}>•</span>
+          <span className={styles.separator}>•</span>
           <Link href="/terms" className={styles.legalLink}> Terms of Service</Link>
         </div>
       </div>

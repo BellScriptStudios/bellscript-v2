@@ -71,6 +71,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "web",
                 featured: true,
                 active: true,
+                demoUrl: "/services/demos/chef-liora"
             },
             {
                 id:"local-business-bundle",

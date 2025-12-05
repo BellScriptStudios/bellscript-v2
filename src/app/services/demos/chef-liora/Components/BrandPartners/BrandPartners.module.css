@@ -1,0 +1,103 @@
+.section {
+  width: 100%;
+  padding: 2.5rem 1.25rem 2.75rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fdfaf6;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1120px;
+  text-align: center;
+}
+
+.kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.logos::-webkit-scrollbar {
+  height: 6px;
+}
+
+.logos::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 999px;
+}
+
+.logoBadge {
+  flex: 0 0 auto;
+  min-width: 140px;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+.logoText {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 22, 0.7);
+}
+
+.note {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(10, 10, 12, 0.78);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 2.75rem 1.5rem 3rem;
+  }
+
+  .logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+    padding-bottom: 0;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .logoBadge {
+    min-width: 150px;
+  }
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding: 3rem 1.5rem 3.25rem;
+  }
+
+  .kicker {
+    margin-bottom: 1.75rem;
+  }
+
+  .logos {
+    gap: 1.5rem;
+  }
+
+  .logoBadge {
+    padding-inline: 1.4rem;
+  }
+}

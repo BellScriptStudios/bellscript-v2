@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "src/app/Styles/ServicesPage.module.css";
+import Header from "src/Components/Header";
+import Footer from "src/Components/Footer";
 import ServiceCard from "src/Components/ServiceCard";
 import { SERVICE_CATEGORIES } from "src/app/Data/services";
 import type { IconKey } from "src/app/Data/services";
@@ -66,6 +68,7 @@ export default function ServicesPage() {
 
   return (
     <>
+      <Header />
       <main className={styles.page}>
         <section className={styles.hero}>
           <p className={`kicker ${styles.kicker}`}>Studio Services</p>
@@ -130,6 +133,7 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 { /* import Splash from "src/Components/Splash"; */ }
 import styles from "src/app/Styles/Page.module.css";
 import Link from "next/link";
+import Header from "src/Components/Header";
+import Footer from "src/Components/Footer";
 import ProcessSection from "src/Components/ProcessSection";
 import ServicesSection from "src/Components/ServicesSection";
 import AboutSection from "src/Components/AboutSection";
@@ -31,6 +33,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <Header />
+
       { /* <Splash /> */ }
 
       <main className={styles.page}>
@@ -86,6 +90,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
