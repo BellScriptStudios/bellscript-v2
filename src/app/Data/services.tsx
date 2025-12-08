@@ -252,6 +252,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "resume",
                 featured: false,
                 active: true,
+                demoUrl: "/services/demos/ariana-james-resume"
             },
         ],
     },
