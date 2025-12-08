@@ -3,19 +3,20 @@ import styles from "./FinalCTA.module.css";
 
 export default function FinalCTA() {
   return (
+    
     <section className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.title}>
-          Imagine this as your website in just seven days.
+          Let’s create a digital presence that works as hard as you do.
         </h2>
 
         <p className={styles.subtitle}>
-          Clean design, confident storytelling, and a layout built for your brand.
-          Website in a Week brings it all together — fast, modern, and fully custom.
+          Showcase your experience with a clean, modern website 
+          designed to make hiring managers stop and pay attention.
         </p>
 
-        <Link href="/services/website-in-a-week" className={styles.button}>
-          Start your Website in a Week →
+        <Link href="/services/resume-website" className={styles.button}>
+          Start your Resume Website →
         </Link>
 
         <p className={styles.note}>
