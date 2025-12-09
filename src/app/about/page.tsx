@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "BellScript Studios is a digital studio under The Morning Bell Co., dedicated to clean design, fast builds, and intentional engineering.",
     url: "/about",
+    images: [
+      {
+        url: "https://bellscript.studio/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BellScript Studios – Custom Websites & Digital Solutions",
+      },
+    ],
     type: "website",
   },
   twitter: {

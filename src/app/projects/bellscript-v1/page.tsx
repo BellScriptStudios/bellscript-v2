@@ -8,6 +8,27 @@ export const metadata = {
     title: "BellScript Studios — Version One",
     description:
         "A look back at the first version of BellScript Studios: a fast, minimal, MVP that laid the foundation for the current brand.",
+    openGraph: {
+        title: "BellScript Studios — Version One",
+        description:
+        "A look back at the first version of BellScript Studios: a fast, minimal, MVP that laid the foundation for the current brand.",
+        url: "/projects/bellscript-v1",
+        images: [
+            {
+                url: "https://bellscript.studio/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "BellScript Studios — Version One",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "BellScript Studios — Version One",
+        description:
+        "A look back at the first version of BellScript Studios: a fast, minimal, MVP that laid the foundation for the current brand.",
+    },
 };
 
 export default function BellScriptV1Page() {

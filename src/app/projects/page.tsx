@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     description:
       "Explore modern websites, digital tools, and custom builds crafted by BellScript Studios. Clean interfaces, thoughtful engineering, and fast delivery—designed for today’s brands.",
     url: "/projects",
+    images: [
+        {
+            url: "https://bellscript.studio/og-image.jpg",
+            width: 1200,
+            height: 630,
+            alt: "BellScript Studios — Version One",
+        },
+    ],
     type: "website",
   },
   twitter: {

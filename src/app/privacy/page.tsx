@@ -13,6 +13,14 @@ export const metadata: Metadata = {
         description:
         "BellScript Studios only collects the information you submit through our contact form. No tracking cookies, no ad pixels, and no selling your data.",
         url: "/privacy",
+        images: [
+            {
+                url: "https://bellscript.studio/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "BellScript Studios – Custom Websites & Digital Solutions",
+            },
+        ],
         type: "website",
     },
     twitter: {

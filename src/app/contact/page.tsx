@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     description:
       "Tell us what you’re building. We’ll help design, develop, and launch a modern, reliable experience.",
     url: "/contact",
+    images: [
+      {
+        url: "https://bellscript.studio/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BellScript Studios – Custom Websites & Digital Solutions",
+      },
+    ],
     type: "website",
   },
   twitter: {

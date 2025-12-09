@@ -49,6 +49,14 @@ export async function generateMetadata(
       description,
       url: canonicalUrl,
       siteName: "BellScript Studios",
+      images: [
+        {
+          url: "https://bellscript.studio/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "BellScript Studios — Version One",
+        },
+    ],
       type: "article",
     },
     twitter: {
