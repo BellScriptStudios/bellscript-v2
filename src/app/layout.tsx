@@ -44,6 +44,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   openGraph: {
     siteName: "BellScript Studios",
+    images: [
+      {
+        url:"/og-image-.jpg",
+        width: 1200,
+        height: 630,
+
+      }
+    ],
     type: "website",
   },
   twitter: {
