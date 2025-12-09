@@ -12,21 +12,24 @@ import { FEATURED_SERVICES } from "src/app/Data/services";
 import ProjectSection from "src/Components/ProjectSection";
 
 export const metadata: Metadata = {
-  title: "We build in a week — BellScript Studios",
+  title: "BellScript Studios | Custom Websites & Digital Solutions",
   description:
-    "BellScript Studios builds clean, modern websites and digital experiences — fast. From Website-in-a-Week builds to local business bundles, we help you launch without the corporate bloat.",
+    "BellScript Studios builds modern, custom websites and digital solutions.",
   openGraph: {
+    title: "BellScript Studios",
+    description:
+      "Custom websites and digital solutions built with clean, modern code.",
+    url: "https://bellscript.studio",
+    siteName: "BellScript Studios",
     type: "website",
-    url: "/",
-    title: "We build in a week — BellScript Studios",
-    description:
-      "Custom websites and digital experiences — fast, modern, and crafted for real-world ideas.",
-  },
-    twitter: {
-    card: "summary_large_image",
-    title: "We build in a week — BellScript Studios",
-    description:
-      "Custom websites and digital experiences — fast, modern, and crafted for your brand.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "BellScript Studios – Custom Websites & Digital Solutions",
+      },
+    ],
   },
 };
 

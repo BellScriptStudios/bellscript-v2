@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "BellScript Studios",
     description:
       "Custom websites and digital solutions built with clean, modern code.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
 }
 
