@@ -203,8 +203,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 active: true,
             },
             {
-                id:"birthday-website",
-                title: "Birthday Website",
+                id:"party-website",
+                title: "Party Website",
                 blurb: "A fun, sharable page with details and RSVPs.",
                 long: "A personalized event site for details, RSVPs, and memories.",
                 bullets: ["Invite & RSVP", "Photos", "Wishlist/registry (optional)"],
@@ -224,6 +224,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "event",
                 featured: false,
                 active: true,
+                demoUrl: "/services/demos/wedding-cocktail",
             },
         ],
     },
