@@ -9,7 +9,7 @@ export type Project = {
         label?: string;
         ariaLabel?: string
     };
-    image?: {
+    thumbnail?: {
         src: string;
         alt: string;
         width?: number;
@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
             "Optimized for speed, SEO, and cross-browser compatibility",
         ],
         link: { href: "https://www.themorningbell.co"},
-        image: { 
+        thumbnail: { 
             src: "/images/tmb.png",
             alt: "The Morning Bell Co. thumbnail",
             width: 300, height: 200 },
@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
             href: "https://github.com/MTinsley00/CLI_Expense_Tracker.git",
             ariaLabel: "View SmartSpend CLI Expense Tracker project on GitHub",
         },
-        image: { src: "/images/smartspend-thumb.png", alt: "SmartSpend CLI thumbnail", width: 300, height: 200 },
+        thumbnail: { src: "/images/smartspend-thumb.png", alt: "SmartSpend CLI thumbnail", width: 300, height: 200 },
         status: "live",
         icon: "cli",
         featured: false,
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
             "Mobile-first experience",
         ],
         link: { href: "https://www.candlephase.com", label: "Coming Soon" },
-        image: { src: "/images/candle-phase-bs-thumbnail.png", alt: "Candle Phase thumbnail", width: 300, height: 200 },
+        thumbnail: { src: "/images/candle-phase-bs-thumbnail.png", alt: "Candle Phase thumbnail", width: 300, height: 200 },
         status: "coming-soon",
         icon: "shop",
         featured: true,
@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
             "Clean UI foundations",
             "Launched in under one week"
         ],
-        image: {
+        thumbnail: {
             src: "/images/bellscript-v1-thumb2.png", 
             alt: "BellScript Studios Version One Screenshot",
             width: 600,

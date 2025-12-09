@@ -91,8 +91,8 @@ function Icon({ kind }: { kind?: Project["icon"] }) {
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const { title, subtitle, blurb, features, link, image, status, icon } = project;
-  const hasImage = Boolean(image);
+  const { title, subtitle, blurb, features, link, thumbnail, status, icon } = project;
+  const hasImage = Boolean(thumbnail);
 
   return (
     <article
@@ -104,16 +104,16 @@ export default function ProjectCard({ project }: { project: Project }) {
       {hasImage && (
         <div className={styles.thumbwrap}>
           <a
-            href={image!.src}
+            href={thumbnail!.src}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${title} image`}
           >
             <Image
-              src={image!.src}
-              alt={image!.alt}
-              width={image!.width ?? 300}
-              height={image!.height ?? 200}
+              src={thumbnail!.src}
+              alt={thumbnail!.alt}
+              width={thumbnail!.width ?? 300}
+              height={thumbnail!.height ?? 200}
               className={styles.image}
               priority={false}
             />
