@@ -25,7 +25,7 @@ export default function HeaderSection() {
                     <p className={styles.subtitle}>Crafting warm intentional guest experiences rooted in the soul of Detroit.</p>
                     <div className={styles.CTARow}>
                         <a
-                            href="/files/demos/Ariana-James-Resume.pdf"
+                            href="/Ariana-James-Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.downloadBtn}

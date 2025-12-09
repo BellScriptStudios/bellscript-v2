@@ -1,5 +1,6 @@
 import styles from "./WeddingCocktail.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import FinalCTA from "./FinalCTA/FinalCTA";
 
@@ -59,6 +60,19 @@ export default function WeddingCocktailPage() {
                     <p className={styles.aboutNote}>
                         This event is adults-only.
                     </p>
+
+                    <div className={styles.venueWrap}>
+                        { /* Photo by Pawel Olbrycht: https://www.pexels.com/photo/malmo-live-concert-ab-19191390/ */ }
+                        <Image
+                            src="/images/demos/cocktail-venue-river.jpg"
+                            alt="Exterior of The Loft at Riverwood, the cocktail party venue"
+                            className={styles.venuePhoto}
+                            fill={false}
+                            width={180}
+                            height={180}
+                        />
+                    </div>
+                    <p className={styles.venueCaption}>The Loft at Riverwood</p>
                 </div>
 
                 <div className={styles.details}>
