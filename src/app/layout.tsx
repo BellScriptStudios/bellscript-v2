@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "BellScript Studios",
     images: [
       {
-        url:"/og-image-.jpg",
+        url:"https://bellscript.studio/og-image.jpg",
         width: 1200,
         height: 630,
 
