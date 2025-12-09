@@ -31,31 +31,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://bellscript.studio";
-
 export const metadata: Metadata = {
-  title: {
-    default: "BellScript Studios — We build in a week",
-    template: "%s — BellScript Studios",
-  },
+  metadataBase: new URL("https://bellscript.studio"),
+  title: "BellScript Studios | Custom Websites & Digital Solutions",
   description:
-    "Custom websites and digital experiences, built fast and crafted for real-world ideas.",
-  metadataBase: new URL(SITE_URL),
+    "BellScript Studios builds modern, custom websites and digital solutions.",
   openGraph: {
+    title: "BellScript Studios",
+    description:
+      "Custom websites and digital solutions built with clean, modern code.",
+    url: "https://bellscript.studio",
     siteName: "BellScript Studios",
+    type: "website",
     images: [
       {
-        url:"https://bellscript.studio/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-
-      }
+        alt: "BellScript Studios – Custom Websites & Digital Solutions",
+      },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: "BellScript Studios",
+    description:
+      "Custom websites and digital solutions built with clean, modern code.",
+    images: ["/og-image.jpg"],
   },
 }
 
