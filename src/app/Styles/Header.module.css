@@ -26,6 +26,11 @@
   letter-spacing: 0.02em;
   color: #eef3ff;
   white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.logo:hover {
+  color: #fff;
 }
 
 .nav {
@@ -41,7 +46,7 @@
   opacity: .9;
   transition: opacity .2s ease, color .2s ease;
 }
-.navLink:hover { opacity: 1; color: rgba(238,243,255,.9); }
+.navLink:hover { opacity: 1; color: #fff; }
 
 .navBtn {
   font-size: .9rem;
