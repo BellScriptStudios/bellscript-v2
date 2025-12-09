@@ -54,6 +54,21 @@
     margin-bottom: 0.4rem;
 }
 
+.mapWrapper {
+  margin-top: 2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  background: #fff;
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block
+}
+
 .detailBadge {
     display: inline-flex;
     align-items: center;
@@ -300,4 +315,10 @@
   .RSVP {
         padding: 2.4rem 2.2rem 2.6rem;
   }
+}
+
+@media (min-width: 768px) {
+    .map {
+        height: 420px;
+    }
 }
