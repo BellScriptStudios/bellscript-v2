@@ -15,6 +15,14 @@ export const metadata: Metadata = {
       "A fictional resume website built by BellScript Studios to demonstrate professional resume web design, layout, and branding.",
     url: "/services/demos/ariana-james-resume",
     siteName: "Ariana James – Resume Demo",
+    images: [
+      {
+        url: "https://bellscript.studio/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BellScript Studios — Version One",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
