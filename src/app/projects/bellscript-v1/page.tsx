@@ -1,3 +1,6 @@
+import Header from "src/Components/Header";
+import Footer from "src/Components/Footer";
+
 import Image from "next/image";
 import styles from "src/app/Styles/CaseStudy.module.css";
 
@@ -10,6 +13,7 @@ export const metadata = {
 export default function BellScriptV1Page() {
     return (
         <main className={styles.page}>
+            <Header />
             <header className={styles.hero}>
                 <p className={`kicker ${styles.kicker}`}>Archived Project</p>
                 <h1 className={`title ${styles.title}`}>Case Study: BellScript Studios V1</h1>
@@ -122,6 +126,7 @@ export default function BellScriptV1Page() {
                     ← Back to Projects
                 </a>
             </footer>
+            <Footer />
         </main>
     )
 }

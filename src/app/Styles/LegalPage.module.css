@@ -142,7 +142,6 @@
 
 .backLink:hover {
   color: #f9fafb;
-  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
