@@ -12,6 +12,7 @@ import { FEATURED_SERVICES } from "src/app/Data/services";
 import ProjectSection from "src/Components/ProjectSection";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bellscript.studio"),
   title: "BellScript Studios | Custom Websites & Digital Solutions",
   description:
     "BellScript Studios builds modern, custom websites and digital solutions.",
@@ -30,6 +31,13 @@ export const metadata: Metadata = {
         alt: "BellScript Studios – Custom Websites & Digital Solutions",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BellScript Studios",
+    description:
+      "Custom websites and digital solutions built with clean, modern code.",
+    images: ["/og-image.png"],
   },
 };
 
