@@ -1,0 +1,512 @@
+.photoSection {
+    padding: 0 1rem 2.75rem;
+}
+
+.photoFrame {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 1px solid rgba(199, 164, 93, 0.18);
+    background: rgba(22, 22, 26, 0.25);
+    position: relative;
+}
+
+.photoFrame::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1.25rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+    height: clamp(16rem, 45vw, 26rem);
+    object-fit: cover;
+    filter: contrast(1.02) saturate(0.95);
+}
+
+.photoCaption {
+    margin: 0.75rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+.hero {
+    position: relative;
+    padding: 6.25rem 1rem 3.5rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 22rem;
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(199, 164, 93, 0.16) 0%,
+        rgba(199, 164, 93, 0.06) 35%,
+        transparent 65%
+    ),
+    radial-gradient(
+        circle at 85% 35%,
+        rgba(155, 107, 107, 0.14) 0%,
+        rgba(155, 107, 107, 0.05) 40%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 11, 13, 0.25) 0%,
+        rgba(11, 11, 13, 0.65) 55%,
+        rgba(11, 11, 13, 1) 100%
+    );
+    pointer-events: none;
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kicker {
+    font-family: "DM Sans", system-ui, -apple-system,
+               BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 1);
+    line-height: 1.2;
+}
+
+.kicker::after {
+    content: "";
+    display: block;
+    width: 1.75rem;
+    height: 1px;
+    margin-top: 0.25rem;
+    background: rgba(199, 164, 93, 0.65);
+}
+
+.title {
+    font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+    font-size: clamp(2.5rem, 8vw, 4.75rem);
+}
+
+.meta {
+    margin: 0.9rem 0 0;
+    font-size: 0.875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.tagline {
+    margin: 1.25rem 0 0;
+    max-width: 38rem;
+    font-size: 1.07rem;
+    line-height: 1.8;
+    opacity: 0.92;
+}
+
+.tagline em {
+    font-style: italic;
+    opacity: 0.98;
+}
+
+.heroCtas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    height: 2.875rem;
+    padding: 0 1rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.primaryBtn {
+    border: 1px solid rgba(199, 164, 93, 0.85);
+    background: rgba(199, 164, 93, 0.12)
+}
+
+.primaryBtn:hover {
+    background: rgba(199, 164, 93, 0.18);
+    transform: translateY(-1px);
+}
+
+.secondaryBtn {
+    border: 1px solid rgba(199, 164, 93, 0.25);
+    background: rgba(22, 22, 26, 0.28);
+    opacity: 0.92;
+}
+
+.secondaryBtn:hover {
+    border-color: rgba(199, 164, 93, 0.55);
+    transform: translateY(-1px);
+}
+
+.heroNote {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+.goldLine {
+    width: 2.25rem;
+    height: 1px;
+    background: rgba(199, 164, 93, 0.75);
+    flex: 0 0 auto;
+}
+
+@media (min-width: 900px) {
+    .hero {
+        padding: 7.25rem 1.25rem 4.25rem;
+    }
+    .tagline {
+        font-size: 1.125rem;
+    }
+    .hero::before {
+        height: 26rem;
+    }
+}
+
+.section {
+    padding: 3.25rem 1rem;
+}
+
+.sectionInner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.lead {
+    margin: 0;
+    max-width: 46rem;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.375rem;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    opacity: 0.96;
+}
+
+.body {
+    margin: 1rem 0 0;
+    max-width: 44rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.85;
+    opacity: 0.78;
+}
+
+.lead::after {
+    content: "";
+    display: block;
+    width: 2.25rem;
+    height: 1px;
+    margin-top: 1.1rem;
+    background: rgba(199, 164, 93, 0.7);
+    opacity: 0.9;
+}
+
+.sectionKicker {
+    margin: 0 0 0.75rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+}
+
+.h2 {
+    margin: 0;
+    max-width: 40rem;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    opacity: 0.97;
+}
+
+.cards {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.875rem;
+}
+
+.card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+
+    padding: 1.25rem 1.125rem 1.125rem;
+    border-radius: 18px;
+
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(22, 22, 26, 0.32);
+    overflow: hidden;
+
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 9.5rem;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(199, 164, 93, 0.14) 0%,
+        rgba(199, 164, 93, 0.05) 38%,
+        transparent 70%
+  );
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1.125rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(199, 164, 93, 0.34);
+    background: rgba(22, 22, 26, 0.46);
+}
+
+.cardTitle {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.01em;
+    opacity: 0.98;
+}
+
+.cardText {
+    margin: 0.75rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+    opacity: 0.78;
+}
+
+.cardAction {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: rgba(199, 164, 93, 0.95);
+    opacity: 0.95;
+}
+
+.card:hover .cardAction {
+    transform: translateX(1px);
+    transition: transform 0.18s ease;
+}
+
+@media (min-width: 900px) {
+    .section {
+        padding: 3.75rem 1.25rem;
+    }
+
+    .h2 { text-wrap: nowrap;}
+
+    .cards {
+        margin-top: 1.75rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem 1.25rem 1.25rem;
+    }
+
+    .lead {
+        font-size: 1.5rem;
+    }
+}
+
+.featureStrip {
+    padding: 2.25rem 1rem;
+    margin-top: 0.25rem;
+
+    border-top: 1px solid rgba(199, 164, 93, 0.14);
+    border-bottom: 1px solid rgba(199, 164, 93, 0.14);
+    background:
+        radial-gradient(
+            circle at 18% 30%,
+            rgba(199, 164, 93, 0.10) 0%,
+            rgba(199, 164, 93, 0.04) 35%,
+            transparent 70%
+        ), 
+        rgba(11, 11, 13, 0.55);
+}
+
+.featureGrid {
+    display: grid;
+    gap: 0.875rem;
+}
+
+.feature {
+    position: relative;
+    padding: 1rem 1rem 0.95rem;
+    border-radius: 1rem;
+
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(22, 22, 26, 0.28);
+    overflow: hidden;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.feature::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.feature::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 8.5rem;
+    background: radial-gradient(
+        circle at 35% 30%,
+        rgba(199, 164, 93, 0.12) 0%,
+        rgba(199, 164, 93, 0.04) 40%,
+        transparent 72%
+    );
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.feature:hover {
+    transform: translateY(-1px);
+    border-color: rgba(199, 164, 93, 0.3);
+    background: rgba(22, 22, 26, 0.38);
+}
+
+.featureLabel {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+}
+
+.featureValue {
+    margin: 0.6rem 0 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    opacity: 0.92;
+}
+
+.featureCta {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.featureCtaLink {
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    padding-bottom: 0.25rem;
+    color: rgba(199, 164, 93, 0.95);
+    position: relative;
+}
+
+.featureCtaLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(199, 164, 93, 0.7);
+}
+
+.featureCtaLink:hover {
+    color: rgba(199, 164, 93, 1);
+}
+
+@media (min-width: 900px) {
+    .featureStrip {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .featureGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .feature {
+        padding: 1.125rem 1.125rem 1.05rem;
+    }
+
+    .featureValue {
+        font-size: 1.2rem;
+    }
+}

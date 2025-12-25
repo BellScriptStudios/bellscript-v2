@@ -179,6 +179,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "event",
                 featured: true,
                 active: true,
+                demoUrl: "/services/demos/happily-ever-after",
             },
             {
                 id:"event-website",

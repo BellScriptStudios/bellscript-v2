@@ -1,6 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Sora, Inter, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Sora, Inter, Space_Grotesk, Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
+
+export const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--sans",
+});
+
+export const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--serif",
+});
 
 const sora = Sora({
   subsets: ["latin"],

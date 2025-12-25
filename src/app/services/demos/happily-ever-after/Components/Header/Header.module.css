@@ -1,0 +1,251 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.transparent {
+  background: rgba(11, 11, 13, 0.18);
+  border-bottom: 1px solid rgba(199, 164, 93, 0);
+}
+
+.solid {
+  background: rgba(11, 11, 13, 0.88);
+  border-bottom: 1px solid rgba(199, 164, 93, 0.16);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 4.5rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.96;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.rsvpBtn {
+  height: 2.375rem;
+  padding: 0 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(199, 164, 93, 0.6);
+  background: rgba(199, 164, 93, 0.12);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  text-decoration: none;
+}
+
+.menuBtn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(199, 164, 93, 0.22);
+  background: rgba(22, 22, 26, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuIcon {
+  position: relative;
+  width: 18px;
+  height: 12px;
+}
+
+.lineTop,
+.lineMid,
+.lineBot,
+.lineTopOpen,
+.lineMidOpen,
+.lineBotOpen {
+  position: absolute;
+  inset-inline: 0;
+  height: 2px;
+  background: rgba(244, 239, 234, 0.92);
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+}
+
+.lineTop { top: 0; }
+.lineMid { top: 5px; }
+.lineBot { top: 10px; }
+
+/* Desktop nav */
+.desktopNav {
+  display: none;
+}
+
+.navLink {
+  opacity: 0.75;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.active {
+  opacity: 1;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: rgba(199, 164, 93, 0.85);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(11, 11, 13, 0.86);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlayInner {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 6.25rem 1.25rem 2rem;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.closeBtn:hover { opacity: 1; }
+
+.closeText {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.overlayBrand {
+    margin-bottom: 0.25rem;
+}
+
+.overlayKicker {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.overlayMeta {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.overlayLinks {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.overlayLink {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.92;
+}
+
+.overlayFooter {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(199, 164, 93, 0.16);
+}
+
+.overlayRsvp {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(199, 164, 93, 0.6);
+  border-radius: 999px;
+  padding: 0.9rem 1rem;
+  background: rgba(199, 164, 93, 0.1);
+}
+
+.overlaySub {
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.overlayNote {
+  margin: 1rem 0 0;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+@media (min-width: 56.25rem) {
+  .inner {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .desktopNav {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+
+  .overlayInner {
+    padding-top: 7.5rem;
+  }
+}
