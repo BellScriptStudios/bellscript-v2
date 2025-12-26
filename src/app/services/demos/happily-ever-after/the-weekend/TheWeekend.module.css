@@ -1,0 +1,449 @@
+.section {
+    padding: 3.25rem 1rem;
+}
+
+.sectionInner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    padding: 7.5rem 1rem 3,5rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 22rem;
+    background:
+        radial-gradient(
+        circle at 18% 25%,
+        rgba(199, 164, 93, 0.14) 0%,
+        rgba(199, 164, 93, 0.05) 40%,
+        transparent 72%
+        ),
+        radial-gradient(
+        circle at 85% 30%,
+        rgba(155, 107, 107, 0.12) 0%,
+        rgba(155, 107, 107, 0.05) 42%,
+        transparent 72%
+    );
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 11, 13, 0.25) 0%,
+        rgba(11, 11, 13, 0.7) 60%,
+        rgba(11, 11, 13, 1) 100%
+    );
+    pointer-events: none;
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kicker {
+    margin: 0 0 0.75rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+}
+
+.title {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    opacity: 0.98;
+}
+
+.subtitle {
+    margin: 1.25rem 0 0;
+    max-width: 42rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.78;
+}
+
+.subtitle::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 1px; /* hairline */
+    margin-top: 1.25rem;
+    background: rgba(199, 164, 93, 0.7);
+    opacity: 0.9;
+}
+
+.h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.85rem;
+    letter-spacing: 0.01em;
+    opacity: 0.97;
+}
+
+.h3 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+    opacity: 0.96;
+}
+
+.body {
+    margin: 0.85rem 0 0;
+    max-width: 44rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    opacity: 0.78;
+}
+
+.muted {
+    margin: 0.5rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    opacity: 0.62;
+}
+
+.cards {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.875rem;
+}
+
+.card {
+    position: relative;
+    padding: 1.25rem 1.125rem 1.125rem;
+    border-radius: 20px;
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(22, 22, 26, 0.32);
+    overflow: hidden;
+    transition: transform 0.18s ease, border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 9.5rem;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(199, 164, 93, 0.12) 0%,
+        rgba(199, 164, 93, 0.04) 40%,
+        transparent 72%
+    );
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1.25rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(199, 164, 93, 0.32);
+    background: rgba(22, 22, 26, 0.44);
+}
+
+.cardLabel {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.9);
+}
+
+.cardTitle {
+    margin: 0.4rem 0 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman";
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+    opacity: 0.98;
+}
+
+.cardText {
+    margin: 0.55rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+    opacity: 0.76;
+}
+
+.detail {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(199, 164, 93, 0.14);
+}
+
+.detailTop {
+    display: grid;
+    gap: 0.85rem;
+    align-items: start;
+    margin-top: 0.9rem;
+}
+
+.miniPhotoFrame {
+    position: relative;
+    width: 100%;
+    height: 9.25rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(22, 22, 26, 0.22);
+}
+
+.miniPhotoFrame::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.miniPhoto {
+    object-fit: cover;
+    filter: contrast(1.05) saturate(0.92) brightness(0.92);
+    transform: scale(1.02);
+}
+
+.metaRow {
+    margin-top: 0.85rem;
+    display: grid;
+    gap: 0.75rem;
+    padding: 0.9rem 0.95rem;
+    border-radius: 16px;
+    border: 1px solid rgba(199, 164, 93, 0.14);
+    background: rgba(22, 22, 26, 0.22);
+}
+
+.metaItem {
+    min-width: 0;
+}
+
+.metaLabel {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.9);
+}
+
+.metaValue {
+    margin: 0.4rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    opacity: 0.78;
+}
+
+.venueLink {
+    color: rgba(199, 164, 93, 0.95);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.12rem;
+}
+
+.venueLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(199, 164, 93, 0.65);
+    opacity: 0.9;
+    transition: opacity 0.18s ease;
+}
+
+.venueLink:hover {
+    color: rgba(199, 164, 93, 1);
+}
+
+.ext {
+    margin-left: 0.25rem;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.venueLink:focus-visible {
+    outline: 2px solid rgba(199, 164, 93, 0.65);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.timeline {
+    margin-top: 0.9rem;
+    padding: 1rem 0.95rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(199, 164, 93, 0.14);
+    background: rgba(22, 22, 26, 0.22);
+}
+
+.timeRow {
+    display: grid;
+    grid-template-columns: 5.25rem 1fr;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid rgba(199, 164, 93, 0.1);
+}
+
+.timeRow:first-child {
+    border-top: none;
+}
+
+.time {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+    white-space: nowrap;
+}
+
+.timeText {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    opacity: 0.78;
+}
+
+.reassurance {
+    margin: 0;
+    max-width: 44rem;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    opacity: 0.92;
+}
+
+.reassurance::before {
+    content: "";
+    display: block;
+    width: 2.25rem;
+    height: 1px;
+    margin-bottom: 1.25rem;
+    background: rgba(199, 164, 93, 0.7);
+    opacity: 0.9;
+}
+
+.ctaNote {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    opacity: 0.65;
+}
+
+.ctaLink {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.12rem;
+}
+
+.ctaLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(199, 164, 93, 0.65);
+}
+
+.ctaLink:hover {
+    color: rgba(199, 164, 93, 1);
+}
+
+.ctaLink:focus-visible {
+    outline: 2px solid rgba(199, 164, 93, 0.65);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 8.5rem 1.25rem 4rem;
+  }
+
+  .section {
+    padding: 3.75rem 1.25rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .detailTop {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+
+  .miniPhotoFrame {
+    width: 14rem;
+    height: 9rem;
+  }
+
+  .metaRow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 1.05rem;
+  }
+
+  .timeline {
+    padding: 1.05rem 1.05rem;
+  }
+
+  .timeRow {
+    grid-template-columns: 6rem 1fr;
+  }
+
+  .reassurance {
+    font-size: 1.35rem;
+  }
+}
