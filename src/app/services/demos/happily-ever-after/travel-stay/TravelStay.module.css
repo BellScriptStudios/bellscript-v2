@@ -30,7 +30,7 @@
         rgba(155, 107, 107, 0.12) 0%,
         rgba(155, 107, 107, 0.05) 42%,
         transparent 72%
-    );
+        );
     pointer-events: none;
 }
 
@@ -57,7 +57,7 @@
 .kicker {
     margin: 0 0 0.75rem;
     font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
@@ -66,8 +66,8 @@
 
 .title {
     margin: 0;
-    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.25rem, 7vw, 4rem);
     line-height: 1.05;
     letter-spacing: 0.01em;
     opacity: 0.98;
@@ -75,11 +75,11 @@
 
 .subtitle {
     margin: 1.25rem 0 0;
-    max-width: 42rem;
+    max-width: 44rem;
     font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.85;
     opacity: 0.78;
 }
 
@@ -87,7 +87,7 @@
     content: "";
     display: block;
     width: 2.5rem;
-    height: 1px; /* hairline */
+    height: 1px;
     margin-top: 1.25rem;
     background: rgba(199, 164, 93, 0.7);
     opacity: 0.9;
@@ -111,20 +111,12 @@
 
 .body {
     margin: 0.85rem 0 0;
-    max-width: 44rem;
+    max-width: 46rem;
     font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.9;
     opacity: 0.78;
-}
-
-.muted {
-    margin: 0.5rem 0 0;
-    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.8;
-    opacity: 0.62;
 }
 
 .cards {
@@ -136,12 +128,10 @@
 .card {
     position: relative;
     padding: 1.25rem 1.125rem 1.125rem;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     border: 1px solid rgba(199, 164, 93, 0.16);
     background: rgba(22, 22, 26, 0.32);
     overflow: hidden;
-    transition: transform 0.18s ease, border-color 0.18s ease,
-        background 0.18s ease;
 }
 
 .card::before {
@@ -168,10 +158,11 @@
     pointer-events: none;
 }
 
-.card:hover {
-    transform: translateY(-1px);
-    border-color: rgba(199, 164, 93, 0.32);
-    background: rgba(22, 22, 26, 0.44);
+.cardTop {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
 }
 
 .cardLabel {
@@ -185,65 +176,27 @@
 }
 
 .cardTitle {
-    margin: 0.4rem 0 0;
-    font-family: "Playfair Display", Georgia, "Times New Roman";
-    font-size: 1.15rem;
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
     letter-spacing: 0.01em;
     opacity: 0.98;
 }
 
 .cardText {
-    margin: 0.55rem 0 0;
+    margin: 0.8rem 0 0;
     font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.75;
+    line-height: 1.8;
     opacity: 0.76;
 }
 
-.detail {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(199, 164, 93, 0.14);
-}
-
-.detailTop {
-    display: grid;
-    gap: 0.85rem;
-    align-items: start;
-    margin-top: 0.9rem;
-}
-
-.miniPhotoFrame {
-    position: relative;
-    width: 100%;
-    height: 9.25rem;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(199, 164, 93, 0.16);
-    background: rgba(22, 22, 26, 0.22);
-}
-
-.miniPhotoFrame::after {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: calc(1rem - 1px);
-    border: 1px solid rgba(244, 239, 234, 0.06);
-    pointer-events: none;
-}
-
-.miniPhoto {
-    object-fit: cover;
-    filter: contrast(1.05) saturate(0.92) brightness(0.92);
-    transform: scale(1.02);
-}
-
 .metaRow {
-    margin-top: 0.85rem;
+    margin-top: 0.95rem;
     display: grid;
     gap: 0.75rem;
     padding: 0.9rem 0.95rem;
-    border-radius: 16px;
+    border-radius: 1rem;
     border: 1px solid rgba(199, 164, 93, 0.14);
     background: rgba(22, 22, 26, 0.22);
 }
@@ -286,17 +239,10 @@
     width: 100%;
     background: rgba(199, 164, 93, 0.65);
     opacity: 0.9;
-    transition: opacity 0.18s ease;
 }
 
 .venueLink:hover {
     color: rgba(199, 164, 93, 1);
-}
-
-.ext {
-    margin-left: 0.25rem;
-    font-size: 0.85em;
-    opacity: 0.8;
 }
 
 .venueLink:focus-visible {
@@ -305,63 +251,67 @@
     border-radius: 6px;
 }
 
-.timeline {
-    margin-top: 0.9rem;
-    padding: 1rem 0.95rem;
-    border-radius: 1rem;
+.ext {
+    margin-left: 0.25rem;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.detail {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(199, 164, 93, 0.14);
+}
+
+.smallGrid {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.875rem;
+}
+
+.smallCard {
+    display: block;
+    padding: 1.05rem 1.05rem 1rem;
+    border-radius: 1.25rem;
     border: 1px solid rgba(199, 164, 93, 0.14);
     background: rgba(22, 22, 26, 0.22);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.18s ease, border-color 0.18s ease,
+        background 0.18s ease;
 }
 
-.timeRow {
-    display: grid;
-    grid-template-columns: 5.25rem 1fr;
-    gap: 0.75rem;
-    padding: 0.6rem 0;
-    border-top: 1px solid rgba(199, 164, 93, 0.1);
+.smallCard:hover {
+    transform: translateY(-1px);
+    border-color: rgba(199, 164, 93, 0.28);
+    background: rgba(22, 22, 26, 0.34);
 }
 
-.timeRow:first-child {
-    border-top: none;
-}
-
-.time {
+.smallTitle {
     margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    opacity: 0.96;
+}
+
+.smallText {
+    margin: 0.55rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+    opacity: 0.76;
+}
+
+.smallAction {
+    display: inline-block;
+    margin-top: 0.75rem;
     font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: rgba(199, 164, 93, 0.95);
-    white-space: nowrap;
-}
-
-.timeText {
-    margin: 0;
-    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.65;
-    opacity: 0.78;
-}
-
-.reassurance {
-    margin: 0;
-    max-width: 44rem;
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-    font-size: 1.25rem;
-    line-height: 1.65;
-    letter-spacing: 0.01em;
-    opacity: 0.92;
-}
-
-.reassurance::before {
-    content: "";
-    display: block;
-    width: 2.25rem;
-    height: 1px;
-    margin-bottom: 1.25rem;
-    background: rgba(199, 164, 93, 0.7);
-    opacity: 0.9;
 }
 
 .ctaNote {
@@ -405,45 +355,28 @@
     border-radius: 6px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25rem) {
   .hero {
-    padding: 8.5rem 1.25rem 4rem;
+        padding: 8.5rem 1.25rem 4rem;
   }
 
   .section {
-    padding: 3.75rem 1.25rem;
+        padding: 3.75rem 1.25rem;
   }
 
   .cards {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
-  .detailTop {
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
-  }
-
-  .miniPhotoFrame {
-    width: 14rem;
-    height: 9rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
   }
 
   .metaRow {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem 1.05rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem 1.05rem;
   }
 
-  .timeline {
-    padding: 1.05rem 1.05rem;
-  }
-
-  .timeRow {
-    grid-template-columns: 6rem 1fr;
-  }
-
-  .reassurance {
-    font-size: 1.35rem;
+  .smallGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
   }
 }
