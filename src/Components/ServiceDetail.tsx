@@ -64,6 +64,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
                     <h3 className={styles.siteCarePlanName}>{plan.name}</h3>
                     <p className={styles.siteCarePlanPrice}>{plan.price}</p>
+                    <p className={styles.siteCarePlanIncludes}>{plan.plus}</p>
 
                     <ul className={styles.siteCarePlanPerks}>
                       {plan.perks.map((perk, i) => (

@@ -328,8 +328,10 @@
   }
 }
 
-
 .siteCareSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
   margin-top: 1.75rem;
   padding: 1.4rem 1.1rem;
   border-radius: 18px;

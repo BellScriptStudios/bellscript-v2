@@ -11,6 +11,7 @@ export type PlanTier = {
     id: string;
     name: string;
     price: string;
+    plus?: string;
     perks: string[];
     featured?: boolean;
 };
@@ -43,7 +44,7 @@ export type ServiceCategory = {
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
     {
         id: "signature-packages",
-        title: "Signature Packages (Core Offerings)",
+        title: "Signature Packages",
         items: [
             {
                 id:"website-in-a-week",
@@ -155,7 +156,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     },
     {
         id: "celebration-sites",
-        title: "Celebration Sites (Specialty Niche)",
+        title: "Celebration Sites",
         items: [
             {
                 id:"wedding-website",
@@ -326,37 +327,43 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 ],
                 plans: [
                     {
-                        id: "basic",
-                        name: "Basic",
-                        price: "$149/mo",
+                        id: "essential",
+                        name: "Essential",
+                        price: "$49/mo",
                         perks: [
-                            "Backups",
-                            "Uptime checks",
+                            "Hosting + uptime monitoring",
                             "Security updates",
-                            "1 hour changes",
+                            "Monthly backups",
+                            "Minor content edits (up to ~30 mins/month)",
+                            "Email support",
                         ],
                         featured: false,
                     },
                     {
                         id: "growth",
                         name: "Growth",
-                        price: "$349/mo",
+                        price: "$99/mo",
+                        plus: "Includes everything in Essential, plus:",
                         perks: [
-                            "Everything in Basic",
-                            "3 hours changes",
-                            "Quarterly performance/SEO",
+                            "Priority support",
+                            "Performance checks & optimization",
+                            "Content updates (up to ~1.5 hrs/month)",
+                            "Monthly site health report",
+                            "SEO + analytics monitoring",
                         ],
                         featured: true,
                     },
                     {
-                        id: "pro",
-                        name: "Pro",
-                        price: "$699/mo",
+                        id: "studio",
+                        name: "Studio",
+                        price: "$199/mo",
+                        plus: "Includes everything in Growth, plus:",
                         perks: [
-                            "Everything in Growth",
-                            "8 hours changes",
-                            "Priority support",
-                            "Monthly UX review",
+                            "Up to ~4 hrs/month of updates or improvements",
+                            "Feature tweaks / small enhancements",
+                            "On-call dev support",
+                            "Quarterly strategy check-in",
+                            "Emergency fixes (same-day response)",
                         ],
                         featured: false,
                     },
@@ -364,7 +371,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 href: "/services#site-care-plans",
                 icon: "tool",
                 featured: false,
-                active: false,
+                active: true,
             },
         ],
     },
