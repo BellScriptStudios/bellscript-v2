@@ -14,6 +14,7 @@ export default function Page() {
                     <section className={styles.photoSection} aria-label="Engagement photo">
                         <div className={styles.sectionInner}>
                             <div className={styles.photoFrame}>
+                            {/* Pixabay Photo by The Short Guy Films: https://www.pexels.com/photo/romantic-evening-engagement-in-toronto-29187293/*/}
                                 <Image
                                     src="/images/demos/alex-lauren-1.jpg"
                                     className={styles.photo}
