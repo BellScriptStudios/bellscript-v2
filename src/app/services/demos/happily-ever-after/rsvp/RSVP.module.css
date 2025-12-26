@@ -1,0 +1,461 @@
+.section {
+    padding: 3.25rem 1rem;
+}
+
+.sectionInner {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    padding: 7.5rem 1rem 3.25rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 22rem;
+    background:
+        radial-gradient(
+        circle at 18% 25%,
+        rgba(199, 164, 93, 0.14) 0%,
+        rgba(199, 164, 93, 0.05) 40%,
+        transparent 72%
+        ),
+        radial-gradient(
+        circle at 85% 30%,
+        rgba(155, 107, 107, 0.12) 0%,
+        rgba(155, 107, 107, 0.05) 42%,
+        transparent 72%
+        );
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 11, 13, 0.2) 0%,
+        rgba(11, 11, 13, 0.75) 65%,
+        rgba(11, 11, 13, 1) 100%
+    );
+    pointer-events: none;
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100pxrem;
+    margin: 0 auto;
+}
+
+.kicker {
+    margin: 0 0 0.75rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+}
+
+.title {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.25rem, 7vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    opacity: 0.98;
+}
+
+.subtitle {
+    margin: 1.15rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.85;
+    opacity: 0.78;
+}
+
+.gold {
+    color: rgba(199, 164, 93, 0.98);
+}
+
+.subtitle::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    margin-top: 1.25rem;
+    background: rgba(199, 164, 93, 0.7);
+    opacity: 0.9;
+}
+
+.form {
+    border-radius: 1.25rem;
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(22, 22, 26, 0.28);
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1.25rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.formHeader {
+    margin-bottom: 1.1rem;
+}
+
+.h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    letter-spacing: 0.01em;
+    opacity: 0.96;
+}
+
+.note {
+    margin: 0.6rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    opacity: 0.72;
+}
+
+.grid {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 0.9rem;
+}
+
+.field {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 0.9rem;
+}
+
+.label {
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.9);
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    border-radius: 0.95rem;
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(11, 11, 13, 0.45);
+    color: rgba(244, 239, 234, 0.92);
+    padding: 0.9rem 0.95rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 7.5rem;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: rgba(244, 239, 234, 0.48);
+}
+
+.help {
+    margin-top: 0.35rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible {
+    outline: 2px solid rgba(199, 164, 93, 0.55);
+    outline-offset: 2px;
+}
+
+/* Disabled state */
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.pills {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 0.15rem;
+}
+
+.pill {
+    border-radius: 1rem;
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(11, 11, 13, 0.35);
+    color: rgba(244, 239, 234, 0.9);
+    padding: 0.85rem 0.95rem;
+    text-align: left;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.18s ease, border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+.pill:hover {
+    transform: translateY(-1px);
+    border-color: rgba(199, 164, 93, 0.32);
+    background: rgba(11, 11, 13, 0.5);
+}
+
+.pillActive {
+    border-color: rgba(199, 164, 93, 0.55);
+    background: rgba(199, 164, 93, 0.12);
+}
+
+.pill:focus-visible {
+    outline: 2px solid rgba(199, 164, 93, 0.55);
+    outline-offset: 3px;
+}
+
+.actions {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.primaryBtn {
+    border: none;
+    border-radius: 1.1rem;
+    background: rgba(199, 164, 93, 0.92);
+    color: rgba(11, 11, 13, 0.95);
+    padding: 0.95rem 1rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+}
+
+.primaryBtn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.disclaimer {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    opacity: 0.6;
+}
+
+.success {
+    border-radius: 1.25rem;
+    border: 1px solid rgba(199, 164, 93, 0.16);
+    background: rgba(22, 22, 26, 0.28);
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.success::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -2rem auto -2rem;
+    height: 9.5rem;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(199, 164, 93, 0.12) 0%,
+        rgba(199, 164, 93, 0.04) 40%,
+        transparent 72%
+    );
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.success::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1.25rem - 1px);
+    border: 1px solid rgba(244, 239, 234, 0.06);
+    pointer-events: none;
+}
+
+.successKicker {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+}
+
+.successTitle {
+    margin: 0.5rem 0 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    opacity: 0.98;
+}
+
+.successActions {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.secondaryBtn {
+    border-radius: 1.1rem;
+    border: 1px solid rgba(199, 164, 93, 0.22);
+    background: rgba(11, 11, 13, 0.45);
+    color: rgba(244, 239, 234, 0.92);
+    padding: 0.9rem 1rem;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.secondaryBtn:hover {
+    border-color: rgba(199, 164, 93, 0.4);
+}
+
+.primaryLink {
+    display: inline-block;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.95);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.12rem;
+}
+
+.primaryLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(199, 164, 93, 0.65);
+}
+
+.primaryLink:hover {
+  color: rgba(199, 164, 93, 1);
+}
+
+.smallNote {
+    margin: 1.25rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    opacity: 0.62;
+}
+
+.infoBar {
+    margin-top: 1.05rem;
+    display: grid;
+    gap: 0.65rem;
+    padding: 0.9rem 0.95rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(199, 164, 93, 0.14);
+    background: rgba(22, 22, 26, 0.22);
+}
+
+.infoItem {
+    min-width: 0;
+}
+
+.infoLabel {
+    margin: 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(199, 164, 93, 0.9);
+}
+
+.infoValue {
+    margin: 0.4rem 0 0;
+    font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    opacity: 0.78;
+}
+
+@media (min-width: 900px) {
+    .hero {
+        padding: 8.5rem 1.25rem 4rem;
+    }
+
+    .section {
+        padding: 3.75rem 1.25rem;
+    }
+
+    .sectionInner {
+        max-width: 44rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .pills {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+    }
+
+    .form {
+        padding: 1.5rem 1.5rem 1.4rem;
+    }
+
+    .success {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .infoBar {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem 1.05rem;
+    }
+}
