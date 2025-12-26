@@ -22,7 +22,7 @@ export async function generateMetadata(
 
   if (!service || service.active === false) {
     return {
-      title: "Service not found — BellScript Studios",
+      title: "Service not found | BellScript Studios",
       description: "This service is no longer available.",
     };
   }
@@ -36,7 +36,7 @@ export async function generateMetadata(
       : rawDesc || "Custom websites and digital builds by BellScript Studios.";
 
   const canonicalUrl = `${SITE_URL}/services/${id}`;
-  const pageTitle = `${title} — BellScript Studios`;
+  const pageTitle = `${title} | BellScript Studios`;
 
   return {
     title: pageTitle,

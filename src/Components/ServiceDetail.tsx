@@ -14,6 +14,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
     bullets,
     outcome,
     plans,
+    demoUrl,
   } = service;
 
   const isSiteCare = id === "site-care-plans";
@@ -153,6 +154,12 @@ export default function ServiceDetail({ service }: { service: Service }) {
           >
             {isSiteCare ? "Talk About Your Care Plan →" : "Start a project →"}
           </Link>
+          
+          {demoUrl && (
+            <Link href={demoUrl} className={styles.demoCta}>
+              View Demo
+            </Link>
+          )}
         </div>
 
         <nav className={styles.backNav}>
