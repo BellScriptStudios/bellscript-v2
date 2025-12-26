@@ -5,11 +5,11 @@ import Header from "src/Components/Header";
 import Footer from "src/Components/Footer";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy",
+    title: "Privacy Policy | BellScript Studios",
     description:
         "Learn how BellScript Studios handles the information you share via our contact form. We keep things simple: no tracking cookies, no ad pixels, no selling your data.",
     openGraph: {
-        title: "Privacy Policy",
+        title: "Privacy Policy | BellScript Studios",
         description:
         "BellScript Studios only collects the information you submit through our contact form. No tracking cookies, no ad pixels, and no selling your data.",
         url: "/privacy",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Privacy Policy",
+        title: "Privacy Policy | BellScript Studios",
         description:
         "A simple, transparent privacy policy from BellScript Studios. No tracking cookies or ad pixels — just your contact form details, handled with care.",
     },

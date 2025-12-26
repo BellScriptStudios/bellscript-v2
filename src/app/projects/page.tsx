@@ -7,11 +7,11 @@ import { PROJECTS } from "src/app/Data/projects";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Project Showcase",
+  title: "Project Showcase | BellScript Studios",
   description:
     "Detroit-based BellScript Studios builds modern websites and digital tools for local businesses, creators, and startups. Explore our portfolio of fast, clean, custom-crafted projects.",
   openGraph: {
-    title: "Project Showcase",
+    title: "Project Showcase | BellScript Studios",
     description:
       "Explore modern websites, digital tools, and custom builds crafted by BellScript Studios. Clean interfaces, thoughtful engineering, and fast delivery—designed for today’s brands.",
     url: "/projects",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Project Showcase",
+    title: "Project Showcase | BellScript Studios",
     description:
       "A curated look at our modern builds—clean UI, fast engineering, and custom-crafted digital experiences.",
   },

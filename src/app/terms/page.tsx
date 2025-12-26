@@ -5,11 +5,11 @@ import Header from "src/Components/Header";
 import Footer from "src/Components/Footer";
 
 export const metadata: Metadata = {
-    title: "Terms of Service",
+    title: "Terms of Service | BellScript Studios",
     description:
         "Read the terms of service for using the BellScript Studios website. Learn how we handle content, links, and contact form submissions.",
     openGraph: {
-        title: "Terms of Service",
+        title: "Terms of Service | BellScript Studios",
         description:
         "These Terms of Service explain how you may use the BellScript Studios website, how contact form submissions are handled, and how our studio content is protected.",
         url: "/terms",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Terms of Service",
+        title: "Terms of Service | BellScript Studios",
         description:
         "BellScript Studios' Terms of Service for using the site and contacting the studio about digital projects.",
     },

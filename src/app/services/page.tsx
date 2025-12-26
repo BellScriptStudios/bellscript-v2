@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import ServicesClient from "src/app/services/ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Services & Packages",
+  title: "Services & Packages | BellScript Studios",
   description:
     "Browse BellScript Studios services and packages: Website-in-a-Week builds, local business bundles, celebration sites, and more.",
   openGraph: {
-    title: "Services & Packages",
+    title: "Services & Packages | BellScript Studios",
     description:
       "Explore modern website builds, celebration sites, automations, and support services.",
     url: "/services",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services & Packages",
+    title: "Services & Packages | BellScript Studios",
     description:
       "Clean, modern builds for real-world ideas: websites, events, optimization, and more.",
   },

@@ -5,11 +5,11 @@ import Header from "src/Components/Header";
 import Footer from "src/Components/Footer";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About | BellScript Studios",
   description:
     "BellScript Studios is the digital arm of The Morning Bell Co., crafting modern websites, polished interfaces, and thoughtful engineering for brands that value clarity and refinement.",
   openGraph: {
-    title: "About",
+    title: "About | BellScript Studios",
     description:
       "BellScript Studios is a digital studio under The Morning Bell Co., dedicated to clean design, fast builds, and intentional engineering.",
     url: "/about",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    title: "About",
+    title: "About | BellScript Studios",
     description:
       "A modern digital studio crafting thoughtful, intentional websites under The Morning Bell Co.",
   },

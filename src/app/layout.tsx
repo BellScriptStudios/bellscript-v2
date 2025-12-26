@@ -39,6 +39,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://bellscript.studio/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "BellScript Studios – Custom Websites & Digital Solutions",
