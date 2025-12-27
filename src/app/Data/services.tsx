@@ -107,7 +107,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 priceFromValue: 3500,
                 href: "/services#local-business-bundle",
                 icon: "web",
-                featured: true,
+                featured: false,
                 active: true,
             },
             {
@@ -196,7 +196,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             {
                 id:"event-website",
                 title: "Event Website",
-                blurb: "Promote and manage any event with clarity.",
+                blurb: "Promote and manage any event with clarity and ease.",
                 long: "A central hub for your event with schedules, registration, and key info.",
                 bullets: ["Agenda", "Tickets/RSVP", "Maps & Logistics"],
                 includes: [
@@ -212,8 +212,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 priceFromValue: 1800,
                 href: "/services#event-website",
                 icon: "event",
-                featured: false,
+                featured: true,
                 active: true,
+                demoUrl: "/services/demos/wedding-cocktail",
             },
             {
                 id:"party-website",
@@ -237,7 +238,6 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "event",
                 featured: false,
                 active: true,
-                demoUrl: "/services/demos/wedding-cocktail",
             },
         ],
     },
@@ -383,14 +383,14 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         id: "extra-dev-time",
                         name: "Extra Development Time",
-                        price: "$75/hr",
+                        price: "$50/hr",
                         desc: "Additional development time beyond your plan’s included hours.",
                         popular: true,
                     },
                     {
                         id: "seo-lite",
                         name: "SEO Lite Monitoring",
-                        price: "$49/mo",
+                        price: "$29/mo",
                         desc: "On-page checks and basic SEO health monitoring.",
                     },
                     {

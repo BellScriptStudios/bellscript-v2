@@ -108,6 +108,11 @@
 
 .separator { color: rgba(255,255,255,0.35); }
 
+.location:hover {
+  color: rgb(39, 153, 137);
+  transform: translateY(1);
+}
+
 @media (min-width: 768px) {
   .inner {
     flex-direction: row;

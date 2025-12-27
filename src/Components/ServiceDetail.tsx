@@ -29,7 +29,9 @@ export default function ServiceDetail({ service }: { service: Service }) {
   return (
     <main className={styles.page} role="main" aria-labelledby="service-title">
       <div className={styles.detailBody} aria-labelledby="service-title">
-        <p className={`kicker ${styles.kicker}`}>Get into the details</p>
+        <p className={`kicker ${styles.kicker}`}>
+          {isSiteCare ? "Ongoing care, without the overhead" : "Get into the details"}
+        </p>
         <header className={styles.header}>
           <h1 id="service-title">{title}</h1>
 
@@ -60,7 +62,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
                     }
                   >
                     {isSiteCare && plan.featured && (
-                      <span className={styles.siteCareBadge}>Most Popular</span>
+                      <span className={styles.siteCareBadge}>Popular</span>
                     )}
 
                     <h3 className={styles.siteCarePlanName}>{plan.name}</h3>

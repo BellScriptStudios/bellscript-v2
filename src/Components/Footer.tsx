@@ -57,6 +57,7 @@ export default function Footer() {
           <Link href="/privacy" className={styles.legalLink}>Privacy Policy </Link>
           <span className={styles.separator}>•</span>
           <Link href="/terms" className={styles.legalLink}> Terms of Service</Link>
+          <p className={styles.location}>Based in Detroit, Michigan</p>
         </div>
       </div>
     </footer>
