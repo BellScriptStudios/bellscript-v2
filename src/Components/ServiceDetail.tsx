@@ -14,6 +14,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
     bullets,
     outcome,
     plans,
+    addons,
     demoUrl,
   } = service;
 
@@ -146,6 +147,39 @@ export default function ServiceDetail({ service }: { service: Service }) {
             </article>
           )}
         </section>
+
+        {addons?.length ? (
+          <section
+            className={styles.addonsSection}
+            aria-labelledby="addons-heading"
+          >
+            <h3 id="addons-heading" className={styles.addonsHeading}>
+              Optional Add-Ons
+            </h3>
+
+            <ul className={styles.addonsList}>
+              {addons.map((addon) => (
+                <li key={addon.id} className={styles.addonItem}>
+                  <div className={styles.addonInfo}>
+                    <span className={styles.addonName}>
+                      {addon.name}
+                      {addon.popular && (
+                        <span className={styles.addonBadge}>Popular</span>
+                      )}
+                    </span>
+                    {addon.desc && (
+                      <p className={styles.addonDescription}>
+                        {addon.desc}
+                      </p>
+                    )}
+                  </div>
+
+                  <span className={styles.addonPrice}>{addon.price}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <div className={styles.bottomCta}>
           <Link

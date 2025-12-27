@@ -16,6 +16,7 @@ export type PlanTier = {
     featured?: boolean;
 };
 
+
 export type Service = {
     id: string;
     title: string;
@@ -32,8 +33,18 @@ export type Service = {
     featured?: boolean;
     active?: boolean;
     plans?: PlanTier[];
+    addons?: Addon[];
     demoUrl?: string;
 };
+
+export type Addon = {
+    id: string;
+    name: string;
+    price: string;
+    desc?: string;
+    popular?: boolean;
+    minPlanId?: PlanTier["id"];
+}
 
 export type ServiceCategory = {
     id: string;
@@ -366,6 +377,33 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                             "Emergency fixes (same-day response)",
                         ],
                         featured: false,
+                    },
+                ],
+                addons: [
+                    {
+                        id: "extra-dev-time",
+                        name: "Extra Development Time",
+                        price: "$75/hr",
+                        desc: "Additional development time beyond your plan’s included hours.",
+                        popular: true,
+                    },
+                    {
+                        id: "seo-lite",
+                        name: "SEO Lite Monitoring",
+                        price: "$49/mo",
+                        desc: "On-page checks and basic SEO health monitoring.",
+                    },
+                    {
+                        id: "content-updates",
+                        name: "Content Writing & Updates",
+                        price: "From $75/mo",
+                        desc: "Light copy updates and page content assistance.",
+                    },
+                    {
+                        id: "hosting-only",
+                        name: "Hosting Only",
+                        price: "$19/mo",
+                        desc: "Secure hosting without updates or content changes.",
                     },
                 ],
                 href: "/services#site-care-plans",

@@ -7,13 +7,13 @@ export type Project = {
     link?: { 
         href: string;
         label?: string;
-        ariaLabel?: string
+        ariaLabel?: string;
     };
     thumbnail?: {
         src: string;
         alt: string;
         width?: number;
-        height?: number
+        height?: number;
     };
     status?: "live" | "coming-soon" | "research-develop" | "archived";
     icon?: "umbrella" | "cli" | "shop" | "mirror" | "rnd" | "web";
