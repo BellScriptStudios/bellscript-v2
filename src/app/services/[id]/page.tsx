@@ -37,10 +37,11 @@ export async function generateMetadata(
 
   const canonicalUrl = `${SITE_URL}/services/${id}`;
   const pageTitle = `${title} | BellScript Studios`;
+  const desc = `${blurb}`;
 
   return {
     title: pageTitle,
-    description,
+    description: desc,
     alternates: {
       canonical: canonicalUrl,
     },
@@ -54,7 +55,7 @@ export async function generateMetadata(
           url: "https://bellscript.studio/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: "BellScript Studios — Version One",
+          alt: "BellScript Studios",
         },
     ],
       type: "article",
