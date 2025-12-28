@@ -9,22 +9,24 @@ export default function ServiceDetail({ service }: { service: Service }) {
     priceFrom,
     timeline,
     long,
+    extLong,
+    sub,
     blurb,
     includes,
-    bullets,
     outcome,
     plans,
     addons,
+    note,
     demoUrl,
   } = service;
 
   const isSiteCare = id === "site-care-plans";
 
   const hasIncludes = Array.isArray(includes) && includes.length > 0;
-  const hasBullets = Array.isArray(bullets) && bullets.length > 0;
   const hasOutcomeList = Array.isArray(outcome) && outcome.length > 0;
   const hasOutcomeText =
     typeof outcome === "string" && outcome.trim().length > 0;
+  const hasWhoFor = Array.isArray(sub) && sub.length > 0;
 
   return (
     <main className={styles.page} role="main" aria-labelledby="service-title">
@@ -89,65 +91,76 @@ export default function ServiceDetail({ service }: { service: Service }) {
             <p className={styles.lead}>{long ?? blurb}</p>
           )}
 
-          
+          {extLong && (
+            <p className={styles.extLong}>
+              {extLong}
+            </p>
+          )}
+
+          {note && (
+            <p className={styles.note}>
+              {note}
+            </p>
+          )}
         </header>
 
+        <section className={styles.whoFor}>
+          {hasWhoFor && (
+            <div className={styles.whoForInner}>
+              <h2 className={styles.h2}>Who this is for</h2>
+
+              <ul className={styles.whoForList}>
+                {sub!.map((x, i) => (
+                  <li key={i}>{x}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+
         <section className={styles.columns}>
-          {hasIncludes && (
-            <article
-              className={styles.card}
-              role="region"
-              aria-labelledby="includes-heading"
-            >
-              <h2 className={styles.h2}>What&apos;s included</h2>
-              <ul className={styles.list}>
-                {includes!.map((x, i) => (
-                  <li key={i}>{x}</li>
-                ))}
-              </ul>
-            </article>
-          )}
+          <div className={styles.columnsGrid}>
+            {hasIncludes && (
+              <article
+                className={styles.card}
+                role="region"
+                aria-labelledby="includes-heading"
+              >
+                <h2 className={styles.h2}>What&apos;s included</h2>
+                <ul className={styles.list}>
+                  {includes!.map((x, i) => (
+                    <li key={i}>{x}</li>
+                  ))}
+                </ul>
+              </article>
+            )}
 
-          {hasOutcomeList && (
-            <article
-              className={`${styles.card} ${isSiteCare ? styles.siteCareOutcome : ""}`}
-              role="region"
-              aria-labelledby="outcomes-heading"
-            >
-              <h2 className={styles.h2}>Outcomes</h2>
-              <ul className={styles.list}>
-                {(outcome as string[])!.map((x, i) => (
-                  <li key={i}>{x}</li>
-                ))}
-              </ul>
-            </article>
-          )}
+            {hasOutcomeList && (
+              <article
+                className={`${styles.card} ${isSiteCare ? styles.siteCareOutcome : ""}`}
+                role="region"
+                aria-labelledby="outcomes-heading"
+              >
+                <h2 className={styles.h2}>Outcomes</h2>
+                <ul className={styles.list}>
+                  {(outcome as string[])!.map((x, i) => (
+                    <li key={i}>{x}</li>
+                  ))}
+                </ul>
+              </article>
+            )}
 
-          {hasOutcomeText && (
-            <article
-              className={`${styles.card} ${isSiteCare ? styles.siteCareOutcome : ""}`}
-              role="region"
-              aria-labelledby="outcome-heading"
-            >
-              <h2 className={styles.h2}>Outcome</h2>
-              <p className={styles.outcomeText}>{outcome as string}</p>
-            </article>
-          )}
-
-          {hasBullets && (
-            <article
-              className={styles.card}
-              role="region"
-              aria-labelledby="highlights-heading"
-            >
-              <h2 className={styles.h2}>Highlights</h2>
-              <ul className={styles.list}>
-                {bullets!.map((x, i) => (
-                  <li key={i}>{x}</li>
-                ))}
-              </ul>
-            </article>
-          )}
+            {hasOutcomeText && (
+              <article
+                className={`${styles.card} ${isSiteCare ? styles.siteCareOutcome : ""}`}
+                role="region"
+                aria-labelledby="outcome-heading"
+              >
+                <h2 className={styles.h2}>Outcome</h2>
+                <p className={styles.outcomeText}>{outcome as string}</p>
+              </article>
+            )}
+          </div>
         </section>
 
         {addons?.length ? (
