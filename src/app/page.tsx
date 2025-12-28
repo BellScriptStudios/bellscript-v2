@@ -5,11 +5,11 @@ import Link from "next/link";
 import Header from "src/Components/Header";
 import Footer from "src/Components/Footer";
 import ProcessSection from "src/Components/ProcessSection";
-import ServicesSection from "src/Components/ServicesSection";
+import HomeFeaturedServices from "src/Components/FeaturedServices";
 import AboutSection from "src/Components/AboutSection";
 import { FEATURED_PROJECTS } from "./Data/projects";
-import { FEATURED_SERVICES } from "src/app/Data/services";
 import ProjectSection from "src/Components/ProjectSection";
+import { SERVICE_CATEGORIES } from "./Data/services";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bellscript.studio"),
@@ -55,22 +55,8 @@ export default function Home() {
           <p className={styles.subTitle}>Custom websites and digital experiences — fast, modern, and crafted for your brand.</p>
         </div>
 
-        <section
-          id="services"
-          className={styles.services}
-          aria-labelledby="featured-services-heading"
-          >
-            <ServicesSection
-              id="services"
-              heading="Featured Services"
-              intro="From career milestones to life’s biggest moments, our featured services bring your ideas to life with clean, modern websites."
-              items={FEATURED_SERVICES}
-            />
-          <div className={styles.servicesCta}>
-            <p className={styles.ctaIntro}>Discover thoughtful offerings designed to support your brand’s next phase.</p>
-            <Link href="/services" className={styles.viewAll}>Browse Our Services</Link>
-          </div>
-        </section>
+        <HomeFeaturedServices categories={SERVICE_CATEGORIES} />
+
 
         <section id="projects" className={styles.projects}>
           <ProjectSection
