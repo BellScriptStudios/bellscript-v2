@@ -189,11 +189,15 @@ export default function ServiceDetail({ service }: { service: Service }) {
             className={`btn-primary ${styles.primaryCta} ${isSiteCare ? styles.siteCareCta : ""}`}
             aria-label="Contact BellScript Studios"
           >
-            {isSiteCare ? "Talk About Your Care Plan →" : "Start a project →"}
+            {isSiteCare ? "Talk About Your Care Plan" : "Start your project"}
           </Link>
           
           {demoUrl && (
-            <Link href={demoUrl} className={styles.demoCta}>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={demoUrl} 
+              className={styles.demoCta}>
               View Demo
             </Link>
           )}

@@ -130,10 +130,10 @@ export default function AboutPage() {
                     </p>
                     <Link
                     href="/contact"
-                    className={`btn-primary ${styles.ctaButton}`}
+                    className={styles.ctaButton}
                     aria-label="Contact BellScript Studios"
                     >
-                    Start a Project
+                    Start your Project
                     </Link>
                 </section>
             </div>

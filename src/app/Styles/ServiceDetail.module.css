@@ -229,16 +229,42 @@
 }
 
 .primaryCta {
-  width: 100%;
-  max-width: 360px;
-  text-align: center;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem 1.2rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(224, 52, 162, 1),
+    rgba(255, 255, 255, 0.1)
+  ) !important;
+  border-radius: 999px;
+  border: 1px solid rgba(224, 52, 162, .9);
+
+
+  box-shadow:
+    0 0 22px rgba(224, 52, 162, 0.5),
+    0 14px 40px rgba(0, 0, 0, 0.6);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.primaryCta:hover {
+  filter: brightness(1.25);
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 32px rgba(224, 52, 162, 0.75),
+    0 18px 48px rgba(0,0,0,0.7);
 }
 
 .primaryCta:active {
   transform: translateY(0);
-  box-shadow:
-    0 0 18px rgba(224, 52, 162, 0.55),
-    0 12px 35px rgba(0, 0, 0, 0.7);
 }
 
 .demoCta {
@@ -271,6 +297,10 @@
   border-color: rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.04);
   transform: translateY(-1px);
+}
+
+.demoCta:active {
+  transform: translateY(0);
 }
 
 @media (min-width: 640px) {
@@ -612,7 +642,7 @@
   margin-top: 2.75rem;
 }
 
-.siteCareCta .primaryCta {
+.siteCareCta {
   padding: 0.85rem 2rem;
   font-size: 1.05rem;
   box-shadow:

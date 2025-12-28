@@ -202,7 +202,7 @@ export default function AboutPage() {
                                     type="submit"
                                     className={`btn-primary ${styles.submit}`}
                                 >
-                                    Send message
+                                    Send Message
                                 </button>
                                 <p className={styles.helperText}>
                                     You&apos;ll hear back within 1–2 business days with next steps.

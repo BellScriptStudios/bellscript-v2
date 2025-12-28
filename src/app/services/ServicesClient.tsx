@@ -125,10 +125,10 @@ export default function ServicesPage() {
               <p className={styles.contactIntro}>Partner with a studio focused on refinement, intention, and digital craftsmanship.</p>
               <Link
                 href="/contact"
-                className={`btn-primary ${styles.ctaButton}`}
+                className={styles.ctaButton}
                 aria-label="Contact BellScript Studios"
               >
-                Start a Project
+                Start your Project
             </Link>
           </div>
         </section>

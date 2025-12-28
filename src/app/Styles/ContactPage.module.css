@@ -295,10 +295,42 @@
 }
 
 .submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding-inline: 1.6rem;
   font-size: 1rem;
   width: 100%;
+  border-radius: 8px;
+
+  padding-inline: 1.6rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(224, 52, 162, 1),
+    rgba(255, 255, 255, 0.1)
+  );
+  border: 1px solid rgba(224, 52, 162, .9);
+
+  box-shadow:
+    0 0 22px rgba(224, 52, 162, 0.5),
+    0 14px 40px rgba(0, 0, 0, 0.6);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.submit:hover {
+  box-shadow:
+    0 0 32px rgba(224, 52, 162, 0.75),
+    0 18px 48px rgba(0,0,0,0.7);
+}
+
+.submit:active {
+  transform: translateY(0);
 }
 
 .helperText {

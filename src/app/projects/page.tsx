@@ -62,7 +62,7 @@ export default function ProjectsPage() {
                             className={`btn-primary ${styles.ctaButton}`}
                             aria-label="Contact BellScript Studios"
                         >
-                            Start a Project
+                            Start your Project
                         </Link>
                     </div>
                 </div>
