@@ -104,6 +104,7 @@ export default function ServiceCard({
           <a
             href={demoUrl}
             className={styles.demoBtn}
+            aria-label="View Demo"
             target="_blank"
             rel="noopener noreferrer"
             >
