@@ -1,4 +1,3 @@
-// src/app/Components/ServicesSection.tsx
 "use client";
 
 import ServiceCard from "src/Components/ServiceCard";

@@ -60,6 +60,68 @@
   gap: 1rem;
 }
 
+/* Variant hook (optional, but good to have) */
+.homeFeatured {
+  position: relative;
+}
+
+/* HOME ONLY: new featured wrapper look */
+.homeFeaturedCard {
+  position: relative;
+  border-radius: 22px;
+
+  /* reliable gradient ring */
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(224, 52, 162, 0.42),
+    rgba(244, 114, 182, 0.16),
+    rgba(148, 163, 184, 0.12)
+  );
+
+  overflow: visible;
+  z-index: 0;
+
+  transition: transform 0.25s ease;
+}
+
+/* Make the ProjectCard sit cleanly inside the ring */
+.homeFeaturedCard > * {
+  position: relative;
+  z-index: 1;
+
+  /* match the wrapper radius minus padding */
+  border-radius: 21px;
+}
+
+/* Soft aura behind the featured project card */
+.homeFeaturedCard::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 26px;
+
+  background: radial-gradient(
+    circle at 20% 10%,
+    rgba(224, 52, 162, 0.16),
+    transparent 60%
+  );
+
+  filter: blur(26px);
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.homeFeaturedCard:hover {
+  transform: translateY(-3px);
+}
+
+.homeFeaturedCard:hover::after {
+  opacity: 0.34;
+}
+
+
 .footerCta {
   margin-top: 0.5rem;
   text-align: center;

@@ -7,8 +7,8 @@ import Footer from "src/Components/Footer";
 import ProcessSection from "src/Components/ProcessSection";
 import HomeFeaturedServices from "src/Components/FeaturedServices";
 import AboutSection from "src/Components/AboutSection";
+import FeaturedProjects from "src/Components/FeaturedProjects";
 import { FEATURED_PROJECTS } from "./Data/projects";
-import ProjectSection from "src/Components/ProjectSection";
 import { SERVICE_CATEGORIES } from "./Data/services";
 
 export const metadata: Metadata = {
@@ -56,24 +56,9 @@ export default function Home() {
         </div>
 
         <HomeFeaturedServices categories={SERVICE_CATEGORIES} />
-
-
-        <section id="projects" className={styles.projects}>
-          <ProjectSection
-            id="our-work"
-            heading="Featured Work"
-            intro="Our featured projects showcase the clean design and thoughtful details that define every BellScript Studios build."
-            items={FEATURED_PROJECTS}
-            showViewAll={true}
-            viewAllHref="/projects"
-            viewAllLabel="See the Full Showcase"
-            showHeading={true}
-          />
-        </section>
-
+        <FeaturedProjects items={FEATURED_PROJECTS} />
 
         <AboutSection />
-
         <ProcessSection />
 
         <section

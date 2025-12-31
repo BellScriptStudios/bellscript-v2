@@ -77,6 +77,9 @@ export default function HomeFeaturedServices({ categories }: Props) {
 
                     <Link href="/services" className={styles.viewAll}>
                         <span>Browse All Services</span>
+                        <span className={styles.arrow} aria-hidden="true">
+                            →
+                        </span>
                     </Link>
                 </div>
             </div>

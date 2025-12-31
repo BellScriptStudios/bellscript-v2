@@ -12,6 +12,7 @@ type Props = {
     viewAllHref?: string;
     viewAllLabel?: string;
     showHeading?: boolean;
+    variant?: "default" | "homeFeatured";
 };
 
 export default function ProjectSection({
@@ -23,29 +24,42 @@ export default function ProjectSection({
     viewAllHref = "/projects",
     viewAllLabel = "View all projects",
     showHeading = true,
+    variant = "default",
 }: Props) {
+    const isHomeFeatured = variant === "homeFeatured";
     return (
-        <section id={id} className={styles.section}>
+        <section 
+            id={id}
+            className={`${styles.section} ${isHomeFeatured ? styles.homeFeatured : ""}`}
+            aria-labelledby={`${id}-heading`}
+        >
             <div className={styles.inner}>
-            
                 {showHeading && (
-                    <>
                         <div className={styles.hero}>
-                            <h2 className={styles.kicker}>{heading}</h2>
+                            <h2 className={styles.kicker} id={`${id}-heading`}>
+                                {heading}
+                            </h2>
                             {intro && <p className={styles.intro}>{intro}</p>}
                         </div>
-                    </>
                 )}
 
                 <div className={styles.stack}>
                     {items.map((p) => (
-                        <ProjectCard key={p.id} project={p} />
+                        <div key={p.id}
+                            className={
+                                isHomeFeatured ? styles.homeFeatureCard : styles.featureWrap
+                            }
+                        >
+                            <ProjectCard project={p} />
+                        </div>
                     ))}
                 </div>
 
                 {showViewAll && (
                     <div className={styles.footerCta}>
-                        <p className={styles.ctaIntro}>Real projects, real clients, and real solutions built for long-term impact.</p>
+                        <p className={styles.ctaIntro}>
+                            Real projects, real clients, and real solutions built for long-term impact.
+                        </p>
                         <Link href={viewAllHref} className={styles.viewAll}>
                             {viewAllLabel}
                         </Link>

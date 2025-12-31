@@ -20,6 +20,7 @@ export type Project = {
     featured?: boolean;
     active?: boolean;
     inhouse: boolean;
+    homeHero?: boolean;
 }
 
 export const PROJECTS: Project[] = [
@@ -44,6 +45,7 @@ export const PROJECTS: Project[] = [
         featured: true,
         active: true,
         inhouse: true,
+        homeHero: true,
     },
 
     {
@@ -82,7 +84,7 @@ export const PROJECTS: Project[] = [
             "Modern storefront base",
             "Mobile-first experience",
         ],
-        link: { href: "https://www.candlephase.com", label: "Coming Soon" },
+        //link: { href: "https://www.candlephase.com", label: "Coming Soon" },
         thumbnail: { src: "/images/candle-phase-bs-thumbnail.png", alt: "Candle Phase thumbnail", width: 300, height: 200 },
         status: "coming-soon",
         icon: "shop",
@@ -103,11 +105,12 @@ export const PROJECTS: Project[] = [
             "Modular, privacy-focused ReflectOS enviroment"
         ],
         status: "research-develop",
-        link: { href: "/luci", label: "R&D Project By BellScript Studios"},
+        //link: { href: "/luci", label: "R&D Project By BellScript Studios"},
         icon: "rnd",
         featured: true,
         active: true,
         inhouse: true,
+        homeHero: true,
     },
 
     {
@@ -131,7 +134,7 @@ export const PROJECTS: Project[] = [
         status: "archived",
         link: { href: "/projects/bellscript-v1", label: "View Case Study"},
         icon: "web",
-        featured: true,
+        featured: false,
         active: true,
         inhouse: true,
     },
