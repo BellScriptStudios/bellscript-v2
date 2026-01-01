@@ -7,6 +7,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
     id,
     title,
     priceFrom,
+    priceFlat,
     timeline,
     long,
     extLong,
@@ -37,9 +38,12 @@ export default function ServiceDetail({ service }: { service: Service }) {
         <header className={styles.header}>
           <h1 id="service-title">{title}</h1>
 
-          {priceFrom && (
+          {priceFrom || priceFlat && (
             <p className={styles.meta}>
-              <strong>Starting at:</strong> {priceFrom}
+              <strong>
+                {priceFlat ? "Flat fee:" : "Starting at:"}
+              </strong>{" "}
+              {priceFlat ?? priceFrom}
             </p>
           )}
 

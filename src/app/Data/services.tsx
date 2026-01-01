@@ -29,6 +29,7 @@ export type Service = {
     outcome?: string | string[];
     timeline?: string;
     priceFrom?: string;
+    priceFlat?: string;
     priceFromValue?: number;
     href?: string;
     icon?: IconKey;
@@ -296,7 +297,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 priceFromValue: 350,
                 href: "/services/event-website",
                 icon: "event",
-                featured: true,
+                featured: false,
                 active: true,
                 addons: [
                     {
@@ -462,11 +463,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "A smoother experience across devices",
                 ],
                 timeline: "3-7 business days",
-                priceFrom: "Flat fee of $900",
+                priceFlat: "$900",
                 priceFromValue: 900,
                 href: "/services/optimization-pass",
                 icon: "seo",
-                featured: false,
+                featured: true,
                 active: true,
                 note: "Focused on performance and accessibility—not design changes or feature development.",
             },

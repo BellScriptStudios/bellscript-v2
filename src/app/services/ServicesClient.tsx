@@ -24,7 +24,7 @@ const activeIcons = Array.from(
 function labelForIcon(icon: IconKey): string {
   switch (icon) {
     case "web":
-      return "Websites";
+      return "Launch Packages";
     case "event":
       return "Events & Celebrations";
     case "cart":
