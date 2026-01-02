@@ -477,12 +477,6 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 blurb: "Ongoing website care that keeps your site secure, up to date, and running smoothly—without the stress of handling it yourself.",
                 long: "Site Care Plans provide continuous maintenance and support for websites that need to stay reliable over time. Instead of reacting to issues when something breaks, we proactively handle updates, backups, performance checks, and small improvements to keep your site running smoothly behind the scenes.",
                 extLong: "This service is ideal for businesses and creators who rely on their website and want peace of mind after launch. With ongoing care, your site stays secure, current, and supported—so you can focus on your work while we handle the technical upkeep.",
-                outcome: [
-                    "A website that stays secure and up to date",
-                    "Fewer issues and less downtime over time",
-                    "Ongoing support without starting new projects",
-                    "Peace of mind knowing your site is professionally maintained",
-                ],
                 plans: [
                     {
                         id: "essential",

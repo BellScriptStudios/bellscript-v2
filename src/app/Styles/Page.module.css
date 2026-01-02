@@ -51,8 +51,8 @@
 }
 
 .contactSection {
-  padding: clamp(0.75rem, 4vw, 1.5rem) clamp(1rem, 5vw, 1.5rem);
-  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
 }

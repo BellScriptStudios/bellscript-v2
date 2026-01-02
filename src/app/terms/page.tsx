@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import styles from "src/app/Styles/LegalPage.module.css";
 import Header from "src/Components/Header";
 import Footer from "src/Components/Footer";
@@ -152,12 +151,6 @@ export default function TermsPage() {
                     </p>
                     </section>
                 </div>
-
-                <nav className={styles.backNav} aria-label="Back navigation">
-                    <Link href="/" className={styles.backLink}>
-                    ← Back to home
-                    </Link>
-                </nav>
             </main>
             <Footer />
         </>

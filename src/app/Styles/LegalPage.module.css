@@ -128,22 +128,6 @@
   color: #e5edff;
 }
 
-.backNav {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 1.25rem 3rem;
-}
-
-.backLink {
-  font-size: 0.85rem;
-  color: rgba(226, 232, 255, 0.75);
-  text-decoration: none;
-}
-
-.backLink:hover {
-  color: #f9fafb;
-}
-
 @media (min-width: 768px) {
   .hero {
     padding: 5.5rem 1.5rem 3rem;
@@ -156,9 +140,5 @@
 
   .section {
     padding: 1.6rem 1.6rem 1.7rem;
-  }
-
-  .backNav {
-    padding: 0 1.5rem 3.5rem;
   }
 }

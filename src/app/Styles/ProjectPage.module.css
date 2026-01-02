@@ -71,12 +71,16 @@
   color: rgba(226, 232, 255, 0.8);
 }
 
-.content { padding-bottom: 4.5rem;}
-
-.stack {
+.content {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.25rem 3.5rem;
+  padding: 0 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.stack {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -98,9 +102,8 @@
 
 .bottomCta {
   text-align: center;
-    max-width: 1120px;
-    margin: 2.5rem auto 0;
-    padding: 2rem 1.25rem;
+  max-width: 1120px;
+  margin: 2.5rem auto 0;
 }
 
 @media (min-width: 768px) {

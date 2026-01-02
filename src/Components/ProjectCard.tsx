@@ -93,6 +93,8 @@ function Icon({ kind }: { kind?: Project["icon"] }) {
 export default function ProjectCard({ project }: { project: Project }) {
   const { title, subtitle, blurb, features, link, thumbnail, status, icon } = project;
   const hasImage = Boolean(thumbnail);
+  const typeLabel = project.inhouse ? "In-house" : "Client";
+  const typeClass = project.inhouse ? styles.inhouse : styles.client;
 
   return (
     <article
@@ -120,6 +122,27 @@ export default function ProjectCard({ project }: { project: Project }) {
           </a>
         </div>
       )}
+      <div className={styles.badges}>
+        <span className={`${styles.typeBadge} ${typeClass}`}>{typeLabel}</span>
+
+          {status === "research-develop" && (
+            <span
+              className={`${styles.typeBadge} ${styles.rndBadge}`}
+              aria-label="Research and Development"
+            >
+                Research &amp; Development
+            </span>
+          )}
+
+          {status === "coming-soon" && (
+            <span 
+                className={`${styles.typeBadge} ${styles.soonBadge}`}
+                aria-label="Coming Soon"
+            >
+                Coming Soon
+            </span>
+          )}
+        </div>
 
       <div className={styles.details}>
         <div className={styles.header}>
@@ -143,21 +166,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         ) : null}
 
         <div className={styles.ctaSlot}>
-          {status === "coming-soon" ? (
-            <span
-              className={`${styles.soonBadge} ${styles.ctaPill}`}
-              aria-label="Coming Soon"
-            >
-              Coming Soon
-            </span>
-          ) : status === "research-develop" ? (
-            <span
-              className={`${styles.rndBadge} ${styles.ctaPill} ${styles.researchBadge}`}
-              aria-label="Research and Development"
-            >
-              In Research & Development
-            </span>
-          ) : (
+          {(
             link && (
               <a
                 href={link.href}

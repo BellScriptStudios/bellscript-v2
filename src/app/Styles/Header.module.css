@@ -19,6 +19,7 @@
 }
 
 .logo {
+  position: relative;
   font-family: var(--font-sora), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   font-size: 1.1rem;
@@ -27,10 +28,31 @@
   color: #eef3ff;
   white-space: nowrap;
   transition: color .2s ease;
+
+  background: linear-gradient(
+    90deg,
+    #e034a2,
+    #f472b6,
+    #38bdf8
+  );
+
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  transition:
+    background-position 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.45s ease;
+}
+
+.logo:not(:hover) {
+  color: #eef3ff;
 }
 
 .logo:hover {
-  color: #fff;
+  color: transparent;
+  background-position: 100% 50%;
 }
 
 .nav {

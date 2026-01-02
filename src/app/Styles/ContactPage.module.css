@@ -75,7 +75,7 @@
 .grid {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.25rem 4rem;
+  padding: 0 1.25rem 6rem;
   display: flex;
   flex-direction: column;
   gap: 1.75rem;

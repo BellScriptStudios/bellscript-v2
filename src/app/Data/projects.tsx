@@ -27,13 +27,13 @@ export const PROJECTS: Project[] = [
     {
         id: "tmb",
         title: "The Morning Bell Co.",
+        subtitle: "Parent company · Venture platform · Brand incubator",
         blurb:
             "Our own parent brand website built to unify and showcase all ventures under our company umbrella.",
         features: [
             "Corporate-polished UI consistent with sub-brand styles",
             "Responsive, mobile-first design for optimal accessibility",
             "Portfolio showcase linking directly to each brand site",
-            "Optimized for speed, SEO, and cross-browser compatibility",
         ],
         link: { href: "https://www.themorningbell.co"},
         thumbnail: { 
@@ -51,17 +51,16 @@ export const PROJECTS: Project[] = [
     {
         id: "smartspend",
         title: "SmartSpend — CLI Expense Tracker",
+        subtitle: "Personal finance tool · CLI application · Data-driven",
         blurb:
             "SmartSpend is a command-line interface (CLI) application designed to make expense tracking simple and efficient.",
         
         features: [
-            "Multi-user account support for personalized data tracking",
-            "Full CRUD operations to add, edit, and delete expense entries",
-            "Budget-setting tools with category-based organization",
-            "CSV export for seamless data backup and analysis",
-            "Clean, intuitive terminal interface for fast navigation",
+            "Multi-user accounts with personalized data",
+            "Full CRUD operations for expense entries",
+            "Category-based budgeting tools",
+            "CSV export for backup and analysis",
         ],
-
         link: { 
             href: "https://github.com/MTinsley00/CLI_Expense_Tracker.git",
             ariaLabel: "View SmartSpend CLI Expense Tracker project on GitHub",
@@ -77,12 +76,15 @@ export const PROJECTS: Project[] = [
     {
         id: "candle-phase",
         title: "Candle Phase",
+        subtitle: "Lifestyle brand · E-commerce · Product storytelling",
         blurb:
             "Something Beautiful is on the Horizon — We’re pouring, curing, and crafting the perfect collection just for you. From healing to hustle, love to glow-up — your phase is about to be lit.",
         features: [
-            "Polished web brand",
-            "Modern storefront base",
-            "Mobile-first experience",
+            "Custom brand identity and phase-based product system",
+            "E-commerce-ready product layouts",
+            "Emotion-led storytelling and copy structure",
+            "Mobile-first, performance-focused design",
+            "Scalable foundation for future product drops",
         ],
         //link: { href: "https://www.candlephase.com", label: "Coming Soon" },
         thumbnail: { src: "/images/candle-phase-bs-thumbnail.png", alt: "Candle Phase thumbnail", width: 300, height: 200 },
@@ -96,13 +98,13 @@ export const PROJECTS: Project[] = [
     {
         id: "luci",
         title: "L.U.C.I — Logical Unified Control Interface",
-        subtitle: "AI Smart Mirror Prototype",
+        subtitle: "AI Smart Mirror · Experimental OS · Raspberry Pi",
         blurb: "A custom Raspberry Pi-powered smart mirror. L.U.C.I intergrates wellness tools, personal dashboards, and AI-powered daily insights — all wrapped in a modern home-tech interface",
         features: [
-            "Built with Raspberry Pi 5",
-            "Designed & coded in TypeScript + Python",
-            "Intergrates voice commands & smart assistant AI",
-            "Modular, privacy-focused ReflectOS enviroment"
+            "Raspberry Pi 5–powered hardware platform",
+            "TypeScript and Python application architecture",
+            "Voice command integration with smart assistant AI",
+            "Modular, privacy-first ReflectOS environment",
         ],
         status: "research-develop",
         //link: { href: "/luci", label: "R&D Project By BellScript Studios"},
@@ -116,7 +118,7 @@ export const PROJECTS: Project[] = [
     {
         id: "bellscript-v1",
         title: "BellScirpt Studios — Version One",
-        subtitle: "The original BellScript Studios site",
+        subtitle: "Early brand site · Design exploration · Foundation build",
         blurb: "The first version of BellScript Studios — a minimal, fast MVP designed to establish the early brand and ship quickly.",
         features: [
             "Rapid MVP build",
