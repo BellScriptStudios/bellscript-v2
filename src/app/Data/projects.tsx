@@ -4,6 +4,7 @@ export type Project = {
     subtitle?: string;
     blurb: string;
     features?: string[];
+    featuresShort?: string[];
     link?: { 
         href: string;
         label?: string;
@@ -34,6 +35,11 @@ export const PROJECTS: Project[] = [
             "Corporate-polished UI consistent with sub-brand styles",
             "Responsive, mobile-first design for optimal accessibility",
             "Portfolio showcase linking directly to each brand site",
+        ],
+        featuresShort: [
+            "Parent company and venture platform",
+            "Incubates and operates in-house brands",
+            "Foundation for long-term growth",
         ],
         link: { href: "https://www.themorningbell.co"},
         thumbnail: { 
@@ -86,6 +92,11 @@ export const PROJECTS: Project[] = [
             "Mobile-first, performance-focused design",
             "Scalable foundation for future product drops",
         ],
+        featuresShort: [
+            "Emotion-led brand system",
+            "E-commerce-ready design",
+            "Built for future product drops",
+        ],
         //link: { href: "https://www.candlephase.com", label: "Coming Soon" },
         thumbnail: { src: "/images/candle-phase-bs-thumbnail.png", alt: "Candle Phase thumbnail", width: 300, height: 200 },
         status: "coming-soon",
@@ -105,6 +116,11 @@ export const PROJECTS: Project[] = [
             "TypeScript and Python application architecture",
             "Voice command integration with smart assistant AI",
             "Modular, privacy-first ReflectOS environment",
+        ],
+        featuresShort: [
+            "Voice-driven smart interface",
+            "Custom OS experimentation",
+            "Privacy-focused architecture",
         ],
         status: "research-develop",
         //link: { href: "/luci", label: "R&D Project By BellScript Studios"},

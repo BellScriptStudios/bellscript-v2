@@ -94,9 +94,9 @@ export default function FeaturedProjects({
           {p.subtitle && <p className={styles.subtitle}>{p.subtitle}</p>}
           <p className={styles.blurb}>{p.blurb}</p>
 
-          {p.features?.length ? (
+          {p.featuresShort?.length ? (
             <ul className={styles.features}>
-              {p.features
+              {p.featuresShort
                 .slice(0, variant === "hero" ? 5 : variant === "side" ? 3 : 3)
                 .map((f, i) => (
                   <li key={i}>{f}</li>

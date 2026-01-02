@@ -465,6 +465,7 @@
 
 .ctaIntro {
     max-width: 56ch;
+    align-items: center;
     font-size: 0.95rem;
     line-height: 1.7;
     color: rgba(226, 232, 255, 0.78);
