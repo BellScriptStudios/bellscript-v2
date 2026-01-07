@@ -382,6 +382,67 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 note: "A professional presence that works alongside your resume—not instead of it.",
                 demoUrl: "/services/demos/ariana-james-resume"
             },
+            {
+                id: "portfolio-strater-website",
+                title: "Portfolio Starter Website",
+                blurb:"A clean, modern website designed to showcase your work and make it easy for clients to reach you. Ideal for creatives who’ve outgrown templates and want something more intentional.",
+                long: "The Portfolio Starter Site is a streamlined, professional website built specifically for creatives who want their work to speak for itself.",
+                extLong: "If you’re relying on social media or a DIY template, this gives you a polished online home you can confidently share with clients, collaborators, and opportunities.",
+                sub: [
+                    "Creatives who want a polished online home for their work",
+                    "Photographers, designers, stylists, chefs, and creative professionals",
+                    "Anyone who’s outgrown templates or social-only portfolios",
+                    "Those who want something professional without unnecessary complexity",
+                ],
+                bullets: [
+                    "Custom portfolio website",
+                    "Image-focused design",
+                    "Mobile-friendly layout",
+                    "Easy contact options",
+                ],
+                includes: [
+                    "Custom 1–3 page website",
+                    "Image-focused design",
+                    "Personalized styling",
+                    "Launch-ready setup",
+                ],
+                outcome: [
+                    "A professional website you can confidently share with clients and collaborators",
+                    "polished online home that reflects the quality of your work",
+                    "A clean, distraction-free portfolio that works across devices",
+                    "site that feels intentional, credible, and easy to navigate",
+                ],
+                timeline: "7-10 business days",
+                priceFrom: "Starting at $250",
+                priceFromValue: 250,
+                href: "/services/portfolio-strater-website",
+                icon: "resume",
+                addons: [
+                    {
+                        id: "extra-page",
+                        name: "Additional Page",
+                        price: "$50"
+                    },
+                    {
+                        id: "extra-gallery",
+                        name: "Extra Gallery",
+                        price: "$40",
+                    },
+                    {
+                        id: "booking-integration",
+                        name: "Booking Integration",
+                        price: "$50",
+                    },
+                    {
+                        id: "copy-assistance",
+                        name: "Copy Assistance",
+                        price: "$50",
+                    },
+                ],
+                featured: true,
+                active: true,
+                note: "This service is focused on presentation and clarity. It’s ideal for showcasing your work, not for complex systems, dashboards, or custom functionality.",
+            },
         ],
     },
     {
