@@ -440,7 +440,6 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 ],
                 featured: true,
                 active: true,
-                demoUrl: "/services/demos/portfolio-starter",
                 note: "This service is focused on presentation and clarity. It’s ideal for showcasing your work, not for complex systems, dashboards, or custom functionality.",
             },
         ],
