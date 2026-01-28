@@ -136,10 +136,13 @@ export default function AboutPage() {
                                         Select an option
                                     </option>
                                     <option value="website-in-a-week">Website-in-a-Week</option>
-                                    <option value="marketing-site">Marketing / brand website</option>
-                                    <option value="ecommerce">E-commerce</option>
-                                    <option value="web-app">Web app / product</option>
+                                    <option value="wedding">Wedding Website</option>
+                                    <option value="portfolio">Portfolio / Personal Brand Website</option>
+                                    <option value="small-biz">Small Business Website</option>
+                                    <option value="landing">Landing Page / Booking Website</option>
                                     <option value="fix-refresh">Fix &amp; refresh an existing site</option>
+                                    <option value="web-app">Custom Web Application</option>
+                                    <option value="concept">Experimental / Concept Project</option>
                                     <option value="other">Something else</option>
                                     </select>
                                 </div>
@@ -152,7 +155,8 @@ export default function AboutPage() {
                                     <option value="" disabled>
                                         Select a range
                                     </option>
-                                    <option value="under-2k">Under $2,000</option>
+                                    <option value="under-1k">Under $1,000</option>
+                                    <option value="1k-2k">$1,000 – $2,000</option>
                                     <option value="2k-5k">$2,000 – $5,000</option>
                                     <option value="5k-10k">$5,000 – $10,000</option>
                                     <option value="10k-plus">$10,000+</option>
