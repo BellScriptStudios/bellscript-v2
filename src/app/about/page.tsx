@@ -2,6 +2,9 @@ import styles from "src/app/Styles/AboutPage.module.css"
 import { Metadata } from "next";
 import Link from "next/link";
 import Header from "src/Components/Header";
+import FAQ from "src/Components/FAQ";
+import { aboutFAQ } from "../Data/faqs/about";
+import { pricingFAQ } from "../Data/faqs/pricing";
 import Footer from "src/Components/Footer";
 
 export const metadata: Metadata = {
@@ -120,6 +123,26 @@ export default function AboutPage() {
                     We like to keep things straightforward — and elevated.
                     </p>
                 </section>
+
+                    <FAQ 
+                        title="FAQ — About the Studio"
+                        subtitle="A few things people usually ask"
+                        items={aboutFAQ}
+                        defaultOpenIndex={0}
+                    />
+
+
+                    <FAQ
+                        title="FAQ — Pricing & Process"
+                        subtitle="Common questions about our pricing and process"
+                        items={pricingFAQ}
+                    />
+
+                    <section className={styles.faqFooter}>
+                        <p className={styles.footerNote}>
+                            BellScript Studios works exclusively with fixed, project-based pricing. We do not offer hourly rates or retainer agreements at this time. This allows us to provide clear, upfront pricing and focus on delivering a high-quality product that meets your needs without any surprises.
+                        </p>
+                    </section>
 
                 <section className={styles.ctaSection}>
                     <h2 className={styles.ctaHeading}>
