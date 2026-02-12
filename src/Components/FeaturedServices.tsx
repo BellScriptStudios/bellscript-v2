@@ -19,13 +19,13 @@ export default function HomeFeaturedServices({ categories }: Props) {
             className={styles.services}
             aria-labelledby="featured-services-heading"
         >
-            <div className={styles.servicesInner}>
-                <header className={styles.servicesHeader}>
-                    <p className={styles.kicker}>Featured Services</p>
-                    <h2 className={styles.heading} id="featured-services-heading">
+            <div className={`section-inner ${styles.sectionInner}`}>
+                <header className={`section-header ${styles.sectionHeader}`}>
+                    <p className={`section-kicker ${styles.kicker}`}>Featured Services</p>
+                    <h2 className={`section-title ${styles.sectionTitle}`} id="featured-services-heading">
                         Our Picks
                     </h2>
-                    <p className={styles.intro}>
+                    <p className={`section-intro ${styles.sectionIntro}`}>
                         From career milestones to life’s biggest moments, our featured
                         services bring your ideas to life with clean, modern websites.
                     </p>
@@ -71,13 +71,13 @@ export default function HomeFeaturedServices({ categories }: Props) {
                 </div>
 
                 <div className={styles.servicesCta}>
-                    <p className={styles.ctaIntro}>
+                    <p className={`cta-intro ${styles.ctaIntro}`}>
                         Discover thoughtful offerings designed to support your brand’s next phase.
                     </p>
 
-                    <Link href="/services" className={styles.viewAll}>
+                    <Link href="/services" className={`view-all ${styles.viewAll}`}>
                         <span>Browse All Services</span>
-                        <span className={styles.arrow} aria-hidden="true">
+                        <span className={`cta-arrow ${styles.ctaArrow}`} aria-hidden="true">
                             →
                         </span>
                     </Link>

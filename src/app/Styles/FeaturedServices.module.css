@@ -1,12 +1,7 @@
 .services {
   position: relative;
   padding: clamp(3rem, 7vw, 5rem) 0;
-  background: linear-gradient(
-    180deg,
-    #020314 0%,
-    #02030a 45%,
-    #030712 100%
-  );
+  background: linear-gradient(180deg, #02030a 0%, #020314 55%, #030712 100%);
   border-top: 1px solid rgba(17, 24, 39, 0.9);
   overflow: hidden;
 }
@@ -32,43 +27,6 @@
   filter: blur(110px);
   opacity: 0.75;
   pointer-events: none;
-}
-
-.servicesInner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 5vw, 1.75rem);
-  position: relative;
-  z-index: 1;
-}
-
-.servicesHeader {
-  margin-bottom: 1.75rem;
-}
-
-.kicker {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 650;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 0.5rem;
-}
-
-.heading {
-  margin: 0 0 0.65rem;
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
-  font-weight: 650;
-  letter-spacing: -0.03em;
-  color: rgba(248, 250, 252, 0.96);
-}
-
-.intro {
-  margin: 0;
-  max-width: 62ch;
-  font-size: 0.98rem;
-  line-height: 1.7;
-  color: rgba(226, 232, 255, 0.82);
 }
 
 .grid {
@@ -308,44 +266,6 @@
   flex-direction: column;
   gap: 0.85rem;
   align-items: flex-start;
-}
-
-.ctaIntro {
-  max-width: 56ch;
-  align-items: center;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(226, 232, 255, 0.78);
-}
-
-.viewAll {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.78rem 1.05rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  color: rgba(255, 255, 255, 0.92);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.96rem;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-
-.viewAll:hover {
-  transform: translateY(-1px);
-  border-color: rgba(224, 52, 162, 0.26);
-  background: rgba(255, 255, 255, 0.065);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
-}
-
-.arrow {
-  transition: transform 0.25s ease;
-}
-
-.viewAll:hover .arrow {
-  transform: translateX(4px);
 }
 
 @media (min-width:1010px) {

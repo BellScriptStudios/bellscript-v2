@@ -125,13 +125,13 @@ export default function FeaturedProjects({
 
   return (
     <section id={id} className={styles.section} aria-labelledby={`${id}-heading`}>
-      <div className={styles.inner}>
-        <header className={styles.hero}>
-          <p className={styles.kicker}>Our Work</p>
-          <h2 className={styles.heading} id={`${id}-heading`}>
+      <div className={`section-inner ${styles.sectionInner}`}>
+        <header className={`section-header ${styles.sectionHeader}`}>
+          <p className={`section-kicker ${styles.kicker}`}>Our Work</p>
+          <p className={`section-title ${styles.sectionTitle}`} id={`${id}-heading`}>
             {heading}
-          </h2>
-          {intro && <p className={styles.intro}>{intro}</p>}
+          </p>
+          {intro && <p className={`section-intro ${styles.sectionIntro}`}>{intro}</p>}
         </header>
 
         <div className={styles.layout}>
@@ -151,12 +151,12 @@ export default function FeaturedProjects({
 
         {showViewAll && (
           <div className={styles.footerCta}>
-            <p className={styles.ctaIntro}>
+            <p className={`cta-intro ${styles.ctaIntro}`}>
               Real projects, real clients, and real solutions built with care.
             </p>
-            <Link href={viewAllHref} className={styles.viewAll}>
+            <Link href={viewAllHref} className={`view-all ${styles.viewAll}`}>
               <span>{viewAllLabel}</span>
-              <span className={styles.arrow} aria-hidden="true">
+              <span className={`cta-arrow ${styles.ctaArrow}`} aria-hidden="true">
                 →
               </span>
             </Link>

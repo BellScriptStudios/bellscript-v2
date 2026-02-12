@@ -1,24 +1,30 @@
 .page {
-    position: relative;
-    min-height: 100vh;
-    padding: 0;
-    color: #e8eefc;
-    isolation: isolate;
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  color: #e5edff;
+  isolation: isolate;
 
-    background:
+  background:
     radial-gradient(
-        circle at 8% 0%,
-        rgba(255, 255, 130, 0.50) 0%,
-        rgba(255, 255, 130, 0.18) 28%,
-        transparent 60%
+      circle at 8% 0%,
+      rgba(224, 52, 162, 0.45) 0%,
+      rgba(169, 84, 138, 0.18) 25%,
+      transparent 55%
     ),
     radial-gradient(
-        circle at 92% 100%,
-        rgba(255, 255, 160, 0.40) 0%,
-        rgba(255, 255, 160, 0.14) 28%,
-        transparent 65%
+      circle at 92% 100%,
+      rgba(169, 84, 138, 0.35) 0%,
+      rgba(115, 115, 115, 0.14) 30%,
+      transparent 60%
     ),
-    linear-gradient(145deg, #07070d 0%, #05040a 45%, #040408 100%);
+    linear-gradient(
+      145deg,
+      #020617 0%,
+      #111111 45%,
+      #030712 100%
+    );
+
   background-attachment: fixed;
 }
 
@@ -32,19 +38,19 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(255, 225, 160, 0.07) 0px,
+      rgba(115, 115, 115, 0.08) 0px,
       transparent 1px,
       transparent 14px
     ),
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(255, 221, 140, 0.28) 0%,
-      rgba(15, 23, 42, 0) 60%
+      rgba(224, 52, 162, 0.25) 0%,
+      rgba(2, 6, 23, 0) 55%
     );
 
   mix-blend-mode: soft-light;
-  opacity: 0.45;
-  filter: blur(0.35px);
+  opacity: 0.35;
+  filter: blur(0.3px);
 }
 
 

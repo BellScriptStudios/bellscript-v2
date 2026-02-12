@@ -3,29 +3,6 @@
     border-top: 1px solid #111827;
 }
 
-.inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
-}
-
-.kicker {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.45);
-    margin-bottom: 0.4rem;
-}
-
-.processDesc {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: rgba(249, 250, 251, 0.75);
-    margin-bottom: 1.75rem;
-    max-width: 28rem;
-}
-
 .steps {
     list-style: none;
     margin: 0; padding: 0;
@@ -73,12 +50,6 @@
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--muted);
-}
-
-@media (min-width: 768px) {
-    .processDesc {
-        margin-bottom: 2rem;
-    }
 }
 
 @media (min-width: 640px) {

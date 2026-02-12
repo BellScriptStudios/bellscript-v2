@@ -3,12 +3,15 @@ import styles from 'src/app/Styles/ProcessSection.module.css';
 export default function ProcessSection() {
     return (
         <section className={styles.processSection} aria-labelledby="process-heading">
-            <div className={styles.inner}>
-                <p id="process-title" className={styles.kicker}>Process</p>
-                <p className={styles.processDesc}>
-                    From concept to launch, we follow a streamlined process to ensure 
-                    your project is delivered on time and exceeds expecations.
-                </p>
+            <div className={`section-inner ${styles.sectionInner}`}>
+                <header className={`section-header ${styles.sectionHeader}`}>
+                    <p id="process-kicker" className={`section-kicker ${styles.kicker}`}>Process</p>
+                    <p id="process-title" className={`section-title ${styles.sectionTitle}`}>How We Work</p> 
+                    <p className={`section-intro ${styles.sectionIntro}`}>
+                        From concept to launch, we follow a streamlined process to ensure 
+                        your project is delivered on time and exceeds expecations.
+                    </p>
+                </header>
                     
                 <ol className={styles.steps}>
                     <li className={styles.step}>
