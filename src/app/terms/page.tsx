@@ -27,13 +27,13 @@ export default function TermsPage() {
         <>
             <Header />
             <main className={styles.page} aria-labelledby="terms-title">
-                <header className={styles.hero}>
-                    <p className={`kicker ${styles.kicker}`}>Terms of Service</p>
-                    <h1 id="terms-title" className={`title ${styles.title}`}>
+                <header className={`page-hero ${styles.pageHero}`}>
+                    <p className={`page-kicker ${styles.pageKicker}`}>Terms of Service</p>
+                    <h1 id="terms-title" className={`page-title ${styles.pageTitle}`}>
                     Simple terms for using this site.
                     </h1>
                     <p className={styles.updated}>Last updated: November 2025</p>
-                    <p className={styles.lead}>
+                    <p className={`page-intro ${styles.pageIntro}`}>
                     These terms explain how you may use the BellScript Studios website and
                     what to expect when you get in touch about a project.
                     </p>

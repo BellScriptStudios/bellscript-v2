@@ -39,15 +39,15 @@ export default function AboutPage() {
         <Header />
 
         <main className={styles.page}>
-            <div className={styles.hero}>
-                <p className={`kicker ${styles.kicker}`}>A look inside the studio</p>
-                <h1 className={`title ${styles.title}`} >
+            <div className={`page-hero ${styles.hero}`}>
+                <p className={`page-kicker ${styles.pageKicker}`}>A look inside the studio</p>
+                <h1 className={`page-title ${styles.pageTitle}`} >
                 Where thoughtful design and reliable engineering meet.
                 </h1>
-                <p className={styles.lead}>
+                <p className={`page-intro ${styles.pageIntro}`}>
                 BellScript Studios builds digital experiences that feel intuitive, polished, and genuinely enjoyable to use.
                 </p>
-                <p className={styles.subLead}>
+                <p className={`page-intro ${styles.pageIntro}`}>
                 We blend clean aesthetics with dependable tech so your online presence feels effortless — for you and your users.
                 </p>
             </div>

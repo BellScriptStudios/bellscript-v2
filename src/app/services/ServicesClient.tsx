@@ -70,10 +70,10 @@ export default function ServicesPage() {
     <>
       <Header />
       <main className={styles.page}>
-        <section className={styles.hero}>
-          <p className={`kicker ${styles.kicker}`}>Studio Services</p>
-          <h1 className={`title ${styles.title}`}>Clean & modern builds for real-world ideas.</h1>
-          <p className={styles.lead}>
+        <section className={`page-hero ${styles.pageHero}`}>
+          <p className={`page-kicker ${styles.pageKicker}`}>Studio Services</p>
+          <h1 className={`page-title ${styles.pageTitle}`}>Clean & modern builds for real-world ideas.</h1>
+          <p className={`page-intro ${styles.pageIntro}`}>
             From fast-launch websites to custom software and automations, BellScript Studios
             helps you ship polished experiences without the corporate bloat.
           </p>

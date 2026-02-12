@@ -36,14 +36,14 @@ export default function AboutPage() {
             <Header />
 
             <main className={styles.page} role="main" aria-labelledby="contact-h1">
-                <section className={styles.hero}>
-                    <p className={`kicker ${styles.kicker}`}>Let&apos;s start the conversation</p>
-                    <h1 id="contact-h1" className={`title ${styles.title}`}>Start a project. Keep it simple.</h1>
-                    <p className={styles.lead}>
+                <section className={`page-hero ${styles.pageHero}`}>
+                    <p className={`page-kicker ${styles.pageKicker}`}>Let&apos;s start the conversation</p>
+                    <h1 id="contact-h1" className={`page-title ${styles.pageTitle}`}>Start a project. Keep it simple.</h1>
+                    <p className={`page-intro ${styles.pageIntro}`}>
                         Tell us what you’re building, where you are in the process,
                         and we’ll follow up with a clear next step — no pressure, no chaos.
                     </p>
-                    <p className={styles.subLead}>
+                    <p className={`page-intro ${styles.pageIntro}`}>
                         A few details now help us come back with the right questions,
                         rough scope, and timeline for your build.
                     </p>

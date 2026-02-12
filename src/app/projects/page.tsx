@@ -41,10 +41,13 @@ export default function ProjectsPage() {
             <Header />
 
             <main className={styles.page} role="main" aria-labelledby="projects-h1">
-                <header className={styles.hero}>
-                    <p className={`kicker ${styles.kicker}`}>The work we do</p>
-                    <h1 id="projects-h1" className={`title ${styles.title}`}>Where clean interfaces meets thoughtful engineering.</h1>
-                    <p className={styles.lead}>Projects engineered with purpose — refined visuals, scalable architectures, and smooth user journeys for concept to launch.</p>
+                <header className={`page-hero ${styles.pageHero}`}>
+                    <p className={`page-kicker ${styles.pageKicker}`}>The work we do</p>
+                    <h1 id="projects-h1" className={`page-title ${styles.pageTitle}`}>Where clean interfaces meets thoughtful engineering.</h1>
+                    <p className={`page-intro ${styles.pageIntro}`}>
+                        Projects engineered with purpose — refined visuals, scalable 
+                        architectures, and smooth user journeys for concept to launch.
+                    </p>
                 </header>
 
                 <div className={styles.content}>

@@ -36,13 +36,13 @@ export default function PrivacyPage() {
             <Header />
 
             <main className={styles.page} aria-labelledby="privacy-title">
-                <header className={styles.hero}>
-                    <p className={`kicker ${styles.kicker}`}>Privacy Policy</p>
-                    <h1 id="privacy-title" className={`title ${styles.title}`}>
+                <header className={`page-hero ${styles.pageHero}`}>
+                    <p className={`page-kicker ${styles.pageKicker}`}>Privacy Policy</p>
+                    <h1 id="privacy-title" className={`page-title ${styles.pageTitle}`}>
                     A simple, human-readable privacy policy.
                     </h1>
                     <p className={styles.updated}>Last updated: November 2025</p>
-                    <p className={styles.lead}>
+                    <p className={`page-intro ${styles.pageIntro}`}>
                     We only collect what you choose to send us through the contact form —
                     and we use it solely to respond, collaborate, and support your project.
                     </p>
