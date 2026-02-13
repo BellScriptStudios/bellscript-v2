@@ -56,8 +56,6 @@
   filter: blur(0.3px);
 }
 
-.kicker { margin-bottom: 1rem; }
-
 .detailBody {
   max-width: 1120px;
   margin: 0 auto;
@@ -420,14 +418,37 @@
 }
 
 .backLink {
+  display: inline-flex;
+  position: relative;
   font-size: 0.9rem;
   color: rgba(226, 232, 255, 0.75);
   text-decoration: none;
+  transition: transform 160ms ease;
 }
 
 .backLink:hover {
   color: #f9fafb;
+  transform: translateY(-2px)
 }
+
+.backArrow {
+  display: inline-block;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  margin-right: 3px;
+}
+
+.backLink:hover .backArrow {
+  transform: translateX(-4px);
+}
+
+.backLink:active {
+  transform: translateY(1px);
+}
+
+.backLink:active .backArrow {
+  transform: translateX(-6px);
+}
+
 
 @media (min-width: 1024px) {
   .detailBody::before {
@@ -742,4 +763,156 @@
     #f241b0 40%,
     #e034a2 100%
   );
+}
+
+.framework {
+  margin-top: 3.5rem;
+  padding: 2.25rem 1.25rem 1.75rem;
+}
+
+.frameworkHead {
+  max-width: 860px;
+  margin: 0;
+}
+
+.frameworkLabel {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 0.75rem;
+}
+
+.frameworkTitle {
+  font-size: clamp(1.75rem, 3.3vw, 2.5rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.frameworkTitleLine2 {
+  display: block;
+  opacity: 0.9;
+  margin-top: 0.35rem;
+}
+
+.frameworkSub {
+  margin-top: 1rem;
+  max-width: 55ch;
+  opacity: 0.85;
+  font-size: 1.05rem;
+}
+
+.featureGrid {
+  margin: 2rem auto 0;
+  max-width: 1050px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.featureCard {
+  border-radius: 20px;
+  padding: 1.1rem 1.1rem 1.05rem;
+  background: rgba(20, 24, 38, 0.58);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 0, 170, 0.25);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+.featureTop {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.featureIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: radial-gradient(circle at top left, rgba(255, 0, 170, 0.35), rgba(0, 255, 180, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  flex: 0 0 auto;
+}
+
+.featureTitle {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.featureDesc {
+  margin: 0.35rem 0 0;
+  opacity: 0.85;
+  line-height: 1.45;
+}
+
+.outcomePanel {
+  max-width: 1050px;
+  margin: 2rem auto 0;
+  border-radius: 26px;
+  padding: 1.75rem 1.25rem;
+  background:
+    radial-gradient(circle at top left, rgba(255, 0, 170, 0.18), rgba(0, 0, 0, 0)),
+    rgba(15, 18, 30, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+.outcomeTitle {
+  margin: 0 0 1rem;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  text-align: center;
+}
+
+.outcomeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.outcomePillar {
+  border-radius: 18px;
+  padding: 1rem 1rem;
+  background: rgba(10, 12, 20, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .featureGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .outcomeGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .framework { padding: 2rem 1rem 1.25rem; }
+  .featureGrid { grid-template-columns: 1fr; }
+  .frameworkHead { text-align: left; }
+  .outcomeTitle { text-align: left; }
+  .outcomePillar { text-align: left; }
+}
+
+.featureIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.featureIcon svg {
+  opacity: 0.95;
 }

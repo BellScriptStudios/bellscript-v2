@@ -7,6 +7,37 @@ export type IconKey =
   | "tool"
   | "resume";
 
+export type IncludeIconKey =
+  | "strategy"
+  | "layout"
+  | "form"
+  | "seo"
+  | "speed"
+  | "accessibility"
+  | "deploy"
+  | "updates"
+  | "map"
+  | "calendar"
+  | "heart"
+  | "share"
+  | "shield"
+  | "dashboard"
+  | "gallery"
+  | "upload"
+  | "auth"
+  | "database"
+  | "admin"
+  | "payments"
+  | "cart";
+
+export type IncludeItem =
+  | string
+  | {
+      title: string;
+      desc?: string;
+      icon?: IncludeIconKey;
+    };
+
 export type PlanTier = {
     id: string;
     name: string;
@@ -25,7 +56,7 @@ export type Service = {
     extLong?: string;
     sub?: string[]
     bullets?: string[];
-    includes?: string[];
+    includes?: IncludeItem[];
     outcome?: string | string[];
     timeline?: string;
     priceFrom?: string;
@@ -79,14 +110,14 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Custom design & build",
                 ],
                 includes: [
-                    "Strategy kickoff & scope alignment",
-                    "Custom website (up to 5 sections or pages)",
-                    "Contact form or lead capture",
-                    "Basic SEO setup (titles, meta, indexing)",
-                    "Performance & accessibility optimization",
-                    "Hosting setup & deployment",
-                    "Daily progress updates",
-                    "One focused revision pass",
+                    { title: "Strategy kickoff & scope alignment", icon: "strategy", desc: "Lock scope, pages/sections, and launch goals up front." },
+                    { title: "Custom website (up to 5 sections or pages)", icon: "layout", desc: "Designed and built custom—no templates." },
+                    { title: "Contact form or lead capture", icon: "form", desc: "A clear conversion path for inquiries." },
+                    { title: "Basic SEO setup (titles, meta, indexing)", icon: "seo", desc: "Clean metadata so you’re ready to be found." },
+                    { title: "Performance & accessibility optimization", icon: "speed", desc: "Fast load times and clean, usable UX." },
+                    { title: "Hosting setup & deployment", icon: "deploy", desc: "Launch handled end-to-end." },
+                    { title: "Daily progress updates", icon: "dashboard", desc: "Clear check-ins so decisions stay fast." },
+                    { title: "One focused revision pass", icon: "updates", desc: "A tight refinement pass that keeps momentum." },
                 ],
                 outcome: [
                     "A professional website live in one week",
@@ -124,16 +155,56 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Built to convert visitors",
                 ],
                 includes: [
-                    "Custom website design (3–5 pages or sections)",
-                    "Mobile-first, responsive layout",
-                    "Business info (services, hours, location)",
-                    "Contact form & click-to-call",
-                    "Embedded Google Map",
-                    "Basic local SEO setup (titles, meta, indexing)",
-                    "Performance & accessibility optimization",
-                    "Social sharing preview",
-                    "Hosting setup & deployment",
-                    "First month of Site Care included (Basic)",
+                    {
+                        title: "Custom website design (3–5 pages or sections)",
+                        icon: "layout",
+                        desc: "A clean, custom layout built around your services and goals.",
+                    },
+                    {
+                        title: "Mobile-first, responsive layout",
+                        icon: "accessibility",
+                        desc: "Designed to feel smooth on phones first—then scaled up.",
+                    },
+                    {
+                        title: "Business info (services, hours, location)",
+                        icon: "strategy",
+                        desc: "Structured so customers can quickly find what they need.",
+                    },
+                    {
+                        title: "Contact form & click-to-call",
+                        icon: "form",
+                        desc: "A direct path for calls, messages, and inquiries.",
+                    },
+                    {
+                        title: "Embedded Google Map",
+                        icon: "map",
+                        desc: "Easy directions so local customers can find you fast.",
+                    },
+                    {
+                        title: "Basic local SEO setup (titles, meta, indexing)",
+                        icon: "seo",
+                        desc: "Solid SEO fundamentals so you’re ready to show up in search.",
+                    },
+                    {
+                        title: "Performance & accessibility optimization",
+                        icon: "speed",
+                        desc: "Fast load times with usability baked in.",
+                    },
+                    {
+                        title: "Social sharing preview",
+                        icon: "share",
+                        desc: "Clean preview cards for texts, DMs, and social links.",
+                    },
+                    {
+                        title: "Hosting setup & deployment",
+                        icon: "deploy",
+                        desc: "Launch handled end-to-end—no technical handoffs.",
+                    },
+                    {
+                        title: "First month of Site Care included (Basic)",
+                        icon: "updates",
+                        desc: "Post-launch support to keep things stable and stress-free.",
+                    },
                 ],
                 outcome: [
                     "A professional online presence customers trust",
@@ -228,16 +299,15 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Easy to share with guests",
                 ],
                 includes: [
-                    "Custom-designed wedding website",
-                    "Couple story or welcome section",
-                    "Wedding schedule & event details",
-                    "Ceremony & reception locations with maps",
-                    "RSVP form with plus-one support",
-                    "Dietary notes & song requests",
-                    "Dress code, travel & hotel information",
-                    "Mobile-responsive design",
-                    "Social sharing preview for invitations",
-                    "Hosting setup & deployment",
+                    { title: "Custom-designed wedding website", icon: "layout", desc: "Designed to match your style with a clean, modern layout." },
+                    { title: "Couple story or welcome section", icon: "heart", desc: "A personal touch that sets the tone and feels intentional." },
+                    { title: "Wedding schedule & event details", icon: "calendar", desc: "Clear, mobile-first schedules guests can actually follow." },
+                    { title: "Locations with maps", icon: "map", desc: "Google Maps links for every venue and event." },
+                    { title: "RSVP form with plus-one support", icon: "form", desc: "Collect responses cleanly—no spreadsheet chaos." },
+                    { title: "Dietary notes & song requests", icon: "dashboard", desc: "All guest notes organized and easy to export." },
+                    { title: "Travel & hotel information", icon: "strategy", desc: "Everything guests need, in one place." },
+                    { title: "Social sharing preview", icon: "share", desc: "Beautiful preview cards for texts and invitations." },
+                    { title: "Hosting setup & deployment", icon: "deploy", desc: "Launch handled end-to-end—no stress." },
                 ],
                 outcome: [
                     "All wedding details in one beautiful place",
@@ -275,16 +345,53 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Easy to share link",
                 ],
                 includes: [
-                    "Custom-designed event website",
-                    "Event overview (date, time, location)",
-                    "Schedule or agenda section",
-                    "RSVP form with guest fields",
-                    "Embedded map & directions",
-                    "Things to Know or FAQ section",
-                    "Mobile-responsive design",
-                    "Social sharing preview",
-                    "Hosting setup & deployment",
+                    {
+                        title: "Custom-designed event website",
+                        icon: "layout",
+                        desc: "A clean, polished site tailored to your event and audience.",
+                    },
+                    {
+                        title: "Event overview (date, time, location)",
+                        icon: "strategy",
+                        desc: "Clear details presented upfront so nothing gets missed.",
+                    },
+                    {
+                        title: "Schedule or agenda section",
+                        icon: "calendar",
+                        desc: "Organized timelines guests can follow easily on any device.",
+                    },
+                    {
+                        title: "RSVP form with guest fields",
+                        icon: "form",
+                        desc: "Collect responses cleanly without manual tracking.",
+                    },
+                    {
+                        title: "Embedded map & directions",
+                        icon: "map",
+                        desc: "Direct Google Maps integration for smooth navigation.",
+                    },
+                    {
+                        title: "Things to Know or FAQ section",
+                        icon: "dashboard",
+                        desc: "Answer common questions before they’re asked.",
+                    },
+                    {
+                        title: "Mobile-responsive design",
+                        icon: "accessibility",
+                        desc: "Built to look and function perfectly on phones first.",
+                    },
+                    {
+                        title: "Social sharing preview",
+                        icon: "share",
+                        desc: "Beautiful preview cards for invitations and links.",
+                    },
+                    {
+                        title: "Hosting setup & deployment",
+                        icon: "deploy",
+                        desc: "Launch handled completely—no technical stress.",
+                    },
                 ],
+
                 outcome: [
                     "All event details in one clear place",
                     "Guests know where to be and when",
@@ -320,12 +427,36 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 long: "A personalized event site for details, RSVPs, and memories.",
                 bullets: ["Invite & RSVP", "Photos", "Wishlist/registry (optional)"],
                 includes: [
-                    "1–2 pages (Party Details + RSVP)",
-                    "RSVP form",
-                    "Photo gallery/slideshow",
-                    "Venue details",
-                    "Optional wishlist or registry links",
-                    "Themed design",    
+                    {
+                        title: "1–2 pages (Party Details + RSVP)",
+                        icon: "layout",
+                        desc: "A focused, streamlined layout that keeps everything simple.",
+                    },
+                    {
+                        title: "RSVP form",
+                        icon: "form",
+                        desc: "Quick guest responses without messy group texts.",
+                    },
+                    {
+                        title: "Photo gallery or slideshow",
+                        icon: "gallery",
+                        desc: "Share memories, highlights, or event photos beautifully.",
+                    },
+                    {
+                        title: "Venue details",
+                        icon: "map",
+                        desc: "Clear address, directions, and location info.",
+                    },
+                    {
+                        title: "Optional wishlist or registry links",
+                        icon: "share",
+                        desc: "Easy access to gift links without clutter.",
+                    },
+                    {
+                        title: "Themed design",
+                        icon: "heart",
+                        desc: "A playful design style that fits the vibe of your party.",
+                    },
                 ],
                 outcome: "Make your party unforgettable with RSVPs, details, and memories in one place.",
                 timeline: "5 business days",
@@ -356,15 +487,48 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Professional presentation",
                 ],
                 includes: [
-                    "Custom-designed resume website",
-                    "Experience, skills & education sections",
-                    "Project or portfolio highlights",
-                    "Mobile-responsive design",
-                    "Contact button or email link",
-                    "Downloadable PDF resume (optional)",
-                    "Basic SEO & social preview setup",
-                    "Hosting setup & deployment",
+                    {
+                        title: "Custom-designed resume website",
+                        icon: "layout",
+                        desc: "A clean, modern presentation tailored to your career goals.",
+                    },
+                    {
+                        title: "Experience, skills & education sections",
+                        icon: "strategy",
+                        desc: "Structured clearly so hiring managers find what matters fast.",
+                    },
+                    {
+                        title: "Project or portfolio highlights",
+                        icon: "gallery",
+                        desc: "Show real work with context—not just bullet points.",
+                    },
+                    {
+                        title: "Mobile-responsive design",
+                        icon: "accessibility",
+                        desc: "Optimized for recruiters reviewing on any device.",
+                    },
+                    {
+                        title: "Contact button or email link",
+                        icon: "form",
+                        desc: "Make it easy to connect without friction.",
+                    },
+                    {
+                        title: "Downloadable PDF resume (optional)",
+                        icon: "upload",
+                        desc: "Pair your website with a traditional resume when needed.",
+                    },
+                    {
+                        title: "Basic SEO & social preview setup",
+                        icon: "seo",
+                        desc: "Professional search and link previews built in.",
+                    },
+                    {
+                        title: "Hosting setup & deployment",
+                        icon: "deploy",
+                        desc: "Launch handled end-to-end—ready to share immediately.",
+                    },
                 ],
+
                 outcome: [
                     "A professional online presence that stands out",
                     "An easy link to share with employers and recruiters",
@@ -400,11 +564,28 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Easy contact options",
                 ],
                 includes: [
-                    "Custom 1–3 page website",
-                    "Image-focused design",
-                    "Personalized styling",
-                    "Launch-ready setup",
+                    {
+                        title: "Custom 1–3 page website",
+                        icon: "layout",
+                        desc: "A focused, streamlined structure built to showcase your work.",
+                    },
+                    {
+                        title: "Image-focused design",
+                        icon: "gallery",
+                        desc: "Clean layouts that let your visuals lead without distraction.",
+                    },
+                    {
+                        title: "Personalized styling",
+                        icon: "strategy",
+                        desc: "Typography, spacing, and tone aligned with your creative identity.",
+                    },
+                    {
+                        title: "Launch-ready setup",
+                        icon: "deploy",
+                        desc: "Fully deployed and optimized—ready to share immediately.",
+                    },
                 ],
+
                 outcome: [
                     "A professional website you can confidently share with clients and collaborators",
                     "polished online home that reflects the quality of your work",
@@ -468,16 +649,53 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "No full rebuild required",
                 ],
                 includes: [
-                    "Full website audit (UX, layout, performance)",
-                    "Bug fixes and broken layout repairs",
-                    "Responsive & mobile cleanup",
-                    "Performance optimization",
-                    "SSL and security updates",
-                    "Light UI/UX polish",
-                    "Browser and device testing",
-                    "Two focused revision rounds",
-                    "Summary of fixes applied",
+                    {
+                        title: "Full website audit (UX, layout, performance)",
+                        icon: "strategy",
+                        desc: "A structured review to identify usability, layout, and speed issues.",
+                    },
+                    {
+                        title: "Bug fixes and broken layout repairs",
+                        icon: "updates",
+                        desc: "Resolve functional issues and clean up visual inconsistencies.",
+                    },
+                    {
+                        title: "Responsive & mobile cleanup",
+                        icon: "accessibility",
+                        desc: "Ensure smooth behavior across phones, tablets, and desktops.",
+                    },
+                    {
+                        title: "Performance optimization",
+                        icon: "speed",
+                        desc: "Improve load times and overall site responsiveness.",
+                    },
+                    {
+                        title: "SSL and security updates",
+                        icon: "shield",
+                        desc: "Stabilize and secure your site against common vulnerabilities.",
+                    },
+                    {
+                        title: "Light UI/UX polish",
+                        icon: "layout",
+                        desc: "Subtle refinements that improve clarity and visual consistency.",
+                    },
+                    {
+                        title: "Browser and device testing",
+                        icon: "dashboard",
+                        desc: "Cross-browser testing to catch edge cases before users do.",
+                    },
+                    {
+                        title: "Two focused revision rounds",
+                        icon: "updates",
+                        desc: "Structured refinement without scope creep.",
+                    },
+                    {
+                        title: "Summary of fixes applied",
+                        icon: "deploy",
+                        desc: "A clear breakdown of improvements and next steps.",
+                    },
                 ],
+
                 outcome: [
                     "A more stable and reliable website",
                     "Faster load times and smoother performance",
@@ -507,13 +725,41 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "One-time optimization pass",
                 ],
                 includes: [
-                    "Performance audit (Lighthouse & Core Web Vitals)",
-                    "Accessibility review (WCAG basics)",
-                    "Mobile performance optimization",
-                    "Image, asset, and load-time optimizations",
-                    "Fixes targeting 90+ Lighthouse scores",
-                    "Before-and-after performance report",
-                    "Cross-device testing",
+                    {
+                        title: "Performance audit (Lighthouse & Core Web Vitals)",
+                        icon: "speed",
+                        desc: "Detailed scoring across performance, accessibility, and best practices.",
+                    },
+                    {
+                        title: "Accessibility review (WCAG basics)",
+                        icon: "accessibility",
+                        desc: "Baseline accessibility improvements for inclusive usability.",
+                    },
+                    {
+                        title: "Mobile performance optimization",
+                        icon: "dashboard",
+                        desc: "Targeted refinements to improve speed and responsiveness on phones.",
+                    },
+                    {
+                        title: "Image, asset, and load-time optimizations",
+                        icon: "seo",
+                        desc: "Compression, lazy loading, and asset cleanup for faster delivery.",
+                    },
+                    {
+                        title: "Fixes targeting 90+ Lighthouse scores",
+                        icon: "strategy",
+                        desc: "Focused improvements designed to raise measurable performance metrics.",
+                    },
+                    {
+                        title: "Before-and-after performance report",
+                        icon: "share",
+                        desc: "Clear comparison so you can see exactly what improved.",
+                    },
+                    {
+                        title: "Cross-device testing",
+                        icon: "updates",
+                        desc: "Validation across modern browsers and devices.",
+                    },
                 ],
                 outcome: [
                     "Faster page load times",
@@ -579,6 +825,41 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                         featured: false,
                     },
                 ],
+                includes: [
+                    {
+                        title: "Proactive monitoring",
+                        icon: "dashboard",
+                        desc: "Continuous uptime and health checks to catch issues early.",
+                    },
+                    {
+                        title: "Security & stability",
+                        icon: "shield",
+                        desc: "Ongoing updates and protection to reduce risk.",
+                    },
+                    {
+                        title: "Performance oversight",
+                        icon: "speed",
+                        desc: "Regular checks to keep your site running smoothly.",
+                    },
+                    {
+                        title: "Content support",
+                        icon: "updates",
+                        desc: "Structured time for edits, tweaks, and small improvements.",
+                    },
+                    {
+                        title: "Clear communication",
+                        icon: "strategy",
+                        desc: "Defined support structure—no disappearing devs.",
+                    },
+                ],
+
+                outcome: [
+                    "A website that stays secure, current, and dependable",
+                    "Proactive care instead of reactive fixes",
+                    "Ongoing improvements that compound over time",
+                    "Confidence knowing your digital presence is supported",
+                ],
+
                 addons: [
                     {
                         id: "extra-dev-time",
