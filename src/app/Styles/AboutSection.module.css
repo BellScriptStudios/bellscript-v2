@@ -57,7 +57,6 @@
 }
 
 .aboutNote {
-  margin-top: 1.4rem;
   max-width: 378px;
   font-size: 0.85rem;
   color: rgba(148, 163, 184, 0.95);
@@ -88,7 +87,6 @@
 
   .aboutNote {
     grid-column: 1;
-    margin-top: 0.2rem;
   }
 
   .about::before {

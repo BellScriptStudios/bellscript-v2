@@ -8,7 +8,7 @@
     margin: 0; padding: 0;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .step {
@@ -45,7 +45,7 @@
 .note {
     padding-left: 0.85rem;
     border-left: 2px solid rgba(148, 163, 184, 0.35);
-    margin-top: 1.75rem;
+    margin-top: 2rem;
 
     font-size: 0.9rem;
     line-height: 1.5;
@@ -55,5 +55,6 @@
 @media (min-width: 640px) {
     .steps {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
     }
 }

@@ -11,7 +11,6 @@ export default function ServiceDetail({ service }: { service: Service }) {
     timeline,
     long,
     extLong,
-    sub,
     blurb,
     includes,
     outcome,
@@ -27,12 +26,12 @@ export default function ServiceDetail({ service }: { service: Service }) {
   const hasOutcomeList = Array.isArray(outcome) && outcome.length > 0;
   const hasOutcomeText =
     typeof outcome === "string" && outcome.trim().length > 0;
-  const hasWhoFor = Array.isArray(sub) && sub.length > 0;
+  {/* const hasWhoFor = Array.isArray(sub) && sub.length > 0; */}
 
   return (
     <main className={styles.page} role="main" aria-labelledby="service-title">
       <div className={styles.detailBody} aria-labelledby="service-title">
-        <p className={`kicker ${styles.kicker}`}>
+        <p className={`page-kicker ${styles.pageKicker}`}>
           {isSiteCare ? "Ongoing care, without the overhead" : "Get into the details"}
         </p>
         <header className={styles.header}>
@@ -90,23 +89,26 @@ export default function ServiceDetail({ service }: { service: Service }) {
               <strong>Timeline:</strong> {timeline}
             </p>
           )}
+          <div className={styles.leadContainer}>
+            {(long || blurb) && (
+              <p className={styles.lead}>{long ?? blurb}</p>
+            )}
 
-          {(long || blurb) && (
-            <p className={styles.lead}>{long ?? blurb}</p>
-          )}
+            {extLong && (
+              <p className={styles.extLong}>
+                {extLong}
+              </p>
+            )}
 
-          {extLong && (
-            <p className={styles.extLong}>
-              {extLong}
-            </p>
-          )}
-
-          {note && (
-            <p className={styles.note}>
-              {note}
-            </p>
-          )}
+            {note && (
+              <p className={styles.note}>
+                {note}
+              </p>
+            )}
+          </div>
         </header>
+        
+        { /* 
 
         <section className={styles.whoFor}>
           {hasWhoFor && (
@@ -121,6 +123,8 @@ export default function ServiceDetail({ service }: { service: Service }) {
             </div>
           )}
         </section>
+
+        */ }
 
         <section className={styles.columns}>
           <div className={styles.columnsGrid}>

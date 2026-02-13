@@ -119,6 +119,10 @@
   color: #f9fafb;
 }
 
+.leadContainer {
+  margin-top: 3rem;
+}
+
 .lead, .extLong {
   margin-top: 0.75rem;
   max-width: 42rem;
@@ -130,7 +134,7 @@
 .note {
   padding-left: 0.85rem;
   border-left: 2px solid rgba(148, 163, 184, 0.35);
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 
   font-size: 0.9rem;
   line-height: 1.5;
