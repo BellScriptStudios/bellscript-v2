@@ -41,7 +41,7 @@ export default function AboutPage() {
                     <h1 id="contact-h1" className={`page-title ${styles.pageTitle}`}>Start a project. Keep it simple.</h1>
                     <p className={`page-intro ${styles.pageIntro}`}>
                         Tell us what you’re building, where you are in the process,
-                        and we’ll follow up with a clear next step — no pressure, no chaos.
+                        and we’ll follow up with a clear next step, no pressure, no chaos.
                     </p>
                     <p className={`page-intro ${styles.pageIntro}`}>
                         A few details now help us come back with the right questions,
@@ -54,7 +54,7 @@ export default function AboutPage() {
                         <div className={styles.copyInner}>
                             <h2 className={styles.subTitle}>What to share</h2>
                             <p className={styles.body}>
-                                You don&apos;t need a full brief — just a snapshot of what you&apos;re
+                                You don&apos;t need a full brief, just a snapshot of what you&apos;re
                                 trying to do. Screenshots, links, or rough notes are welcome.
                             </p>
                             <ul className={styles.list}>

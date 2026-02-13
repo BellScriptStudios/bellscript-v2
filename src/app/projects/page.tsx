@@ -45,7 +45,7 @@ export default function ProjectsPage() {
                     <p className={`page-kicker ${styles.pageKicker}`}>The work we do</p>
                     <h1 id="projects-h1" className={`page-title ${styles.pageTitle}`}>Where clean interfaces meets thoughtful engineering.</h1>
                     <p className={`page-intro ${styles.pageIntro}`}>
-                        Projects engineered with purpose — refined visuals, scalable 
+                        Projects engineered with purpose, refined visuals, scalable 
                         architectures, and smooth user journeys for concept to launch.
                     </p>
                 </header>

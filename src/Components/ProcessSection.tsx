@@ -52,7 +52,7 @@ export default function ProcessSection() {
                             <h3 className={styles.stepTitle}>Build</h3>
                             <p className={styles.stepText}>
                                 We turn the design into a fast, responsive website. Performance, 
-                                accessibility, and polish are baked in—not added later.
+                                accessibility, and polish are baked in, not added later.
                             </p>
                         </div>
                     </li>

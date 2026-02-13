@@ -52,7 +52,7 @@ export default function Home() {
         <div className={`page-hero ${styles.pageHero}`}>
           <p className={`page-kicker ${styles.pageKicker}`}>Welcome to the Studio</p>
           <h1 className={`page-title ${styles.pageTitle}`}>Building Innovative Experiences</h1>
-          <p className={`page-intro ${styles.pageIntro}`}>Custom websites and digital experiences — fast, modern, and crafted for your brand.</p>
+          <p className={`page-intro ${styles.pageIntro}`}>Custom websites and digital experiences, fast, modern, and crafted for your brand.</p>
         </div>
 
         <HomeFeaturedServices categories={SERVICE_CATEGORIES} />

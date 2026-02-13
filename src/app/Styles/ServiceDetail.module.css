@@ -446,7 +446,7 @@
 }
 
 .backLink:active .backArrow {
-  transform: translateX(-6px);
+  transform: translateX(-2px);
 }
 
 

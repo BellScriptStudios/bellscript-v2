@@ -95,8 +95,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             {
                 id:"website-in-a-week",
                 title: "Website-in-a-Week",
-                blurb: "A focused, fast-track website build designed to get you live in just five days—without cutting corners or dragging things out.",
-                long: "Website in a Week is a streamlined build for clients who need a professional website live quickly. We work within a clearly defined scope, make fast decisions, and move from kickoff to launch in one focused week. The result is a custom, mobile-ready website that looks polished, performs well, and is ready to share—without the usual back-and-forth or extended timelines.",
+                blurb: "A focused, fast-track website build designed to get you live in just five days, without cutting corners or dragging things out.",
+                long: "Website in a Week is a streamlined build for clients who need a professional website live quickly. We work within a clearly defined scope, make fast decisions, and move from kickoff to launch in one focused week. The result is a custom, mobile-ready website that looks polished, performs well, and is ready to share, without the usual back-and-forth or extended timelines.",
                 extLong: "This service is ideal for launches, rebrands, and businesses that value momentum. By keeping the process intentional and efficient, we’re able to deliver speed without sacrificing quality.",
                 sub: [
                     "Businesses preparing for a launch or rebrand",
@@ -111,7 +111,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 ],
                 includes: [
                     { title: "Strategy kickoff & scope alignment", icon: "strategy", desc: "Lock scope, pages/sections, and launch goals up front." },
-                    { title: "Custom website (up to 5 sections or pages)", icon: "layout", desc: "Designed and built custom—no templates." },
+                    { title: "Custom website (up to 5 sections or pages)", icon: "layout", desc: "Designed and built custom, no templates." },
                     { title: "Contact form or lead capture", icon: "form", desc: "A clear conversion path for inquiries." },
                     { title: "Basic SEO setup (titles, meta, indexing)", icon: "seo", desc: "Clean metadata so you’re ready to be found." },
                     { title: "Performance & accessibility optimization", icon: "speed", desc: "Fast load times and clean, usable UX." },
@@ -139,7 +139,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 id:"local-business-bundle",
                 title: "Local Business Bundle",
                 blurb: "A complete, done-for-you website bundle designed to help local businesses show up professionally, attract nearby customers, and turn visits into calls.",
-                long: "The Local Business Website Bundle is an all-in solution for businesses that want a strong online presence without managing multiple vendors or decisions. We design and build a custom website tailored to your business, location, and customers—covering everything from layout and performance to search visibility and contact flow.",
+                long: "The Local Business Website Bundle is an all-in solution for businesses that want a strong online presence without managing multiple vendors or decisions. We design and build a custom website tailored to your business, location, and customers, covering everything from layout and performance to search visibility and contact flow.",
                 extLong: "This bundle is built for clarity and conversion. Your site will be mobile-friendly, fast, and easy to navigate, with clear business information, maps, and calls to action that make it simple for customers to reach you. It’s ideal for shops, service providers, and local brands that need a professional site that works immediately and scales as they grow.",
                 sub: [
                     "Local businesses that need a professional online presence",
@@ -163,7 +163,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Mobile-first, responsive layout",
                         icon: "accessibility",
-                        desc: "Designed to feel smooth on phones first—then scaled up.",
+                        desc: "Designed to feel smooth on phones first, then scaled up.",
                     },
                     {
                         title: "Business info (services, hours, location)",
@@ -198,7 +198,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Hosting setup & deployment",
                         icon: "deploy",
-                        desc: "Launch handled end-to-end—no technical handoffs.",
+                        desc: "Launch handled end-to-end, no technical handoffs.",
                     },
                     {
                         title: "First month of Site Care included (Basic)",
@@ -219,7 +219,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "web",
                 featured: false,
                 active: true,
-                note: "Everything your local business needs to look credible online—handled in one streamlined package.",
+                note: "Everything your local business needs to look credible online, handled in one streamlined package.",
             },
             {
                 id:"comment-app-mvp",
@@ -282,9 +282,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             {
                 id:"wedding-website",
                 title: "Wedding Website",
-                blurb: "A beautifully designed wedding website that keeps all your details, RSVPs, and guest information in one elegant place—so you can focus on the celebration.",
+                blurb: "A beautifully designed wedding website that keeps all your details, RSVPs, and guest information in one elegant place, so you can focus on the celebration.",
                 long: "Your wedding website is the central hub for everything your guests need to know. From schedules and locations to RSVPs and special notes, we design a custom site that feels personal, polished, and easy to use on any device.",
-                extLong: "Our wedding websites are thoughtfully designed to reduce guest questions and last-minute confusion while reflecting your style as a couple. The result is a timeless, shareable website that makes planning smoother, communication clearer, and your wedding experience more enjoyable—for you and your guests.",
+                extLong: "Our wedding websites are thoughtfully designed to reduce guest questions and last-minute confusion while reflecting your style as a couple. The result is a timeless, shareable website that makes planning smoother, communication clearer, and your wedding experience more enjoyable, for you and your guests.",
                 sub: [
                     "Couples who want all wedding details in one place",
 	                "Weddings with multiple events or locations",
@@ -303,11 +303,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     { title: "Couple story or welcome section", icon: "heart", desc: "A personal touch that sets the tone and feels intentional." },
                     { title: "Wedding schedule & event details", icon: "calendar", desc: "Clear, mobile-first schedules guests can actually follow." },
                     { title: "Locations with maps", icon: "map", desc: "Google Maps links for every venue and event." },
-                    { title: "RSVP form with plus-one support", icon: "form", desc: "Collect responses cleanly—no spreadsheet chaos." },
+                    { title: "RSVP form with plus-one support", icon: "form", desc: "Collect responses cleanly, no spreadsheet chaos." },
                     { title: "Dietary notes & song requests", icon: "dashboard", desc: "All guest notes organized and easy to export." },
                     { title: "Travel & hotel information", icon: "strategy", desc: "Everything guests need, in one place." },
                     { title: "Social sharing preview", icon: "share", desc: "Beautiful preview cards for texts and invitations." },
-                    { title: "Hosting setup & deployment", icon: "deploy", desc: "Launch handled end-to-end—no stress." },
+                    { title: "Hosting setup & deployment", icon: "deploy", desc: "Launch handled end-to-end, no stress." },
                 ],
                 outcome: [
                     "All wedding details in one beautiful place",
@@ -322,13 +322,13 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "event",
                 featured: true,
                 active: true,
-                note: "Designed to be beautiful now—and worth keeping long after the day has passed.",
+                note: "Designed to be beautiful now, and worth keeping long after the day has passed.",
                 demoUrl: "/services/demos/happily-ever-after",
             },
             {
                 id:"event-website",
                 title: "Event & Party Website",
-                blurb: "A polished event website that keeps all your details, RSVPs, and schedules in one easy-to-share place—so guests know exactly where to be and when.",
+                blurb: "A polished event website that keeps all your details, RSVPs, and schedules in one easy-to-share place, so guests know exactly where to be and when.",
                 long: "Event and party websites are designed to simplify communication and make hosting easier. We create custom websites that clearly present event details, schedules, locations, and RSVPs in a single, mobile-friendly experience your guests can access anywhere.",
                 extLong: "Whether you’re planning a birthday party, corporate event, fundraiser, or special celebration, this service provides a professional, organized hub for your event. The result is fewer questions, smoother coordination, and a clean, shareable website you can confidently send to every guest.",
                 sub: [
@@ -388,7 +388,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Hosting setup & deployment",
                         icon: "deploy",
-                        desc: "Launch handled completely—no technical stress.",
+                        desc: "Launch handled completely, no technical stress.",
                     },
                 ],
 
@@ -417,7 +417,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                         price: "$25-$50",
                     },
                 ],
-                note: "Designed to keep your event organized—and your guests informed",
+                note: "Designed to keep your event organized, and your guests informed",
                 demoUrl: "/services/demos/wedding-cocktail",
             },
             {
@@ -478,7 +478,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 title: "Resume Website",
                 blurb: "A polished personal website that showcases your experience, skills, and work in one professional, easy-to-share place.",
                 long: "A resume website gives you more control over how your experience is presented than a traditional PDF alone. We design a clean, modern website that highlights your background, skills, and accomplishments while remaining easy to navigate and accessible on any device.",
-                extLong: "This service is ideal for professionals, creatives, and career switchers who want to stand out with a professional online presence. Your resume website acts as a living extension of your resume—perfect for job applications, networking, and sharing your work with confidence.",
+                extLong: "This service is ideal for professionals, creatives, and career switchers who want to stand out with a professional online presence. Your resume website acts as a living extension of your resume, perfect for job applications, networking, and sharing your work with confidence.",
                 bullets: [
                     "Personal resume website",
                     "Experience & skills sections",
@@ -500,7 +500,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Project or portfolio highlights",
                         icon: "gallery",
-                        desc: "Show real work with context—not just bullet points.",
+                        desc: "Show real work with context, not just bullet points.",
                     },
                     {
                         title: "Mobile-responsive design",
@@ -525,7 +525,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Hosting setup & deployment",
                         icon: "deploy",
-                        desc: "Launch handled end-to-end—ready to share immediately.",
+                        desc: "Launch handled end-to-end, ready to share immediately.",
                     },
                 ],
 
@@ -542,7 +542,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "resume",
                 featured: false,
                 active: true,
-                note: "A professional presence that works alongside your resume—not instead of it.",
+                note: "A professional presence that works alongside your resume, not instead of it.",
                 demoUrl: "/services/demos/ariana-james-resume"
             },
             {
@@ -582,7 +582,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Launch-ready setup",
                         icon: "deploy",
-                        desc: "Fully deployed and optimized—ready to share immediately.",
+                        desc: "Fully deployed and optimized, ready to share immediately.",
                     },
                 ],
 
@@ -632,7 +632,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             {
                 id:"fix-and-refresh-package",
                 title: "Fix & Refresh Package",
-                blurb: "A focused audit and cleanup designed to fix issues, improve performance, and refresh your existing website—without starting from scratch.",
+                blurb: "A focused audit and cleanup designed to fix issues, improve performance, and refresh your existing website, without starting from scratch.",
                 long: "Fix & Care is a targeted service for websites that mostly work but need professional attention. We begin with a full audit to identify issues affecting usability, performance, and reliability, then apply a focused set of fixes and optimizations to bring your site back up to modern standards.",
                 extLong: "This package is ideal for outdated sites, recent launches with lingering bugs, or businesses that need stability and polish before investing in a full rebuild. The goal is simple: fix what’s broken, refresh what matters, and leave you with a website that feels solid, fast, and dependable.",
                 sub: [
@@ -715,7 +715,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 id:"optimization-pass",
                 title: "Optimization Pass",
                 blurb: "A one-time performance and accessibility tune-up designed to make your website faster, smoother, and easier to use.",
-                long: "The Optimization Pass is a focused, one-time service for improving how your website performs. We analyze speed, accessibility, and mobile behavior, then apply targeted optimizations to bring your site up to modern performance standards—without changing its core design or structure.",
+                long: "The Optimization Pass is a focused, one-time service for improving how your website performs. We analyze speed, accessibility, and mobile behavior, then apply targeted optimizations to bring your site up to modern performance standards, without changing its core design or structure.",
                 extLong: "This service is ideal for sites that look fine but feel slow, score poorly in audits, or struggle on mobile. The result is a faster, more accessible website that loads quickly, performs reliably, and delivers a better experience for every visitor.",
                 bullets: [
                     "Performance & accessibility audit",
@@ -774,14 +774,14 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "seo",
                 featured: false,
                 active: true,
-                note: "Focused on performance and accessibility—not design changes or feature development.",
+                note: "Focused on performance and accessibility, not design changes or feature development.",
             },
             {
                 id:"site-care-plans",
                 title: "Site Care Plans",
-                blurb: "Ongoing website care that keeps your site secure, up to date, and running smoothly—without the stress of handling it yourself.",
+                blurb: "Ongoing website care that keeps your site secure, up to date, and running smoothly, without the stress of handling it yourself.",
                 long: "Site Care Plans provide continuous maintenance and support for websites that need to stay reliable over time. Instead of reacting to issues when something breaks, we proactively handle updates, backups, performance checks, and small improvements to keep your site running smoothly behind the scenes.",
-                extLong: "This service is ideal for businesses and creators who rely on their website and want peace of mind after launch. With ongoing care, your site stays secure, current, and supported—so you can focus on your work while we handle the technical upkeep.",
+                extLong: "This service is ideal for businesses and creators who rely on their website and want peace of mind after launch. With ongoing care, your site stays secure, current, and supported, so you can focus on your work while we handle the technical upkeep.",
                 plans: [
                     {
                         id: "essential",
@@ -849,7 +849,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     {
                         title: "Clear communication",
                         icon: "strategy",
-                        desc: "Defined support structure—no disappearing devs.",
+                        desc: "Defined support structure, no disappearing devs.",
                     },
                 ],
 
@@ -891,7 +891,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "tool",
                 featured: false,
                 active: true,
-                note: "Designed for sites that need ongoing attention—not set-it-and-forget-it launches.",
+                note: "Designed for sites that need ongoing attention, not set-it-and-forget-it launches.",
             },
         ],
     },

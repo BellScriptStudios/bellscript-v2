@@ -23,7 +23,7 @@ export default function AboutSection() {
                     <p className={styles.aboutBody}>
                         Whether it&apos;s a launch-week website, a specialty event page, or
                         a custom tool for your team, the goal is always the same: give you
-                        something you&apos;re proud to share — and that actually moves the
+                        something you&apos;re proud to share, and that actually moves the
                         needle.
                     </p>
 

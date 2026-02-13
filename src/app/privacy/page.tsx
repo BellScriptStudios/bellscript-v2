@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                     </h1>
                     <p className={styles.updated}>Last updated: November 2025</p>
                     <p className={`page-intro ${styles.pageIntro}`}>
-                    We only collect what you choose to send us through the contact form —
+                    We only collect what you choose to send us through the contact form,
                     and we use it solely to respond, collaborate, and support your project.
                     </p>
                 </header>

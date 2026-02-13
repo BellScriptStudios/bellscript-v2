@@ -48,7 +48,7 @@ export default function AboutPage() {
                 BellScript Studios builds digital experiences that feel intuitive, polished, and genuinely enjoyable to use.
                 </p>
                 <p className={`page-intro ${styles.pageIntro}`}>
-                We blend clean aesthetics with dependable tech so your online presence feels effortless — for you and your users.
+                We blend clean aesthetics with dependable tech so your online presence feels effortless, for you and your users.
                 </p>
             </div>
             <div className={styles.content}>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 </section>
 
                     <FAQ 
-                        title="FAQ — About the Studio"
+                        title="FAQ - About the Studio"
                         subtitle="A few things people usually ask"
                         items={aboutFAQ}
                         defaultOpenIndex={0}
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
 
                     <FAQ
-                        title="FAQ — Pricing & Process"
+                        title="FAQ - Pricing & Process"
                         subtitle="Common questions about our pricing and process"
                         items={pricingFAQ}
                     />

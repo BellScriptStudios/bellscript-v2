@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
 
     {
         id: "smartspend",
-        title: "SmartSpend — CLI Expense Tracker",
+        title: "SmartSpend - CLI Expense Tracker",
         subtitle: "Personal finance tool · CLI application · Data-driven",
         blurb:
             "SmartSpend is a command-line interface (CLI) application designed to make expense tracking simple and efficient.",
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
         title: "Candle Phase",
         subtitle: "Lifestyle brand · E-commerce · Product storytelling",
         blurb:
-            "Something Beautiful is on the Horizon — We’re pouring, curing, and crafting the perfect collection just for you. From healing to hustle, love to glow-up — your phase is about to be lit.",
+            "Something Beautiful is on the Horizon. We’re pouring, curing, and crafting the perfect collection just for you. From healing to hustle, love to glow-up, your phase is about to be lit.",
         features: [
             "Custom brand identity and phase-based product system",
             "E-commerce-ready product layouts",
@@ -108,9 +108,9 @@ export const PROJECTS: Project[] = [
 
     {
         id: "luci",
-        title: "L.U.C.I — Logical Unified Control Interface",
+        title: "L.U.C.I - Logical Unified Control Interface",
         subtitle: "AI Smart Mirror · Experimental OS · Raspberry Pi",
-        blurb: "A custom Raspberry Pi-powered smart mirror. L.U.C.I intergrates wellness tools, personal dashboards, and AI-powered daily insights — all wrapped in a modern home-tech interface",
+        blurb: "A custom Raspberry Pi-powered smart mirror. L.U.C.I intergrates wellness tools, personal dashboards, and AI-powered daily insights, all wrapped in a modern home-tech interface",
         features: [
             "Raspberry Pi 5–powered hardware platform",
             "TypeScript and Python application architecture",
@@ -133,9 +133,9 @@ export const PROJECTS: Project[] = [
 
     {
         id: "bellscript-v1",
-        title: "BellScirpt Studios — Version One",
+        title: "BellScirpt Studios - Version One",
         subtitle: "Early brand site · Design exploration · Foundation build",
-        blurb: "The first version of BellScript Studios — a minimal, fast MVP designed to establish the early brand and ship quickly.",
+        blurb: "The first version of BellScript Studios, a minimal, fast MVP designed to establish the early brand and ship quickly.",
         features: [
             "Rapid MVP build",
             "Early brand exploration",
