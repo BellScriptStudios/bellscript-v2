@@ -238,7 +238,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "web",
                 featured: false,
                 active: true,
-                addons: ["booking-integration", "copy-assistance", "extra-page", "seo-lite", "content-updates", "priority-support"],
+                addons: ["booking-integration", "copy-assistance", "extra-page", "seo-lite", "content-updates", "priority-support", "extra-dev-time"],
                 note: "Everything your local business needs to look credible online, handled in one streamlined package.",
             },
             {
