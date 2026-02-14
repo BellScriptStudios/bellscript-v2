@@ -67,7 +67,7 @@ export type Service = {
     featured?: boolean;
     active?: boolean;
     plans?: PlanTier[];
-    addons?: Addon[];
+    addons?: string[];
     note?: string;
     demoUrl?: string;
 };
@@ -86,6 +86,24 @@ export type ServiceCategory = {
     title: string;
     items: Service[];
 };
+
+export const ADDONS: Addon[] = [
+
+    { id: "extra-page", name: "Additional Page", price: "$50", desc: "Expand your site with an additional fully designed page." },
+    { id: "extra-gallery", name: "Extra Gallery", price: "$40", desc: "Add another image gallery section." },
+    { id: "booking-integration", name: "Booking Integration", price: "$50", desc: "Connect your site to Calendly, Square, or booking tools." },
+    { id: "copy-assistance", name: "Copy Assistance", price: "$50", desc: "Light editing or writing help to refine your content." },
+    { id: "priority-support", name: "Priority Support", price: "$99", desc: "Faster turnaround and direct support access.", popular: true },
+
+    { id: "site-care-post-event", name: "Site Care (post-event edits / archive)", price: "$25–$50", desc: "Keep the page updated, archive it, or make quick post-event edits." },
+
+    { id: "extra-dev-time", name: "Extra Development Time", price: "$50/hr", desc: "Additional development beyond included plan hours.", popular: true },
+    { id: "seo-lite", name: "SEO Lite Monitoring", price: "$29/mo", desc: "Basic SEO health monitoring and checks." },
+    { id: "content-updates", name: "Content Writing & Updates", price: "From $75/mo", desc: "Light copy updates and content assistance." },
+    { id: "hosting-only", name: "Hosting Only", price: "$19/mo", desc: "Secure hosting without updates or content work." },
+
+];
+
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
     {
@@ -132,6 +150,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "web",
                 featured: true,
                 active: true,
+                addons: ["extra-page", "copy-assistance", "booking-integration", "priority-support"],
                 note: "Requires finalized content, brand assets, and fast client feedback.",
                 demoUrl: "/services/demos/chef-liora"
             },
@@ -219,6 +238,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "web",
                 featured: false,
                 active: true,
+                addons: ["booking-integration", "copy-assistance", "extra-page", "seo-lite", "content-updates", "priority-support"],
                 note: "Everything your local business needs to look credible online, handled in one streamlined package.",
             },
             {
@@ -322,6 +342,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "event",
                 featured: true,
                 active: true,
+                addons: ["extra-page", "extra-gallery", "copy-assistance", "priority-support", "site-care-post-event"],
                 note: "Designed to be beautiful now, and worth keeping long after the day has passed.",
                 demoUrl: "/services/demos/happily-ever-after",
             },
@@ -405,18 +426,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "event",
                 featured: false,
                 active: true,
-                addons: [
-                    {
-                        id: "extra-page",
-                        name: "Extra Page",
-                        price: "$75-$125",
-                    },
-                    {
-                        id: "care",
-                        name: "Site Care (post-event archive / edits)",
-                        price: "$25-$50",
-                    },
-                ],
+                addons: ["extra-page", "copy-assistance", "priority-support", "site-care-post-event"],
                 note: "Designed to keep your event organized, and your guests informed",
                 demoUrl: "/services/demos/wedding-cocktail",
             },
@@ -543,6 +553,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 featured: false,
                 active: true,
                 note: "A professional presence that works alongside your resume, not instead of it.",
+                addons: ["copy-assistance", "extra-page", "priority-support"],
                 demoUrl: "/services/demos/ariana-james-resume"
             },
             {
@@ -597,30 +608,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 priceFromValue: 250,
                 href: "/services/portfolio-strater-website",
                 icon: "resume",
-                addons: [
-                    {
-                        id: "extra-page",
-                        name: "Additional Page",
-                        price: "$50"
-                    },
-                    {
-                        id: "extra-gallery",
-                        name: "Extra Gallery",
-                        price: "$40",
-                    },
-                    {
-                        id: "booking-integration",
-                        name: "Booking Integration",
-                        price: "$50",
-                    },
-                    {
-                        id: "copy-assistance",
-                        name: "Copy Assistance",
-                        price: "$50",
-                    },
-                ],
                 featured: true,
                 active: true,
+                addons: ["extra-page", "extra-gallery", "booking-integration", "copy-assistance", "priority-support"],
                 note: "This service is focused on presentation and clarity. It’s ideal for showcasing your work, not for complex systems, dashboards, or custom functionality.",
             },
         ],
@@ -709,6 +699,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "tool",
                 featured: false,
                 active: true,
+                addons: ["extra-dev-time", "priority-support", "content-updates", "seo-lite", "hosting-only"],
                 note: "Not intended for full redesigns or large feature builds.",
             },
             {
@@ -774,6 +765,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 icon: "seo",
                 featured: false,
                 active: true,
+                addons: ["extra-dev-time", "seo-lite", "hosting-only"],
                 note: "Focused on performance and accessibility, not design changes or feature development.",
             },
             {
@@ -859,38 +851,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Ongoing improvements that compound over time",
                     "Confidence knowing your digital presence is supported",
                 ],
-
-                addons: [
-                    {
-                        id: "extra-dev-time",
-                        name: "Extra Development Time",
-                        price: "$50/hr",
-                        desc: "Additional development time beyond your plan’s included hours.",
-                        popular: true,
-                    },
-                    {
-                        id: "seo-lite",
-                        name: "SEO Lite Monitoring",
-                        price: "$29/mo",
-                        desc: "On-page checks and basic SEO health monitoring.",
-                    },
-                    {
-                        id: "content-updates",
-                        name: "Content Writing & Updates",
-                        price: "From $75/mo",
-                        desc: "Light copy updates and page content assistance.",
-                    },
-                    {
-                        id: "hosting-only",
-                        name: "Hosting Only",
-                        price: "$19/mo",
-                        desc: "Secure hosting without updates or content changes.",
-                    },
-                ],
                 href: "/services/site-care-plans",
                 icon: "tool",
                 featured: false,
                 active: true,
+                addons: ["extra-dev-time", "seo-lite", "content-updates", "hosting-only"],
                 note: "Designed for sites that need ongoing attention, not set-it-and-forget-it launches.",
             },
         ],

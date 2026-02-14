@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "src/app/Styles/ServiceDetail.module.css";
-import type { Service } from "src/app/Data/services";
-import type { IncludeIconKey } from "src/app/Data/services";
+import type { Service, IncludeIconKey } from "src/app/Data/services";
+import { ADDONS } from "src/app/Data/services";
 
 import {
   Activity,
@@ -49,6 +49,11 @@ const INCLUDE_ICONS: Record<IncludeIconKey, React.ElementType> = {
   cart: ShoppingCart,
 };
 
+const ADDON_BY_ID = Object.fromEntries(ADDONS.map((a) => [a.id, a])) as Record<
+  string,
+  (typeof ADDONS)[number]
+>;
+
 export default function ServiceDetail({ service }: { service: Service }) {
   const {
     id,
@@ -62,30 +67,19 @@ export default function ServiceDetail({ service }: { service: Service }) {
     includes,
     outcome,
     plans,
-    addons,
     note,
     demoUrl,
   } = service;
 
   const isSiteCare = id === "site-care-plans";
+  const isWedding = id === "wedding-website";
+  const isFixRefresh = id === "fix-and-refresh-package";
 
   const normalizedIncludes = (includes ?? []).map(
     (x): { title: string; desc?: string; icon?: IncludeIconKey } =>
       typeof x === "string" ? { title: x } : x
   );
   const hasIncludes = normalizedIncludes.length > 0;
-
-  const isWedding = id === "wedding-website";
-  const isOptimize = id === "optimization-pass";
-  const isRefresh = id === "fix-and-refresh-package";
-
-  const outcomeTitle =
-    isSiteCare || isOptimize || isRefresh
-      ? "What you can expect"
-      : isWedding
-      ? "Designed to make your day smoother and more memorable."
-      : "Built to reduce friction and elevate your presence.";
-
 
   const outcomeItems =
     Array.isArray(outcome)
@@ -94,13 +88,22 @@ export default function ServiceDetail({ service }: { service: Service }) {
       ? [outcome]
       : [];
 
+  const outcomeTitle =
+    isSiteCare || isFixRefresh
+      ? "What you can expect"
+      : isWedding
+      ? "Designed to make your day smoother and more memorable."
+      : "Built to reduce friction and elevate your presence.";
+
+  const resolvedAddons = (service.addons ?? [])
+    .map((addonId) => ADDON_BY_ID[addonId])
+    .filter(Boolean);
+
   return (
     <main className={styles.page} role="main" aria-labelledby="service-title">
       <div className={styles.detailBody} aria-labelledby="service-title">
-        <p className={`page-kicker ${styles.pageKicker}`}>
-          {isSiteCare
-            ? "Ongoing care, without the overhead"
-            : "Get into the details"}
+        <p className={`page-kicker ${styles.kicker}`}>
+          {isSiteCare ? "Ongoing care, without the overhead" : "Get into the details"}
         </p>
 
         <header className={styles.header}>
@@ -126,9 +129,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
                       ? `${styles.siteCarePlanCard} ${
                           plan.featured ? styles.siteCarePlanCardFeatured : ""
                         }`
-                      : `${styles.planCard} ${
-                          plan.featured ? styles.featured : ""
-                        }`
+                      : `${styles.planCard} ${plan.featured ? styles.featured : ""}`
                   }
                 >
                   {isSiteCare && plan.featured && (
@@ -137,7 +138,9 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
                   <h3 className={styles.siteCarePlanName}>{plan.name}</h3>
                   <p className={styles.siteCarePlanPrice}>{plan.price}</p>
-                  <p className={styles.siteCarePlanIncludes}>{plan.plus}</p>
+                  {plan.plus ? (
+                    <p className={styles.siteCarePlanIncludes}>{plan.plus}</p>
+                  ) : null}
 
                   <ul className={styles.siteCarePlanPerks}>
                     {plan.perks.map((perk, i) => (
@@ -157,9 +160,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
           <div className={styles.leadContainer}>
             {(long || blurb) && <p className={styles.lead}>{long ?? blurb}</p>}
-
             {extLong && <p className={styles.extLong}>{extLong}</p>}
-
             {note && <p className={styles.note}>{note}</p>}
           </div>
         </header>
@@ -178,8 +179,8 @@ export default function ServiceDetail({ service }: { service: Service }) {
             </h2>
 
             <p className={styles.frameworkSub}>
-              A consistent build system designed to look intentional, feel
-              smooth, and stay easy to manage.
+              A consistent build system designed to look intentional, feel smooth,
+              and stay easy to manage.
             </p>
           </div>
 
@@ -191,27 +192,18 @@ export default function ServiceDetail({ service }: { service: Service }) {
             >
               {normalizedIncludes.map((item, i) => {
                 const Icon = item.icon ? INCLUDE_ICONS[item.icon] : Activity;
-                const desc =
-                  item.desc ??
-                  (isSiteCare
-                    ? "Handled proactively with clear updates and support."
-                    : "Designed to be clear for users and easy to manage.");
 
                 return (
-                  <article
-                    key={i}
-                    className={styles.featureCard}
-                    role="listitem"
-                  >
+                  <article key={i} className={styles.featureCard} role="listitem">
                     <div className={styles.featureTop}>
-                    <span className={styles.featureIcon} aria-hidden="true">
-                      <Icon size={16} />
-                    </span>
+                      <span className={styles.featureIcon} aria-hidden="true">
+                        <Icon size={16} />
+                      </span>
                       <h3 className={styles.featureTitle}>{item.title}</h3>
                     </div>
 
-                    {desc ? (
-                      <p className={styles.featureDesc}>{desc}</p>
+                    {item.desc ? (
+                      <p className={styles.featureDesc}>{item.desc}</p>
                     ) : null}
                   </article>
                 );
@@ -234,14 +226,14 @@ export default function ServiceDetail({ service }: { service: Service }) {
           )}
         </section>
 
-        {addons?.length ? (
+        {resolvedAddons.length ? (
           <section className={styles.addonsSection} aria-labelledby="addons-heading">
             <h3 id="addons-heading" className={styles.addonsHeading}>
               Optional Add-Ons
             </h3>
 
             <ul className={styles.addonsList}>
-              {addons.map((addon) => (
+              {resolvedAddons.map((addon) => (
                 <li key={addon.id} className={styles.addonItem}>
                   <div className={styles.addonInfo}>
                     <span className={styles.addonName}>
@@ -294,7 +286,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
             <span className={styles.backArrow} aria-hidden="true">
               ←
             </span>
-            <span>Back to Services</span>
+            <span> Back to Services</span>
           </Link>
         </nav>
       </div>
